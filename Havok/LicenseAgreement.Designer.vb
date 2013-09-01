@@ -83,8 +83,8 @@ Partial Class LicenseAgreement
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CaptionFont = New System.Drawing.Font("Ubuntu", 12.0!)
-        Me.ClientSize = New System.Drawing.Size(778, 618)
+        Me.CaptionFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.ClientSize = New System.Drawing.Size(786, 622)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.RichTextBox1)

@@ -265,7 +265,7 @@ Public Class Preferences
         TextBoxX1.Text = My.Settings.BrowserHomepageURL
     End Sub
 
-    Private Sub Button25_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button25.Click
+    Private Sub Button25_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
@@ -275,5 +275,10 @@ Public Class Preferences
 
     Private Sub Button26_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button26.Click
         CookieManager.ImportCookies(TextBoxX2.Text)
+    End Sub
+
+
+    Private Sub Button25_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button25.Click
+
     End Sub
 End Class

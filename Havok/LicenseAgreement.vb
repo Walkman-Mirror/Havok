@@ -7,9 +7,9 @@ Public Class LicenseAgreement
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        My.Settings.FirstRun = "false"
+        My.Settings.Havok_Enviroment_FirstRun = "false"
         My.Settings.Save()
-        If My.Settings.FirstRun = "false" Then
+        If My.Settings.Havok_Enviroment_FirstRun = "false" Then
             Form1.NotifyIconContextMenuStrip1.Enabled = False
             Form1.Show()
             WhatsNew.ShowDialog()

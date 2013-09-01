@@ -63,6 +63,8 @@ Partial Class Preferences
         Me.Button18 = New System.Windows.Forms.Button()
         Me.Button19 = New System.Windows.Forms.Button()
         Me.TabPage21 = New System.Windows.Forms.TabPage()
+        Me.TabControl6 = New System.Windows.Forms.TabControl()
+        Me.TabPage24 = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button17 = New System.Windows.Forms.Button()
         Me.TextBox3 = New DevComponents.DotNetBar.Controls.TextBoxX()
@@ -100,8 +102,6 @@ Partial Class Preferences
         Me.Button21 = New System.Windows.Forms.Button()
         Me.Button26 = New System.Windows.Forms.Button()
         Me.TabPage19 = New System.Windows.Forms.TabPage()
-        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.Button25 = New System.Windows.Forms.Button()
         Me.TabPage20 = New System.Windows.Forms.TabPage()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Button16 = New System.Windows.Forms.Button()
@@ -121,8 +121,12 @@ Partial Class Preferences
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.SuperTooltip1 = New DevComponents.DotNetBar.SuperTooltip()
-        Me.TabControl6 = New System.Windows.Forms.TabControl()
-        Me.TabPage24 = New System.Windows.Forms.TabPage()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.LabelX3 = New DevComponents.DotNetBar.LabelX()
+        Me.Button25 = New System.Windows.Forms.Button()
+        Me.TextBoxX4 = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.LabelX4 = New DevComponents.DotNetBar.LabelX()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -146,6 +150,8 @@ Partial Class Preferences
         Me.TabPage14.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.TabPage21.SuspendLayout()
+        Me.TabControl6.SuspendLayout()
+        Me.TabPage24.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TabPage15.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
@@ -160,14 +166,12 @@ Partial Class Preferences
         Me.TabPage23.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
         Me.TabPage19.SuspendLayout()
-        Me.GroupBox7.SuspendLayout()
         Me.TabPage20.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabControl6.SuspendLayout()
-        Me.TabPage24.SuspendLayout()
+        Me.GroupBox7.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -638,6 +642,27 @@ Partial Class Preferences
         Me.TabPage21.Text = "Weapons/Tools"
         Me.TabPage21.UseVisualStyleBackColor = True
         '
+        'TabControl6
+        '
+        Me.TabControl6.Controls.Add(Me.TabPage24)
+        Me.TabControl6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl6.Location = New System.Drawing.Point(3, 3)
+        Me.TabControl6.Name = "TabControl6"
+        Me.TabControl6.SelectedIndex = 0
+        Me.TabControl6.Size = New System.Drawing.Size(547, 294)
+        Me.TabControl6.TabIndex = 1
+        '
+        'TabPage24
+        '
+        Me.TabPage24.Controls.Add(Me.GroupBox1)
+        Me.TabPage24.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage24.Name = "TabPage24"
+        Me.TabPage24.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage24.Size = New System.Drawing.Size(539, 268)
+        Me.TabPage24.TabIndex = 0
+        Me.TabPage24.Text = "UDP Flooder"
+        Me.TabPage24.UseVisualStyleBackColor = True
+        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Button17)
@@ -1105,29 +1130,6 @@ Partial Class Preferences
         Me.TabPage19.Text = "Strings"
         Me.TabPage19.UseVisualStyleBackColor = True
         '
-        'GroupBox7
-        '
-        Me.GroupBox7.Controls.Add(Me.Button25)
-        Me.GroupBox7.Location = New System.Drawing.Point(6, 6)
-        Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(547, 110)
-        Me.GroupBox7.TabIndex = 40
-        Me.GroupBox7.TabStop = False
-        Me.GroupBox7.Text = "Strings"
-        '
-        'Button25
-        '
-        Me.Button25.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button25.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button25.Location = New System.Drawing.Point(124, 77)
-        Me.Button25.Name = "Button25"
-        Me.Button25.Size = New System.Drawing.Size(104, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button25, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Set The Homepage URL", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
-        Me.Button25.TabIndex = 37
-        Me.Button25.Text = "&Editor"
-        Me.Button25.UseVisualStyleBackColor = False
-        '
         'TabPage20
         '
         Me.TabPage20.Controls.Add(Me.GroupBox4)
@@ -1345,28 +1347,83 @@ Partial Class Preferences
         Me.PictureBox3.TabIndex = 30
         Me.PictureBox3.TabStop = False
         '
-        'TabControl6
+        'GroupBox7
         '
-        Me.TabControl6.Controls.Add(Me.TabPage24)
-        Me.TabControl6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl6.Location = New System.Drawing.Point(3, 3)
-        Me.TabControl6.Name = "TabControl6"
-        Me.TabControl6.SelectedIndex = 0
-        Me.TabControl6.Size = New System.Drawing.Size(547, 294)
-        Me.TabControl6.TabIndex = 1
+        Me.GroupBox7.Controls.Add(Me.ComboBox1)
+        Me.GroupBox7.Controls.Add(Me.TextBoxX4)
+        Me.GroupBox7.Controls.Add(Me.Button25)
+        Me.GroupBox7.Controls.Add(Me.LabelX4)
+        Me.GroupBox7.Controls.Add(Me.LabelX3)
+        Me.GroupBox7.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(536, 115)
+        Me.GroupBox7.TabIndex = 41
+        Me.GroupBox7.TabStop = False
+        Me.GroupBox7.Text = "Strings Editor"
         '
-        'TabPage24
+        'LabelX3
         '
-        Me.TabPage24.Controls.Add(Me.GroupBox1)
-        Me.TabPage24.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage24.Name = "TabPage24"
-        Me.TabPage24.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage24.Size = New System.Drawing.Size(539, 268)
-        Me.TabPage24.TabIndex = 0
-        Me.TabPage24.Text = "UDP Flooder"
-        Me.TabPage24.UseVisualStyleBackColor = True
         '
-        'About
+        '
+        '
+        Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX3.Location = New System.Drawing.Point(6, 19)
+        Me.LabelX3.Name = "LabelX3"
+        Me.LabelX3.Size = New System.Drawing.Size(91, 23)
+        Me.LabelX3.TabIndex = 40
+        Me.LabelX3.Text = "Import Cookie:"
+        '
+        'Button25
+        '
+        Me.Button25.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button25.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button25.Location = New System.Drawing.Point(424, 77)
+        Me.Button25.Name = "Button25"
+        Me.Button25.Size = New System.Drawing.Size(106, 27)
+        Me.SuperTooltip1.SetSuperTooltip(Me.Button25, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Clear all the browser cookies", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
+        Me.Button25.TabIndex = 38
+        Me.Button25.Text = "&Set value"
+        Me.Button25.UseVisualStyleBackColor = False
+        '
+        'TextBoxX4
+        '
+        Me.TextBoxX4.BackColor = System.Drawing.Color.White
+        '
+        '
+        '
+        Me.TextBoxX4.Border.Class = "TextBoxBorder"
+        Me.TextBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.TextBoxX4.ForeColor = System.Drawing.Color.Black
+        Me.TextBoxX4.Location = New System.Drawing.Point(56, 51)
+        Me.TextBoxX4.Name = "TextBoxX4"
+        Me.TextBoxX4.Size = New System.Drawing.Size(474, 20)
+        Me.TextBoxX4.TabIndex = 43
+        Me.TextBoxX4.WatermarkText = "Input a value"
+        '
+        'LabelX4
+        '
+        '
+        '
+        '
+        Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX4.Location = New System.Drawing.Point(6, 48)
+        Me.LabelX4.Name = "LabelX4"
+        Me.LabelX4.Size = New System.Drawing.Size(44, 23)
+        Me.LabelX4.TabIndex = 42
+        Me.LabelX4.Text = "Value:"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(103, 21)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(427, 21)
+        Me.ComboBox1.TabIndex = 42
+        '
+        'Preferences
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -1376,7 +1433,7 @@ Partial Class Preferences
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "About"
+        Me.Name = "Preferences"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -1406,6 +1463,8 @@ Partial Class Preferences
         Me.TabPage14.ResumeLayout(False)
         Me.GroupBox8.ResumeLayout(False)
         Me.TabPage21.ResumeLayout(False)
+        Me.TabControl6.ResumeLayout(False)
+        Me.TabPage24.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.TabPage15.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
@@ -1420,15 +1479,13 @@ Partial Class Preferences
         Me.TabPage23.ResumeLayout(False)
         Me.GroupBox9.ResumeLayout(False)
         Me.TabPage19.ResumeLayout(False)
-        Me.GroupBox7.ResumeLayout(False)
         Me.TabPage20.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabControl6.ResumeLayout(False)
-        Me.TabPage24.ResumeLayout(False)
+        Me.GroupBox7.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1505,8 +1562,6 @@ Partial Class Preferences
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
     Friend WithEvents Button22 As System.Windows.Forms.Button
     Friend WithEvents Button23 As System.Windows.Forms.Button
-    Friend WithEvents GroupBox7 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button25 As System.Windows.Forms.Button
     Friend WithEvents TabControl4 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage14 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage21 As System.Windows.Forms.TabPage
@@ -1532,4 +1587,10 @@ Partial Class Preferences
     Friend WithEvents TabPage23 As System.Windows.Forms.TabPage
     Friend WithEvents TabControl6 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage24 As System.Windows.Forms.TabPage
+    Friend WithEvents GroupBox7 As System.Windows.Forms.GroupBox
+    Friend WithEvents LabelX3 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents Button25 As System.Windows.Forms.Button
+    Friend WithEvents TextBoxX4 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents LabelX4 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
 End Class

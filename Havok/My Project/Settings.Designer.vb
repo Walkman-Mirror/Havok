@@ -105,12 +105,12 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property Havok_Feature_Lockdown() As Integer
+        Public Property Havok_Enviroment_Lockdown() As Integer
             Get
-                Return CType(Me("Havok_Feature_Lockdown"),Integer)
+                Return CType(Me("Havok_Enviroment_Lockdown"),Integer)
             End Get
             Set
-                Me("Havok_Feature_Lockdown") = value
+                Me("Havok_Enviroment_Lockdown") = value
             End Set
         End Property
         
@@ -130,180 +130,192 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("UDP-Flooder")>  _
-        Public Property LastSelectedWeapon() As String
+        Public Property Havok_Enviroment_LastTyped_LastSelectedWeapon() As String
             Get
-                Return CType(Me("LastSelectedWeapon"),String)
+                Return CType(Me("Havok_Enviroment_LastTyped_LastSelectedWeapon"),String)
             End Get
             Set
-                Me("LastSelectedWeapon") = value
+                Me("Havok_Enviroment_LastTyped_LastSelectedWeapon") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
-        Public Property FirstRun() As String
+        Public Property Havok_Enviroment_FirstRun() As String
             Get
-                Return CType(Me("FirstRun"),String)
+                Return CType(Me("Havok_Enviroment_FirstRun"),String)
             End Get
             Set
-                Me("FirstRun") = value
+                Me("Havok_Enviroment_FirstRun") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property LastTypedIPAddress() As String
+        Public Property Havok_Enviroment_LastTyped_LastTypedIPAddress() As String
             Get
-                Return CType(Me("LastTypedIPAddress"),String)
+                Return CType(Me("Havok_Enviroment_LastTyped_LastTypedIPAddress"),String)
             End Get
             Set
-                Me("LastTypedIPAddress") = value
+                Me("Havok_Enviroment_LastTyped_LastTypedIPAddress") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property LastTypedPort() As String
+        Public Property Havok_Enviroment_LastTyped_LastTypedPort() As String
             Get
-                Return CType(Me("LastTypedPort"),String)
+                Return CType(Me("Havok_Enviroment_LastTyped_LastTypedPort"),String)
             End Get
             Set
-                Me("LastTypedPort") = value
+                Me("Havok_Enviroment_LastTyped_LastTypedPort") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property LastTypedMiscBox() As String
+        Public Property Havok_Enviroment_LastTyped_LastTypedMiscBox() As String
             Get
-                Return CType(Me("LastTypedMiscBox"),String)
+                Return CType(Me("Havok_Enviroment_LastTyped_LastTypedMiscBox"),String)
             End Get
             Set
-                Me("LastTypedMiscBox") = value
+                Me("Havok_Enviroment_LastTyped_LastTypedMiscBox") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
-        Public Property RememberLastTyped() As String
+        Public Property Havok_Enviroment_RememberLastTyped() As String
             Get
-                Return CType(Me("RememberLastTyped"),String)
+                Return CType(Me("Havok_Enviroment_RememberLastTyped"),String)
             End Get
             Set
-                Me("RememberLastTyped") = value
+                Me("Havok_Enviroment_RememberLastTyped") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
-        Public Property TimeEnabled() As String
+        Public Property Havok_Interface_CurrentTimeClockEnabled() As String
             Get
-                Return CType(Me("TimeEnabled"),String)
+                Return CType(Me("Havok_Interface_CurrentTimeClockEnabled"),String)
             End Get
             Set
-                Me("TimeEnabled") = value
+                Me("Havok_Interface_CurrentTimeClockEnabled") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
-        Public Property NetworkStatusInStatusBar() As String
+        Public Property Havok_Interface_Extensions_NetMon_InStatusBar() As String
             Get
-                Return CType(Me("NetworkStatusInStatusBar"),String)
+                Return CType(Me("Havok_Interface_Extensions_NetMon_InStatusBar"),String)
             End Get
             Set
-                Me("NetworkStatusInStatusBar") = value
+                Me("Havok_Interface_Extensions_NetMon_InStatusBar") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
-        Public Property StatusBarVisible() As String
+        Public Property Havok_Interface_StatusBarVisible() As String
             Get
-                Return CType(Me("StatusBarVisible"),String)
+                Return CType(Me("Havok_Interface_StatusBarVisible"),String)
             End Get
             Set
-                Me("StatusBarVisible") = value
+                Me("Havok_Interface_StatusBarVisible") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
-        Public Property OptionsButtonVisible() As String
+        Public Property Havok_Interface_OptionsButtonVisible() As String
             Get
-                Return CType(Me("OptionsButtonVisible"),String)
+                Return CType(Me("Havok_Interface_OptionsButtonVisible"),String)
             End Get
             Set
-                Me("OptionsButtonVisible") = value
+                Me("Havok_Interface_OptionsButtonVisible") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
-        Public Property BrowserStatusTextVisible() As String
+        Public Property Havok_Interface_Browser_StatusTextVisible() As String
             Get
-                Return CType(Me("BrowserStatusTextVisible"),String)
+                Return CType(Me("Havok_Interface_Browser_StatusTextVisible"),String)
             End Get
             Set
-                Me("BrowserStatusTextVisible") = value
+                Me("Havok_Interface_Browser_StatusTextVisible") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
-        Public Property BrowserNotifyOnRedirect() As String
+        Public Property Havok_Interface_Browser_NotifyOnRedirect() As String
             Get
-                Return CType(Me("BrowserNotifyOnRedirect"),String)
+                Return CType(Me("Havok_Interface_Browser_NotifyOnRedirect"),String)
             End Get
             Set
-                Me("BrowserNotifyOnRedirect") = value
+                Me("Havok_Interface_Browser_NotifyOnRedirect") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
-        Public Property BrowserNotifyOnJavascriptError() As String
+        Public Property Havok_Interface_Browser_NotifyOnJavascriptError() As String
             Get
-                Return CType(Me("BrowserNotifyOnJavascriptError"),String)
+                Return CType(Me("Havok_Interface_Browser_NotifyOnJavascriptError"),String)
             End Get
             Set
-                Me("BrowserNotifyOnJavascriptError") = value
+                Me("Havok_Interface_Browser_NotifyOnJavascriptError") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
-        Public Property BrowserNotifyOnSecurityStateChanged() As String
+        Public Property Havok_BrowserNotifyOnSecurityStateChanged() As String
             Get
-                Return CType(Me("BrowserNotifyOnSecurityStateChanged"),String)
+                Return CType(Me("Havok_BrowserNotifyOnSecurityStateChanged"),String)
             End Get
             Set
-                Me("BrowserNotifyOnSecurityStateChanged") = value
+                Me("Havok_BrowserNotifyOnSecurityStateChanged") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
-        Public Property HideOnStartup() As String
+        Public Property Havok_Enviroment_HideOnStartup() As String
             Get
-                Return CType(Me("HideOnStartup"),String)
+                Return CType(Me("Havok_Enviroment_HideOnStartup"),String)
             End Get
             Set
-                Me("HideOnStartup") = value
+                Me("Havok_Enviroment_HideOnStartup") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("100")>  _
+        Public Property Havok_Extensions_NetMon_TimerInterval() As String
+            Get
+                Return CType(Me("Havok_Extensions_NetMon_TimerInterval"),String)
+            End Get
+            Set
+                Me("Havok_Extensions_NetMon_TimerInterval") = value
             End Set
         End Property
     End Class

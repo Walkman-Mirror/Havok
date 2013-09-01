@@ -14,56 +14,59 @@
     <Setting Name="Havok_Interface_ChestaGUI" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="Havok_Feature_Lockdown" Type="System.Int32" Scope="User">
+    <Setting Name="Havok_Enviroment_Lockdown" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="BrowserHomepageURL" Type="(Web Service URL)" Scope="User">
       <Value Profile="(Default)">about:blank</Value>
     </Setting>
-    <Setting Name="LastSelectedWeapon" Type="System.String" Scope="User">
+    <Setting Name="Havok_Enviroment_LastTyped_LastSelectedWeapon" Type="System.String" Scope="User">
       <Value Profile="(Default)">UDP-Flooder</Value>
     </Setting>
-    <Setting Name="FirstRun" Type="System.String" Scope="User">
+    <Setting Name="Havok_Enviroment_FirstRun" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
-    <Setting Name="LastTypedIPAddress" Type="System.String" Scope="User">
+    <Setting Name="Havok_Enviroment_LastTyped_LastTypedIPAddress" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="LastTypedPort" Type="System.String" Scope="User">
+    <Setting Name="Havok_Enviroment_LastTyped_LastTypedPort" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="LastTypedMiscBox" Type="System.String" Scope="User">
+    <Setting Name="Havok_Enviroment_LastTyped_LastTypedMiscBox" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="RememberLastTyped" Type="System.String" Scope="User">
+    <Setting Name="Havok_Enviroment_RememberLastTyped" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
-    <Setting Name="TimeEnabled" Type="System.String" Scope="User">
+    <Setting Name="Havok_Interface_CurrentTimeClockEnabled" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
-    <Setting Name="NetworkStatusInStatusBar" Type="System.String" Scope="User">
+    <Setting Name="Havok_Interface_Extensions_NetMon_InStatusBar" Type="System.String" Scope="User">
       <Value Profile="(Default)">false</Value>
     </Setting>
-    <Setting Name="StatusBarVisible" Type="System.String" Scope="User">
+    <Setting Name="Havok_Interface_StatusBarVisible" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
-    <Setting Name="OptionsButtonVisible" Type="System.String" Scope="User">
+    <Setting Name="Havok_Interface_OptionsButtonVisible" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
-    <Setting Name="BrowserStatusTextVisible" Type="System.String" Scope="User">
+    <Setting Name="Havok_Interface_Browser_StatusTextVisible" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
-    <Setting Name="BrowserNotifyOnRedirect" Type="System.String" Scope="User">
+    <Setting Name="Havok_Interface_Browser_NotifyOnRedirect" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
-    <Setting Name="BrowserNotifyOnJavascriptError" Type="System.String" Scope="User">
+    <Setting Name="Havok_Interface_Browser_NotifyOnJavascriptError" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
-    <Setting Name="BrowserNotifyOnSecurityStateChanged" Type="System.String" Scope="User">
+    <Setting Name="Havok_BrowserNotifyOnSecurityStateChanged" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
-    <Setting Name="HideOnStartup" Type="System.String" Scope="User">
+    <Setting Name="Havok_Enviroment_HideOnStartup" Type="System.String" Scope="User">
       <Value Profile="(Default)">false</Value>
+    </Setting>
+    <Setting Name="Havok_Extensions_NetMon_TimerInterval" Type="System.String" Scope="User">
+      <Value Profile="(Default)">100</Value>
     </Setting>
   </Settings>
 </SettingsFile>

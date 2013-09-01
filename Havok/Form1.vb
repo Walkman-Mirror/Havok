@@ -111,7 +111,7 @@ Public Class Form1
             Label9.Text = "HGetter"
             ListBox1.Items.Add("---------------------------")
             ListBox1.Items.Add("Starting HGetter...")
-            HGettter.Show()
+            HGetter.Show()
             Button2.Enabled = "False"
             Button4.Enabled = "True"
             PictureBox2.Show()
@@ -135,7 +135,7 @@ Public Class Form1
             HPusher.Show()
             PictureBox2.Show()
             Label9.Visible = "True"
-         
+
             Button2.Enabled = False
             Button4.Enabled = True
 
@@ -153,7 +153,7 @@ Public Class Form1
             Button4.Enabled = True
             PictureBox2.Show()
             Label9.Visible = "True"
-       
+
         End If
 
         If ComboBox1.Text = "View-Source" Then
@@ -168,7 +168,7 @@ Public Class Form1
             Button4.Enabled = True
             PictureBox2.Show()
             Label9.Visible = "True"
-           
+
         End If
 
 
@@ -221,7 +221,7 @@ Public Class Form1
             UDPFlooder.Stop()
             PictureBox2.Hide()
             Label9.Visible = "False"
-         
+
             ListBox1.Items.Add("---------------------------")
             ListBox1.Items.Add("UDP-Flooder Has Stopped!")
             Button4.Enabled = False
@@ -238,7 +238,7 @@ Public Class Form1
         End If
 
         If ComboBox1.Text = "HGetter" Then
-            HGettter.Close()
+            HGetter.Close()
         End If
 
         If ComboBox1.Text = "Encryption-Level" Then
@@ -291,10 +291,6 @@ Public Class Form1
         UDPFlooderStatsBox.LabelX2.Text = "Data Received: " & udpClient.Available.ToString
     End Sub
 
-    Private Sub Button3_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        WebBrowser1.Navigate(TextBoxX1.Text)
-    End Sub
-
     Private Sub Button12_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
         Preferences.Show()
     End Sub
@@ -311,18 +307,19 @@ Public Class Form1
     End Sub
 
     Private Sub GetLastTyped()
-        TextBox1.Text = My.Settings.LastTypedIPAddress
-        TextBox2.Text = My.Settings.LastTypedMiscBox
-        TextBox3.Text = My.Settings.LastTypedPort
+        TextBox1.Text = My.Settings.Havok_Enviroment_LastTyped_LastTypedIPAddress
+        TextBox2.Text = My.Settings.Havok_Enviroment_LastTyped_LastTypedMiscBox
+        TextBox3.Text = My.Settings.Havok_Enviroment_LastTyped_LastTypedPort
     End Sub
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
         ListBox1.Items.Add("Starting Up...")
 
 
 
         'Reads The User Settings For Havok
-        If My.Settings.HideOnStartup = "true" Then
+        If My.Settings.Havok_Enviroment_HideOnStartup = "true" Then
             'Hide The Main Havok Window
             Me.Hide()
         End If
@@ -366,74 +363,42 @@ Public Class Form1
             Label7.Visible = False
             Label10.Visible = False
         End If
-        If My.Settings.NetworkStatusInStatusBar = "true" Then
+        If My.Settings.Havok_Interface_Extensions_NetMon_InStatusBar = "true" Then
             ToolStripStatusLabel1.Visible = True
         End If
-        If My.Settings.NetworkStatusInStatusBar = "false" Then
+        If My.Settings.Havok_Interface_Extensions_NetMon_InStatusBar = "false" Then
             ToolStripStatusLabel1.Visible = False
         End If
-        If My.Settings.StatusBarVisible = "true" Then
+        If My.Settings.Havok_Interface_StatusBarVisible = "true" Then
             StatusStrip1.Visible = True
         End If
-        If My.Settings.StatusBarVisible = "false" Then
+        If My.Settings.Havok_Interface_StatusBarVisible = "false" Then
             StatusStrip1.Visible = False
         End If
-        If My.Settings.OptionsButtonVisible = "true" Then
+        If My.Settings.Havok_Interface_OptionsButtonVisible = "true" Then
             ToolStripDropDownButton1.Visible = True
         End If
-        If My.Settings.OptionsButtonVisible = "false" Then
+        If My.Settings.Havok_Interface_OptionsButtonVisible = "false" Then
             ToolStripDropDownButton1.Visible = False
         End If
-        If My.Settings.BrowserStatusTextVisible = "true" Then
+        If My.Settings.Havok_Interface_Browser_StatusTextVisible = "true" Then
             ToolStripStatusLabel2.Visible = True
             WebBrowser1StatusText.Start()
         End If
-        If My.Settings.BrowserStatusTextVisible = "false" Then
+        If My.Settings.Havok_Interface_Browser_StatusTextVisible = "false" Then
             ToolStripStatusLabel2.Visible = False
         End If
-
-        '----------
-
-        'Lord Deavmied This
-        If My.Settings.FirstRun = "true" Then
-            LicenseAgreement.ShowDialog()
-            NotifyIconContextMenuStrip1.Enabled = False
-        End If
-        NotifyIcon1.ShowBalloonTip(50)
-        ListBox1.Items.Add("Welcome To " & My.Application.Info.ProductName)
-        ListBox1.Items.Add("Version " & My.Application.Info.Version.ToString)
-        ListBox1.Items.Add(My.Application.Info.Copyright)
-        ListBox1.Items.Add("")
-        ListBox1.Items.Add("It's Havok's Third Birthday!")
-        ListBox1.Items.Add("Keep Your Dreams, Don't Lose Them!")
-        ListBox1.Items.Add("Please Visit Our Project Site At:")
-        ListBox1.Items.Add("http://deavmi.3owl.com/projects/havok")
-        ListBox1.Items.Add("If You Have Any Feature Suggestions, Questions Or Problems,")
-        ListBox1.Items.Add("Then Please Drop A Comment By")
-        ListBox1.Items.Add("http://deavmi.3owl.com/projects/havok .")
-        ListBox1.Items.Add("---------------------------")
-        PictureBox2.Visible = True
-        'Navigate The Main WebBrowser (WebBrowser1 On Form1) 
-        WebBrowser1.Navigate(My.Settings.BrowserHomepageURL.ToString)
-        'Navigate ABout Form's Two WebBrowsers (WebBrowser1 and WebBrwoser2 On About)
-        Preferences.WebBrowser1.Navigate("http://www.gnu.org/licenses/gpl.txt")
-        Preferences.WebBrowser2.Navigate("http://deavmi.3owl.com/index.php/User_talk:Deavmi")
-        WebBrowser1StatusText.Start()
-        ToolStripMenuItem6.Text = My.User.Name.ToString
-        OSToolStripMenuItem.Text = My.Computer.Info.OSFullName
-        AaaaToolStripMenuItem.Text = My.Computer.Info.OSVersion
         'Just Gets Sum More Settings
-        If My.Settings.Havok_Feature_Lockdown = "0" Then
+        If My.Settings.Havok_Enviroment_Lockdown = "0" Then
             'Deactivates Lockdown Mode
             EnableToolStripMenuItem1.Visible = True
             Me.Enabled = True
             DisableToolStripMenuItem.Visible = False
-            PictureBox2.Visible = False
             Label9.Visible = False
             ListBox1.Items.Add("---------------------------")
             ListBox1.Items.Add("Lockdown Mode Disabled!")
         End If
-        If My.Settings.Havok_Feature_Lockdown = "1" Then
+        If My.Settings.Havok_Enviroment_Lockdown = "1" Then
             'Activates Lockdown Mode
             EnableToolStripMenuItem1.Visible = False
             Me.Enabled = False
@@ -445,22 +410,53 @@ Public Class Form1
             ListBox1.Items.Add("Lockdown Mode Enabled!")
         End If
         'Check If LastTyped Is Activated
-        If My.Settings.RememberLastTyped = "true" Then
+        If My.Settings.Havok_Enviroment_RememberLastTyped = "true" Then
             GetLastTyped()
         End If
-        If My.Settings.RememberLastTyped = "false" Then
+        If My.Settings.Havok_Enviroment_RememberLastTyped = "false" Then
             'This Is Useless Putting Here, But I Always Do
         End If
         'Checks More Settings
-        If My.Settings.TimeEnabled = "true" Then
+        If My.Settings.Havok_Interface_CurrentTimeClockEnabled = "true" Then
             Label11.Visible = True
             Padawan.Start()
         End If
-        If My.Settings.TimeEnabled = "false" Then
+        If My.Settings.Havok_Interface_CurrentTimeClockEnabled = "false" Then
             Label11.Visible = False
         End If
+        NetMonTimer.Interval = My.Settings.Havok_Extensions_NetMon_TimerInterval.ToString
+        '----------
+
+        ' UI related stuff
+        ToolStripMenuItem6.Text = My.User.Name.ToString
+        OSToolStripMenuItem.Text = My.Computer.Info.OSFullName
+        AaaaToolStripMenuItem.Text = My.Computer.Info.OSVersion
+        ComboBox1.Text = My.Settings.Havok_Enviroment_LastTyped_LastSelectedWeapon
+
+
+        'Lord Deavmied This
+        If My.Settings.Havok_Enviroment_FirstRun = "true" Then
+            LicenseAgreement.ShowDialog()
+            NotifyIconContextMenuStrip1.Enabled = False
+        End If
+        NotifyIcon1.ShowBalloonTip(50)
+        ListBox1.Items.Add("Welcome To " & My.Application.Info.ProductName)
+        ListBox1.Items.Add("Version " & My.Application.Info.Version.ToString)
+        ListBox1.Items.Add(My.Application.Info.Copyright)
+        ListBox1.Items.Add("")
+        ListBox1.Items.Add("Visit the project: http://deavmi.github.io/Havok")
+
+        ListBox1.Items.Add("---------------------------")
+        'Navigate The Main WebBrowser (WebBrowser1 On Form1) 
+        WebBrowser1.Navigate(My.Settings.BrowserHomepageURL.ToString)
+        'Navigate ABout Form's Two WebBrowsers (WebBrowser1 and WebBrwoser2 On About)
+        Preferences.WebBrowser1.Navigate("http://www.gnu.org/licenses/gpl.txt")
+        Preferences.WebBrowser2.Navigate("http://deavmi.3owl.com/index.php/User_talk:Deavmi")
+        WebBrowser1StatusText.Start()
+       
+     
         NetMonTimer.Start()
-        ComboBox1.Text = My.Settings.LastSelectedWeapon
+
         Label6.Text = "v" & My.Application.Info.Version.ToString
         MsgBox("Havok 3 Is Beta, HGetter's and HPusher's Background Workers a.k.a The Downloader and Uploader (Respectively) Their Processes, Cannot Be Canceled, To End Them You Need To Exit Havok or Restart Havok, This Can Be Done From The Settings Tab In The About Window. Thanks. ~Deavmi")
 
@@ -490,7 +486,7 @@ Public Class Form1
             WebBrowser1.Navigate(My.Settings.BrowserHomepageURL.ToString)
         End If
         If ComboBox1.Text = "HGetter" Then
-            HGettter.Close()
+            HGetter.Close()
             WebBrowser1.Navigate(My.Settings.BrowserHomepageURL.ToString)
         End If
         If ComboBox1.Text = "Remote-PC" Then
@@ -621,9 +617,9 @@ Public Class Form1
     End Sub
 
     Private Sub EnableToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EnableToolStripMenuItem1.Click
-        My.Settings.Havok_Feature_Lockdown = "1"
+        My.Settings.Havok_Enviroment_Lockdown = "1"
         My.Settings.Save()
-        If My.Settings.Havok_Feature_Lockdown = "1" Then
+        If My.Settings.Havok_Enviroment_Lockdown = "1" Then
             EnableToolStripMenuItem1.Visible = False
             Me.Enabled = False
             DisableToolStripMenuItem.Visible = True
@@ -637,9 +633,9 @@ Public Class Form1
     End Sub
 
     Private Sub DisableToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DisableToolStripMenuItem.Click
-        My.Settings.Havok_Feature_Lockdown = "0"
+        My.Settings.Havok_Enviroment_Lockdown = "0"
         My.Settings.Save()
-        If My.Settings.Havok_Feature_Lockdown = "0" Then
+        If My.Settings.Havok_Enviroment_Lockdown = "0" Then
             EnableToolStripMenuItem1.Visible = True
             Me.Enabled = True
             DisableToolStripMenuItem.Visible = False
@@ -737,28 +733,28 @@ Public Class Form1
     End Sub
 
     Private Sub WebBrowser1_JavascriptError(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WebBrowser1.JavascriptError
-        If My.Settings.BrowserNotifyOnJavascriptError = "true" Then
+        If My.Settings.Havok_Interface_Browser_NotifyOnJavascriptError = "true" Then
             ListBox1.Items.Add("There Has Been A Javascript Error On This Page: " & WebBrowser1.Url.ToString)
         End If
-        If My.Settings.BrowserNotifyOnJavascriptError = "false" Then
+        If My.Settings.Havok_Interface_Browser_NotifyOnJavascriptError = "false" Then
             'DO NOTHIN, This Really doesn't need to be here
         End If
     End Sub
 
     Private Sub WebBrowser1_Redirecting(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WebBrowser1.Redirecting
-        If My.Settings.BrowserNotifyOnRedirect = "true" Then
+        If My.Settings.Havok_Interface_Browser_NotifyOnRedirect = "true" Then
             ListBox1.Items.Add("The Page : " & WebBrowser1.Url.ToString & " Is Redirecting...")
         End If
-        If My.Settings.BrowserNotifyOnRedirect = "false" Then
+        If My.Settings.Havok_Interface_Browser_NotifyOnRedirect = "false" Then
             'DO NOTHIN, This Really doesn't need to be here
         End If
     End Sub
 
-    Private Sub WebBrowser1_SecurityStateChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WebBrowser1.SecurityStateChanged
-        If My.Settings.BrowserNotifyOnSecurityStateChanged = "true" Then
+    Private Sub WebBrowser1_SecurityStateChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        If My.Settings.Havok_BrowserNotifyOnSecurityStateChanged = "true" Then
             ListBox1.Items.Add("The Security State Has Been Changed!")
         End If
-        If My.Settings.BrowserNotifyOnSecurityStateChanged = "false" Then
+        If My.Settings.Havok_BrowserNotifyOnSecurityStateChanged = "false" Then
             'DO NOTHIN, This Really doesn't need to be here
         End If
 
@@ -788,7 +784,7 @@ Public Class Form1
         Else
             UDPFlooderStatsBox.Close()
         End If
-        My.Settings.LastSelectedWeapon = ComboBox1.Text.ToString
+        My.Settings.Havok_Enviroment_LastTyped_LastSelectedWeapon = ComboBox1.Text.ToString
         My.Settings.Save()
     End Sub
 
@@ -828,22 +824,22 @@ Public Class Form1
     End Sub
 
     Private Sub TextBox2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox2.TextChanged
-        If My.Settings.RememberLastTyped = "true" Then
-            My.Settings.LastTypedMiscBox = TextBox2.Text
+        If My.Settings.Havok_Enviroment_RememberLastTyped = "true" Then
+            My.Settings.Havok_Enviroment_LastTyped_LastTypedMiscBox = TextBox2.Text
             My.Settings.Save()
         End If
     End Sub
 
     Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
-        If My.Settings.RememberLastTyped = "true" Then
-            My.Settings.LastTypedIPAddress = TextBox1.Text
+        If My.Settings.Havok_Enviroment_RememberLastTyped = "true" Then
+            My.Settings.Havok_Enviroment_LastTyped_LastTypedIPAddress = TextBox1.Text
             My.Settings.Save()
         End If
     End Sub
 
     Private Sub TextBox3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox3.TextChanged
-        If My.Settings.RememberLastTyped = "true" Then
-            My.Settings.LastTypedPort = TextBox3.Text
+        If My.Settings.Havok_Enviroment_RememberLastTyped = "true" Then
+            My.Settings.Havok_Enviroment_LastTyped_LastTypedPort = TextBox3.Text
             My.Settings.Save()
         End If
     End Sub
@@ -852,22 +848,16 @@ Public Class Form1
         WebBrowser1.GoBack()
     End Sub
 
-    Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
-        Dim tcpclient As New TcpClient
-        Dim GLOIP As IPAddress
-        Dim bytCommand As Byte() = New Byte() {}
-        GLOIP = IPAddress.Parse(TextBox1.Text)
-        tcpclient.Connect(GLOIP, TextBox3.Text)
-        bytCommand = Encoding.ASCII.GetBytes(TextBox2.Text)
-        tcpclient.Connect(GLOIP, TextBox3.Text)
-
-
-
-
+    Private Sub ToolStripButton6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton6.Click
+        WebBrowser1.Navigate(TextBoxX1.Text)
     End Sub
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        Timer2.Start()
+    Private Sub ToolStripButton4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton4.Click
+        WebBrowser1.GoForward()
+    End Sub
+
+    Private Sub LabelX2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LabelX2.DoubleClick
+        'New feature coming here soon.
     End Sub
 End Class
 

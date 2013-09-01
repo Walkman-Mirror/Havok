@@ -27,6 +27,7 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.WebBrowser1 = New Gecko.GeckoWebBrowser()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.LabelX2 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
@@ -38,8 +39,6 @@ Partial Class Form1
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
-        Me.WebBrowser1 = New Gecko.GeckoWebBrowser()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button16 = New System.Windows.Forms.Button()
         Me.Button15 = New System.Windows.Forms.Button()
@@ -133,8 +132,8 @@ Partial Class Form1
         Me.NetMonTimer = New System.Windows.Forms.Timer(Me.components)
         Me.ReflectionImage1 = New DevComponents.DotNetBar.Controls.ReflectionImage()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.BrowserContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -153,6 +152,7 @@ Partial Class Form1
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -179,24 +179,34 @@ Partial Class Form1
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.ToolStrip1)
         Me.GroupBox1.Controls.Add(Me.WebBrowser1)
+        Me.GroupBox1.Controls.Add(Me.ToolStrip1)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox1.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(447, 398)
+        Me.GroupBox1.Size = New System.Drawing.Size(479, 391)
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Web Browser"
         '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.DisableWmImeSetContext = False
+        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.WebBrowser1.Location = New System.Drawing.Point(3, 41)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.Size = New System.Drawing.Size(473, 347)
+        Me.WebBrowser1.TabIndex = 41
+        Me.WebBrowser1.UseHttpActivityObserver = False
+        '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LabelX2, Me.ToolStripSeparator3, Me.TextBoxX1, Me.ToolStripButton6, Me.ToolStripSeparator13, Me.ToolStripButton5, Me.ToolStripButton4, Me.ToolStripButton3, Me.ToolStripButton2, Me.ToolStripButton1, Me.ToolStripSeparator14})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LabelX2, Me.ToolStripSeparator3, Me.TextBoxX1, Me.ToolStripButton6, Me.ToolStripSeparator13, Me.ToolStripButton5, Me.ToolStripButton4, Me.ToolStripButton3, Me.ToolStripButton2, Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(3, 16)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ToolStrip1.Size = New System.Drawing.Size(441, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(473, 25)
         Me.ToolStrip1.TabIndex = 40
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -274,22 +284,6 @@ Partial Class Form1
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
         Me.ToolStripButton1.Text = "ToolStripButton1"
-        '
-        'ToolStripSeparator14
-        '
-        Me.ToolStripSeparator14.Name = "ToolStripSeparator14"
-        Me.ToolStripSeparator14.Size = New System.Drawing.Size(6, 25)
-        '
-        'WebBrowser1
-        '
-        Me.WebBrowser1.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.WebBrowser1.DisableWmImeSetContext = False
-        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.WebBrowser1.Location = New System.Drawing.Point(3, 44)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(441, 351)
-        Me.WebBrowser1.TabIndex = 39
-        Me.WebBrowser1.UseHttpActivityObserver = False
         '
         'Panel1
         '
@@ -431,10 +425,11 @@ Partial Class Form1
         Me.GroupBox3.Controls.Add(Me.Label8)
         Me.GroupBox3.Controls.Add(Me.Label3)
         Me.GroupBox3.Controls.Add(Me.Label2)
+        Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox3.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(4, 116)
+        Me.GroupBox3.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(847, 71)
+        Me.GroupBox3.Size = New System.Drawing.Size(849, 63)
         Me.GroupBox3.TabIndex = 15
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Target"
@@ -500,7 +495,7 @@ Partial Class Form1
         Me.GroupBox5.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox5.Location = New System.Drawing.Point(618, 597)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(233, 60)
+        Me.GroupBox5.Size = New System.Drawing.Size(238, 60)
         Me.GroupBox5.TabIndex = 19
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Other"
@@ -580,7 +575,7 @@ Partial Class Form1
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox2.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(396, 398)
+        Me.GroupBox2.Size = New System.Drawing.Size(366, 391)
         Me.GroupBox2.TabIndex = 26
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Log"
@@ -596,7 +591,7 @@ Partial Class Form1
         Me.ListBox1.ItemHeight = 16
         Me.ListBox1.Location = New System.Drawing.Point(3, 16)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(390, 379)
+        Me.ListBox1.Size = New System.Drawing.Size(360, 372)
         Me.ListBox1.TabIndex = 0
         '
         'LogContextMenuStrip1
@@ -746,7 +741,7 @@ Partial Class Form1
         '
         Me.GroupBox7.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox7.Controls.Add(Me.ComboBox1)
-        Me.GroupBox7.Location = New System.Drawing.Point(669, 46)
+        Me.GroupBox7.Location = New System.Drawing.Point(674, 46)
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.Size = New System.Drawing.Size(182, 64)
         Me.GroupBox7.TabIndex = 30
@@ -938,7 +933,7 @@ Partial Class Form1
         Me.Button10.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button10.Image = CType(resources.GetObject("Button10.Image"), System.Drawing.Image)
         Me.Button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button10.Location = New System.Drawing.Point(291, 19)
+        Me.Button10.Location = New System.Drawing.Point(290, 19)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(89, 28)
         Me.SuperTooltip1.SetSuperTooltip(Me.Button10, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Resets The Application Session To Defaults", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
@@ -953,7 +948,7 @@ Partial Class Form1
         Me.Button9.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
         Me.Button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button9.Location = New System.Drawing.Point(196, 19)
+        Me.Button9.Location = New System.Drawing.Point(195, 19)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(89, 28)
         Me.SuperTooltip1.SetSuperTooltip(Me.Button9, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Pings The Site", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
@@ -968,7 +963,7 @@ Partial Class Form1
         Me.Button2.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(6, 19)
+        Me.Button2.Location = New System.Drawing.Point(5, 19)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(89, 28)
         Me.SuperTooltip1.SetSuperTooltip(Me.Button2, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Starts The Selected Weapon", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
@@ -984,7 +979,7 @@ Partial Class Form1
         Me.Button4.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(101, 19)
+        Me.Button4.Location = New System.Drawing.Point(100, 19)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(89, 28)
         Me.SuperTooltip1.SetSuperTooltip(Me.Button4, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Stops The Selected Weapon", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
@@ -1000,9 +995,9 @@ Partial Class Form1
         Me.GroupBox4.Controls.Add(Me.Button2)
         Me.GroupBox4.Controls.Add(Me.Button4)
         Me.GroupBox4.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox4.Location = New System.Drawing.Point(4, 597)
+        Me.GroupBox4.Location = New System.Drawing.Point(7, 597)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(387, 60)
+        Me.GroupBox4.Size = New System.Drawing.Size(384, 60)
         Me.GroupBox4.TabIndex = 18
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Controls"
@@ -1104,7 +1099,8 @@ Partial Class Form1
         '
         'SplitContainer1
         '
-        Me.SplitContainer1.Location = New System.Drawing.Point(4, 193)
+        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer1.Location = New System.Drawing.Point(3, 72)
         Me.SplitContainer1.Name = "SplitContainer1"
         '
         'SplitContainer1.Panel1
@@ -1114,21 +1110,28 @@ Partial Class Form1
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.GroupBox2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(847, 398)
-        Me.SplitContainer1.SplitterDistance = 447
+        Me.SplitContainer1.Size = New System.Drawing.Size(849, 391)
+        Me.SplitContainer1.SplitterDistance = 479
         Me.SplitContainer1.TabIndex = 1
         '
-        'Button3
+        'TableLayoutPanel1
         '
-        Me.Button3.Location = New System.Drawing.Point(164, 79)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 40
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.TableLayoutPanel1.ColumnCount = 1
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.SplitContainer1, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.GroupBox3, 0, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(4, 125)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.94737!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.05264!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(855, 466)
+        Me.TableLayoutPanel1.TabIndex = 40
         '
-        'Timer2
+        'BrowserContextMenuStrip1
         '
+        Me.BrowserContextMenuStrip1.Name = "BrowserContextMenuStrip1"
+        Me.BrowserContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
         '
         'Form1
         '
@@ -1136,22 +1139,19 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(863, 687)
-        Me.Controls.Add(Me.SplitContainer1)
+        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.StatusStrip1)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ReflectionImage1)
         Me.Controls.Add(Me.GroupBox7)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox6)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -1182,6 +1182,7 @@ Partial Class Form1
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1269,7 +1270,6 @@ Partial Class Form1
     Friend WithEvents ToolStripSeparator12 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents OSToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AaaaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents WebBrowser1 As Gecko.GeckoWebBrowser
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ToolStripProgressBar1 As System.Windows.Forms.ToolStripProgressBar
@@ -1294,8 +1294,8 @@ Partial Class Form1
     Friend WithEvents ToolStripButton3 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Timer2 As System.Windows.Forms.Timer
-    Friend WithEvents ToolStripSeparator14 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents WebBrowser1 As Gecko.GeckoWebBrowser
+    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents BrowserContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
 
 End Class

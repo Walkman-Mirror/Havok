@@ -27,6 +27,6 @@ Public Class Updates
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         MsgBox("We will now open a link in your browser to download the update package, sorry but Google ites doesn't allow direct file downloads.")
-        Process.Start("")
+
     End Sub
 End Class
