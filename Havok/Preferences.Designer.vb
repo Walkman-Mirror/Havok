@@ -60,8 +60,7 @@ Partial Class Preferences
         Me.TabControl4 = New System.Windows.Forms.TabControl()
         Me.TabPage14 = New System.Windows.Forms.TabPage()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
-        Me.Button18 = New System.Windows.Forms.Button()
-        Me.Button19 = New System.Windows.Forms.Button()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.TabPage21 = New System.Windows.Forms.TabPage()
         Me.TabControl6 = New System.Windows.Forms.TabControl()
         Me.TabPage24 = New System.Windows.Forms.TabPage()
@@ -102,6 +101,12 @@ Partial Class Preferences
         Me.Button21 = New System.Windows.Forms.Button()
         Me.Button26 = New System.Windows.Forms.Button()
         Me.TabPage19 = New System.Windows.Forms.TabPage()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TextBoxX4 = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.Button25 = New System.Windows.Forms.Button()
+        Me.LabelX4 = New DevComponents.DotNetBar.LabelX()
+        Me.LabelX3 = New DevComponents.DotNetBar.LabelX()
         Me.TabPage20 = New System.Windows.Forms.TabPage()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Button16 = New System.Windows.Forms.Button()
@@ -120,13 +125,6 @@ Partial Class Preferences
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.LabelX3 = New DevComponents.DotNetBar.LabelX()
-        Me.Button25 = New System.Windows.Forms.Button()
-        Me.TextBoxX4 = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.LabelX4 = New DevComponents.DotNetBar.LabelX()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button27 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -166,12 +164,12 @@ Partial Class Preferences
         Me.TabPage23.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
         Me.TabPage19.SuspendLayout()
+        Me.GroupBox7.SuspendLayout()
         Me.TabPage20.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox7.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -591,9 +589,7 @@ Partial Class Preferences
         '
         'GroupBox8
         '
-        Me.GroupBox8.Controls.Add(Me.Button27)
-        Me.GroupBox8.Controls.Add(Me.Button18)
-        Me.GroupBox8.Controls.Add(Me.Button19)
+        Me.GroupBox8.Controls.Add(Me.CheckBox1)
         Me.GroupBox8.Location = New System.Drawing.Point(6, 6)
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.Size = New System.Drawing.Size(395, 198)
@@ -601,29 +597,15 @@ Partial Class Preferences
         Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "General"
         '
-        'Button18
+        'CheckBox1
         '
-        Me.Button18.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button18.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button18.Location = New System.Drawing.Point(6, 19)
-        Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(218, 27)
-        Me.Button18.TabIndex = 42
-        Me.Button18.Text = "Enable System Stats"
-        Me.Button18.UseVisualStyleBackColor = False
-        '
-        'Button19
-        '
-        Me.Button19.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button19.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button19.Location = New System.Drawing.Point(6, 19)
-        Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(218, 27)
-        Me.Button19.TabIndex = 41
-        Me.Button19.Text = "Disable System Stats"
-        Me.Button19.UseVisualStyleBackColor = False
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(6, 19)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(123, 17)
+        Me.CheckBox1.TabIndex = 44
+        Me.CheckBox1.Text = "Enable System Stats"
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'TabPage21
         '
@@ -1106,6 +1088,81 @@ Partial Class Preferences
         Me.TabPage19.Text = "Strings"
         Me.TabPage19.UseVisualStyleBackColor = True
         '
+        'GroupBox7
+        '
+        Me.GroupBox7.Controls.Add(Me.ComboBox1)
+        Me.GroupBox7.Controls.Add(Me.TextBoxX4)
+        Me.GroupBox7.Controls.Add(Me.Button25)
+        Me.GroupBox7.Controls.Add(Me.LabelX4)
+        Me.GroupBox7.Controls.Add(Me.LabelX3)
+        Me.GroupBox7.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(536, 115)
+        Me.GroupBox7.TabIndex = 41
+        Me.GroupBox7.TabStop = False
+        Me.GroupBox7.Text = "Strings Editor"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(103, 21)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(427, 21)
+        Me.ComboBox1.TabIndex = 42
+        '
+        'TextBoxX4
+        '
+        Me.TextBoxX4.BackColor = System.Drawing.Color.White
+        '
+        '
+        '
+        Me.TextBoxX4.Border.Class = "TextBoxBorder"
+        Me.TextBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.TextBoxX4.ForeColor = System.Drawing.Color.Black
+        Me.TextBoxX4.Location = New System.Drawing.Point(56, 51)
+        Me.TextBoxX4.Name = "TextBoxX4"
+        Me.TextBoxX4.Size = New System.Drawing.Size(474, 20)
+        Me.TextBoxX4.TabIndex = 43
+        Me.TextBoxX4.WatermarkText = "Input a value"
+        '
+        'Button25
+        '
+        Me.Button25.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button25.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button25.Location = New System.Drawing.Point(424, 77)
+        Me.Button25.Name = "Button25"
+        Me.Button25.Size = New System.Drawing.Size(106, 27)
+        Me.Button25.TabIndex = 38
+        Me.Button25.Text = "&Set value"
+        Me.Button25.UseVisualStyleBackColor = False
+        '
+        'LabelX4
+        '
+        '
+        '
+        '
+        Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX4.Location = New System.Drawing.Point(6, 48)
+        Me.LabelX4.Name = "LabelX4"
+        Me.LabelX4.Size = New System.Drawing.Size(44, 23)
+        Me.LabelX4.TabIndex = 42
+        Me.LabelX4.Text = "Value:"
+        '
+        'LabelX3
+        '
+        '
+        '
+        '
+        Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX3.Location = New System.Drawing.Point(6, 19)
+        Me.LabelX3.Name = "LabelX3"
+        Me.LabelX3.Size = New System.Drawing.Size(91, 23)
+        Me.LabelX3.TabIndex = 40
+        Me.LabelX3.Text = "Import Cookie:"
+        '
         'TabPage20
         '
         Me.TabPage20.Controls.Add(Me.GroupBox4)
@@ -1251,9 +1308,9 @@ Partial Class Preferences
         Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.Location = New System.Drawing.Point(319, 57)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(33, 29)
+        Me.Label6.Size = New System.Drawing.Size(75, 29)
         Me.Label6.TabIndex = 34
-        Me.Label6.Text = " 3"
+        Me.Label6.Text = "Major"
         '
         'Label4
         '
@@ -1321,93 +1378,6 @@ Partial Class Preferences
         Me.PictureBox3.TabIndex = 30
         Me.PictureBox3.TabStop = False
         '
-        'GroupBox7
-        '
-        Me.GroupBox7.Controls.Add(Me.ComboBox1)
-        Me.GroupBox7.Controls.Add(Me.TextBoxX4)
-        Me.GroupBox7.Controls.Add(Me.Button25)
-        Me.GroupBox7.Controls.Add(Me.LabelX4)
-        Me.GroupBox7.Controls.Add(Me.LabelX3)
-        Me.GroupBox7.Location = New System.Drawing.Point(6, 6)
-        Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(536, 115)
-        Me.GroupBox7.TabIndex = 41
-        Me.GroupBox7.TabStop = False
-        Me.GroupBox7.Text = "Strings Editor"
-        '
-        'LabelX3
-        '
-        '
-        '
-        '
-        Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX3.Location = New System.Drawing.Point(6, 19)
-        Me.LabelX3.Name = "LabelX3"
-        Me.LabelX3.Size = New System.Drawing.Size(91, 23)
-        Me.LabelX3.TabIndex = 40
-        Me.LabelX3.Text = "Import Cookie:"
-        '
-        'Button25
-        '
-        Me.Button25.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button25.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button25.Location = New System.Drawing.Point(424, 77)
-        Me.Button25.Name = "Button25"
-        Me.Button25.Size = New System.Drawing.Size(106, 27)
-        Me.Button25.TabIndex = 38
-        Me.Button25.Text = "&Set value"
-        Me.Button25.UseVisualStyleBackColor = False
-        '
-        'TextBoxX4
-        '
-        Me.TextBoxX4.BackColor = System.Drawing.Color.White
-        '
-        '
-        '
-        Me.TextBoxX4.Border.Class = "TextBoxBorder"
-        Me.TextBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.TextBoxX4.ForeColor = System.Drawing.Color.Black
-        Me.TextBoxX4.Location = New System.Drawing.Point(56, 51)
-        Me.TextBoxX4.Name = "TextBoxX4"
-        Me.TextBoxX4.Size = New System.Drawing.Size(474, 20)
-        Me.TextBoxX4.TabIndex = 43
-        Me.TextBoxX4.WatermarkText = "Input a value"
-        '
-        'LabelX4
-        '
-        '
-        '
-        '
-        Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX4.Location = New System.Drawing.Point(6, 48)
-        Me.LabelX4.Name = "LabelX4"
-        Me.LabelX4.Size = New System.Drawing.Size(44, 23)
-        Me.LabelX4.TabIndex = 42
-        Me.LabelX4.Text = "Value:"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(103, 21)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(427, 21)
-        Me.ComboBox1.TabIndex = 42
-        '
-        'Button27
-        '
-        Me.Button27.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button27.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button27.Location = New System.Drawing.Point(88, 86)
-        Me.Button27.Name = "Button27"
-        Me.Button27.Size = New System.Drawing.Size(218, 27)
-        Me.Button27.TabIndex = 43
-        Me.Button27.Text = "Enable System Stats"
-        Me.Button27.UseVisualStyleBackColor = False
-        '
         'Preferences
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1447,6 +1417,7 @@ Partial Class Preferences
         Me.TabControl4.ResumeLayout(False)
         Me.TabPage14.ResumeLayout(False)
         Me.GroupBox8.ResumeLayout(False)
+        Me.GroupBox8.PerformLayout()
         Me.TabPage21.ResumeLayout(False)
         Me.TabControl6.ResumeLayout(False)
         Me.TabPage24.ResumeLayout(False)
@@ -1464,13 +1435,13 @@ Partial Class Preferences
         Me.TabPage23.ResumeLayout(False)
         Me.GroupBox9.ResumeLayout(False)
         Me.TabPage19.ResumeLayout(False)
+        Me.GroupBox7.ResumeLayout(False)
         Me.TabPage20.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox7.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1556,8 +1527,6 @@ Partial Class Preferences
     Friend WithEvents TabPage19 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage20 As System.Windows.Forms.TabPage
     Friend WithEvents GroupBox8 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button18 As System.Windows.Forms.Button
-    Friend WithEvents Button19 As System.Windows.Forms.Button
     Friend WithEvents LabelX1 As DevComponents.DotNetBar.LabelX
     Friend WithEvents TextBoxX1 As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents Button24 As System.Windows.Forms.Button
@@ -1577,5 +1546,5 @@ Partial Class Preferences
     Friend WithEvents TextBoxX4 As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents LabelX4 As DevComponents.DotNetBar.LabelX
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Button27 As System.Windows.Forms.Button
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
 End Class

@@ -18,6 +18,7 @@ Public Class Preferences
     End Sub
 
     Private Sub About_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Label6.Text = My.Application.Info.Version.Major.ToString & " Beta-Nightly"
         Label12.Text = "XUL Runner Version: " & Gecko.Xpcom.XulRunnerVersion.ToString
         If My.Settings.Havok_Interface_ChestaGUI = "0" Then
             Button3.Visible = True
@@ -35,12 +36,10 @@ Public Class Preferences
         GeckoWebBrowser1.Navigate("about:license")
         TextBox3.Text = My.Settings.Weapons_UDPInterval.ToString
         If My.Settings.Havok_Interface_SystemStats = "1" Then
-            Button19.Visible = True
-            Button18.Visible = False
+            CheckBox1.Checked = True
         End If
         If My.Settings.Havok_Interface_SystemStats = "0" Then
-            Button19.Visible = False
-            Button18.Visible = True
+            CheckBox1.Checked = False
         End If
         TextBoxX1.Text = My.Settings.BrowserHomepageURL
     End Sub
@@ -232,28 +231,6 @@ Public Class Preferences
         Application.Exit()
     End Sub
 
-    Private Sub Button19_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button19.Click
-        My.Settings.Havok_Interface_SystemStats = "0"
-        My.Settings.Save()
-        If My.Settings.Havok_Interface_SystemStats = "0" Then
-            Button18.Visible = True
-            Button19.Visible = False
-            Form1.Label7.Visible = False
-            Form1.Label10.Visible = False
-        End If
-    End Sub
-
-    Private Sub Button18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button18.Click
-        My.Settings.Havok_Interface_SystemStats = "1"
-        My.Settings.Save()
-        If My.Settings.Havok_Interface_SystemStats = "1" Then
-            Button18.Visible = False
-            Button19.Visible = True
-            Form1.Label7.Visible = True
-            Form1.Label10.Visible = True
-        End If
-    End Sub
-
     Private Sub Button24_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button24.Click
         My.Settings.BrowserHomepageURL = TextBoxX1.Text
         My.Settings.Save()
@@ -265,10 +242,6 @@ Public Class Preferences
         TextBoxX1.Text = My.Settings.BrowserHomepageURL
     End Sub
 
-    Private Sub Button25_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
     Private Sub Button21_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button21.Click
         CookieManager.RemoveAll()
     End Sub
@@ -277,8 +250,23 @@ Public Class Preferences
         CookieManager.ImportCookies(TextBoxX2.Text)
     End Sub
 
-
-    Private Sub Button25_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button25.Click
-
+    Private Sub CheckBox1_CheckedChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked = True Then
+            My.Settings.Havok_Interface_SystemStats = "1"
+            My.Settings.Save()
+            If My.Settings.Havok_Interface_SystemStats = "1" Then
+                   CheckBox1.Checked = True
+                Form1.Label7.Visible = True
+                Form1.Label10.Visible = True
+            End If
+        Else
+            My.Settings.Havok_Interface_SystemStats = "0"
+            My.Settings.Save()
+            If My.Settings.Havok_Interface_SystemStats = "0" Then
+                CheckBox1.Checked = False
+                Form1.Label7.Visible = False
+                Form1.Label10.Visible = False
+            End If
+        End If
     End Sub
 End Class
