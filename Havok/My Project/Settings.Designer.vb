@@ -105,12 +105,12 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property Havok_Enviroment_Lockdown() As Integer
+        Public Property Havok_Environment_Lockdown() As Integer
             Get
-                Return CType(Me("Havok_Enviroment_Lockdown"),Integer)
+                Return CType(Me("Havok_Environment_Lockdown"),Integer)
             End Get
             Set
-                Me("Havok_Enviroment_Lockdown") = value
+                Me("Havok_Environment_Lockdown") = value
             End Set
         End Property
         
@@ -130,72 +130,72 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("UDP-Flooder")>  _
-        Public Property Havok_Enviroment_LastTyped_LastSelectedWeapon() As String
+        Public Property Havok_Environment_LastTyped_LastSelectedWeapon() As String
             Get
-                Return CType(Me("Havok_Enviroment_LastTyped_LastSelectedWeapon"),String)
+                Return CType(Me("Havok_Environment_LastTyped_LastSelectedWeapon"),String)
             End Get
             Set
-                Me("Havok_Enviroment_LastTyped_LastSelectedWeapon") = value
+                Me("Havok_Environment_LastTyped_LastSelectedWeapon") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
-        Public Property Havok_Enviroment_FirstRun() As String
+        Public Property Havok_Environment_FirstRun() As String
             Get
-                Return CType(Me("Havok_Enviroment_FirstRun"),String)
+                Return CType(Me("Havok_Environment_FirstRun"),String)
             End Get
             Set
-                Me("Havok_Enviroment_FirstRun") = value
+                Me("Havok_Environment_FirstRun") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property Havok_Enviroment_LastTyped_LastTypedIPAddress() As String
+        Public Property Havok_Environment_LastTyped_LastTypedIPAddress() As String
             Get
-                Return CType(Me("Havok_Enviroment_LastTyped_LastTypedIPAddress"),String)
+                Return CType(Me("Havok_Environment_LastTyped_LastTypedIPAddress"),String)
             End Get
             Set
-                Me("Havok_Enviroment_LastTyped_LastTypedIPAddress") = value
+                Me("Havok_Environment_LastTyped_LastTypedIPAddress") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property Havok_Enviroment_LastTyped_LastTypedPort() As String
+        Public Property Havok_Environment_LastTyped_LastTypedPort() As String
             Get
-                Return CType(Me("Havok_Enviroment_LastTyped_LastTypedPort"),String)
+                Return CType(Me("Havok_Environment_LastTyped_LastTypedPort"),String)
             End Get
             Set
-                Me("Havok_Enviroment_LastTyped_LastTypedPort") = value
+                Me("Havok_Environment_LastTyped_LastTypedPort") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property Havok_Enviroment_LastTyped_LastTypedMiscBox() As String
+        Public Property Havok_Environment_LastTyped_LastTypedMiscBox() As String
             Get
-                Return CType(Me("Havok_Enviroment_LastTyped_LastTypedMiscBox"),String)
+                Return CType(Me("Havok_Environment_LastTyped_LastTypedMiscBox"),String)
             End Get
             Set
-                Me("Havok_Enviroment_LastTyped_LastTypedMiscBox") = value
+                Me("Havok_Environment_LastTyped_LastTypedMiscBox") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
-        Public Property Havok_Enviroment_RememberLastTyped() As String
+        Public Property Havok_Environment_RememberLastTyped() As String
             Get
-                Return CType(Me("Havok_Enviroment_RememberLastTyped"),String)
+                Return CType(Me("Havok_Environment_RememberLastTyped"),String)
             End Get
             Set
-                Me("Havok_Enviroment_RememberLastTyped") = value
+                Me("Havok_Environment_RememberLastTyped") = value
             End Set
         End Property
         
@@ -298,12 +298,12 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
-        Public Property Havok_Enviroment_HideOnStartup() As String
+        Public Property Havok_Environment_HideOnStartup() As String
             Get
-                Return CType(Me("Havok_Enviroment_HideOnStartup"),String)
+                Return CType(Me("Havok_Environment_HideOnStartup"),String)
             End Get
             Set
-                Me("Havok_Enviroment_HideOnStartup") = value
+                Me("Havok_Environment_HideOnStartup") = value
             End Set
         End Property
         
@@ -316,6 +316,18 @@ Namespace My
             End Get
             Set
                 Me("Havok_Extensions_NetMon_TimerInterval") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
+        Public Property Havok_Environment_DevMessage() As String
+            Get
+                Return CType(Me("Havok_Environment_DevMessage"),String)
+            End Get
+            Set
+                Me("Havok_Environment_DevMessage") = value
             End Set
         End Property
     End Class

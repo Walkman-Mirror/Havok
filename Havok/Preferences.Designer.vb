@@ -120,13 +120,13 @@ Partial Class Preferences
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.SuperTooltip1 = New DevComponents.DotNetBar.SuperTooltip()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.LabelX3 = New DevComponents.DotNetBar.LabelX()
         Me.Button25 = New System.Windows.Forms.Button()
         Me.TextBoxX4 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.LabelX4 = New DevComponents.DotNetBar.LabelX()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Button27 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -213,7 +213,6 @@ Partial Class Preferences
         Me.Button8.Location = New System.Drawing.Point(556, -2)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(26, 23)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button8, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Close The About Window and Save Settings", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button8.TabIndex = 12
         Me.Button8.Text = "X"
         Me.Button8.UseVisualStyleBackColor = False
@@ -341,7 +340,6 @@ Partial Class Preferences
         Me.PictureBox4.Location = New System.Drawing.Point(174, 0)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(379, 300)
-        Me.SuperTooltip1.SetSuperTooltip(Me.PictureBox4, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Visit Iconfinder!", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.PictureBox4.TabIndex = 1
         Me.PictureBox4.TabStop = False
         '
@@ -354,7 +352,6 @@ Partial Class Preferences
         Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(168, 300)
-        Me.SuperTooltip1.SetSuperTooltip(Me.PictureBox2, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Visit 3owl Hosting!", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.PictureBox2.TabIndex = 0
         Me.PictureBox2.TabStop = False
         Me.PictureBox2.Tag = "XC"
@@ -489,7 +486,6 @@ Partial Class Preferences
         Me.Button4.Location = New System.Drawing.Point(450, 170)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(95, 34)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button4, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Deactivate This Mod/Mode", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button4.TabIndex = 41
         Me.Button4.Text = "Deactivate"
         Me.Button4.UseVisualStyleBackColor = False
@@ -501,7 +497,6 @@ Partial Class Preferences
         Me.Button3.Location = New System.Drawing.Point(450, 170)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(95, 34)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button3, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Activate This Mod/Mode", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button3.TabIndex = 40
         Me.Button3.Text = "Activate"
         Me.Button3.UseVisualStyleBackColor = False
@@ -596,6 +591,7 @@ Partial Class Preferences
         '
         'GroupBox8
         '
+        Me.GroupBox8.Controls.Add(Me.Button27)
         Me.GroupBox8.Controls.Add(Me.Button18)
         Me.GroupBox8.Controls.Add(Me.Button19)
         Me.GroupBox8.Location = New System.Drawing.Point(6, 6)
@@ -613,7 +609,6 @@ Partial Class Preferences
         Me.Button18.Location = New System.Drawing.Point(6, 19)
         Me.Button18.Name = "Button18"
         Me.Button18.Size = New System.Drawing.Size(218, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button18, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Enables System Stats", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button18.TabIndex = 42
         Me.Button18.Text = "Enable System Stats"
         Me.Button18.UseVisualStyleBackColor = False
@@ -626,7 +621,6 @@ Partial Class Preferences
         Me.Button19.Location = New System.Drawing.Point(6, 19)
         Me.Button19.Name = "Button19"
         Me.Button19.Size = New System.Drawing.Size(218, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button19, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Disables System Stats", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button19.TabIndex = 41
         Me.Button19.Text = "Disable System Stats"
         Me.Button19.UseVisualStyleBackColor = False
@@ -682,7 +676,6 @@ Partial Class Preferences
         Me.Button17.Location = New System.Drawing.Point(82, 47)
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(109, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button17, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Set Timer Interval", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button17.TabIndex = 36
         Me.Button17.Text = "&Set Interval"
         Me.Button17.UseVisualStyleBackColor = False
@@ -736,7 +729,6 @@ Partial Class Preferences
         Me.Button23.Location = New System.Drawing.Point(6, 147)
         Me.Button23.Name = "Button23"
         Me.Button23.Size = New System.Drawing.Size(218, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button23, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Quits Havok", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button23.TabIndex = 41
         Me.Button23.Text = "Quit Application"
         Me.Button23.UseVisualStyleBackColor = False
@@ -749,7 +741,6 @@ Partial Class Preferences
         Me.Button20.Location = New System.Drawing.Point(6, 114)
         Me.Button20.Name = "Button20"
         Me.Button20.Size = New System.Drawing.Size(218, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button20, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Shutsdown XUL Runner", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button20.TabIndex = 40
         Me.Button20.Text = "Shutdown &XUL Runner"
         Me.Button20.UseVisualStyleBackColor = False
@@ -762,7 +753,6 @@ Partial Class Preferences
         Me.Button15.Location = New System.Drawing.Point(6, 48)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(218, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button15, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Break The Debugger", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button15.TabIndex = 39
         Me.Button15.Text = "Break Deb&ugger"
         Me.Button15.UseVisualStyleBackColor = False
@@ -775,7 +765,6 @@ Partial Class Preferences
         Me.Button14.Location = New System.Drawing.Point(6, 81)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(218, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button14, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Displays The Startup Path of Havok", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button14.TabIndex = 38
         Me.Button14.Text = "&Startup Path"
         Me.Button14.UseVisualStyleBackColor = False
@@ -788,7 +777,6 @@ Partial Class Preferences
         Me.Button12.Location = New System.Drawing.Point(6, 15)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(218, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button12, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Restarts The Havok Application", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button12.TabIndex = 37
         Me.Button12.Text = "Res&tart Havok"
         Me.Button12.UseVisualStyleBackColor = False
@@ -826,7 +814,6 @@ Partial Class Preferences
         Me.Button9.Location = New System.Drawing.Point(6, 147)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(185, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button9, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "View Memory Information", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button9.TabIndex = 41
         Me.Button9.Text = "Gecko &Memory"
         Me.Button9.UseVisualStyleBackColor = False
@@ -839,7 +826,6 @@ Partial Class Preferences
         Me.Button7.Location = New System.Drawing.Point(6, 180)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(185, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button7, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "View The Compartments", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button7.TabIndex = 40
         Me.Button7.Text = "&Gecko C&ompartments"
         Me.Button7.UseVisualStyleBackColor = False
@@ -852,7 +838,6 @@ Partial Class Preferences
         Me.Button6.Location = New System.Drawing.Point(6, 114)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(185, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button6, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "View The Build Configuration", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button6.TabIndex = 39
         Me.Button6.Text = "Gecko &Build Configuration"
         Me.Button6.UseVisualStyleBackColor = False
@@ -865,7 +850,6 @@ Partial Class Preferences
         Me.Button5.Location = New System.Drawing.Point(6, 81)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(185, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button5, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "List The Installed Gecko Addons", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button5.TabIndex = 38
         Me.Button5.Text = "Gecko &Addons"
         Me.Button5.UseVisualStyleBackColor = False
@@ -878,7 +862,6 @@ Partial Class Preferences
         Me.Button2.Location = New System.Drawing.Point(6, 48)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(185, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button2, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "List The Installed Gecko Plugins", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button2.TabIndex = 37
         Me.Button2.Text = "Gecko &Plugins"
         Me.Button2.UseVisualStyleBackColor = False
@@ -891,7 +874,6 @@ Partial Class Preferences
         Me.Button1.Location = New System.Drawing.Point(6, 15)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(185, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button1, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Configure All The Internal Scary Stuff", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button1.TabIndex = 36
         Me.Button1.Text = "Gecko &Configuration"
         Me.Button1.UseVisualStyleBackColor = False
@@ -925,7 +907,6 @@ Partial Class Preferences
         Me.Button11.Location = New System.Drawing.Point(6, 46)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(104, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button11, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "About XUL Runner", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button11.TabIndex = 38
         Me.Button11.Text = "&Abo&ut"
         Me.Button11.UseVisualStyleBackColor = False
@@ -938,7 +919,6 @@ Partial Class Preferences
         Me.Button10.Location = New System.Drawing.Point(6, 15)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(104, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button10, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Install A XUL App", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button10.TabIndex = 37
         Me.Button10.Text = "&Install App."
         Me.Button10.UseVisualStyleBackColor = False
@@ -996,7 +976,6 @@ Partial Class Preferences
         Me.Button24.Location = New System.Drawing.Point(316, 48)
         Me.Button24.Name = "Button24"
         Me.Button24.Size = New System.Drawing.Size(104, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button24, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Set the homepage URL", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button24.TabIndex = 38
         Me.Button24.Text = "&Set Homepage"
         Me.Button24.UseVisualStyleBackColor = False
@@ -1009,7 +988,6 @@ Partial Class Preferences
         Me.Button22.Location = New System.Drawing.Point(426, 48)
         Me.Button22.Name = "Button22"
         Me.Button22.Size = New System.Drawing.Size(104, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button22, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Reset the homepage URL to default", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button22.TabIndex = 37
         Me.Button22.Text = "&Reset To Default"
         Me.Button22.UseVisualStyleBackColor = False
@@ -1102,7 +1080,6 @@ Partial Class Preferences
         Me.Button21.Location = New System.Drawing.Point(424, 48)
         Me.Button21.Name = "Button21"
         Me.Button21.Size = New System.Drawing.Size(106, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button21, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Clear all the browser cookies", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button21.TabIndex = 38
         Me.Button21.Text = "&Clear Cookies"
         Me.Button21.UseVisualStyleBackColor = False
@@ -1115,7 +1092,6 @@ Partial Class Preferences
         Me.Button26.Location = New System.Drawing.Point(312, 48)
         Me.Button26.Name = "Button26"
         Me.Button26.Size = New System.Drawing.Size(106, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button26, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Imports the specified cookie", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button26.TabIndex = 39
         Me.Button26.Text = "&Import Cookie"
         Me.Button26.UseVisualStyleBackColor = False
@@ -1159,7 +1135,6 @@ Partial Class Preferences
         Me.Button16.Location = New System.Drawing.Point(6, 79)
         Me.Button16.Name = "Button16"
         Me.Button16.Size = New System.Drawing.Size(218, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button16, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Restores All Settings Back To Defaults", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button16.TabIndex = 38
         Me.Button16.Text = "&Restore Settings"
         Me.Button16.UseVisualStyleBackColor = False
@@ -1172,7 +1147,6 @@ Partial Class Preferences
         Me.Button13.Location = New System.Drawing.Point(6, 46)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(218, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button13, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Fixes That Annoying Cheslyn Message On Startup", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button13.TabIndex = 37
         Me.Button13.Text = "&Fix Random Cheslyn Message"
         Me.Button13.UseVisualStyleBackColor = False
@@ -1382,7 +1356,6 @@ Partial Class Preferences
         Me.Button25.Location = New System.Drawing.Point(424, 77)
         Me.Button25.Name = "Button25"
         Me.Button25.Size = New System.Drawing.Size(106, 27)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button25, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Clear all the browser cookies", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button25.TabIndex = 38
         Me.Button25.Text = "&Set value"
         Me.Button25.UseVisualStyleBackColor = False
@@ -1422,6 +1395,18 @@ Partial Class Preferences
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(427, 21)
         Me.ComboBox1.TabIndex = 42
+        '
+        'Button27
+        '
+        Me.Button27.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button27.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button27.Location = New System.Drawing.Point(88, 86)
+        Me.Button27.Name = "Button27"
+        Me.Button27.Size = New System.Drawing.Size(218, 27)
+        Me.Button27.TabIndex = 43
+        Me.Button27.Text = "Enable System Stats"
+        Me.Button27.UseVisualStyleBackColor = False
         '
         'Preferences
         '
@@ -1518,7 +1503,6 @@ Partial Class Preferences
     Friend WithEvents TabPage11 As System.Windows.Forms.TabPage
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents SuperTooltip1 As DevComponents.DotNetBar.SuperTooltip
     Friend WithEvents RichTextBox2 As System.Windows.Forms.RichTextBox
     Friend WithEvents RichTextBox3 As System.Windows.Forms.RichTextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
@@ -1593,4 +1577,5 @@ Partial Class Preferences
     Friend WithEvents TextBoxX4 As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents LabelX4 As DevComponents.DotNetBar.LabelX
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Button27 As System.Windows.Forms.Button
 End Class

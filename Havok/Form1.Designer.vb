@@ -110,7 +110,6 @@ Partial Class Form1
         Me.AboutHavokToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SuperTooltip1 = New DevComponents.DotNetBar.SuperTooltip()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
@@ -298,6 +297,7 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Button8)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(863, 35)
@@ -310,7 +310,6 @@ Partial Class Form1
         Me.Button16.Location = New System.Drawing.Point(729, -2)
         Me.Button16.Name = "Button16"
         Me.Button16.Size = New System.Drawing.Size(26, 23)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button16, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Normal Skin", CType(resources.GetObject("Button16.SuperTooltip"), System.Drawing.Image), Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button16.TabIndex = 36
         Me.Button16.Text = "N"
         Me.Button16.UseVisualStyleBackColor = False
@@ -323,7 +322,6 @@ Partial Class Form1
         Me.Button15.Location = New System.Drawing.Point(729, -2)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(26, 23)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button15, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Windows Visual Styles Skin", CType(resources.GetObject("Button15.SuperTooltip"), System.Drawing.Image), Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button15.TabIndex = 35
         Me.Button15.Text = "V"
         Me.Button15.UseVisualStyleBackColor = False
@@ -364,7 +362,6 @@ Partial Class Form1
         Me.Button14.Location = New System.Drawing.Point(761, -2)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(26, 23)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button14, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Gives You An Inspirational Quotation From Deavmi", CType(resources.GetObject("Button14.SuperTooltip"), System.Drawing.Image), Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button14.TabIndex = 22
         Me.Button14.Text = "Q"
         Me.Button14.UseVisualStyleBackColor = False
@@ -376,7 +373,6 @@ Partial Class Form1
         Me.Button13.Location = New System.Drawing.Point(793, -2)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(26, 23)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button13, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Minimize To Tray", CType(resources.GetObject("Button13.SuperTooltip"), System.Drawing.Image), Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button13.TabIndex = 21
         Me.Button13.Text = "_"
         Me.Button13.UseVisualStyleBackColor = False
@@ -409,7 +405,6 @@ Partial Class Form1
         Me.Button8.Location = New System.Drawing.Point(825, -2)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(26, 23)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button8, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Exit Havok", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button8.TabIndex = 12
         Me.Button8.Text = "X"
         Me.Button8.UseVisualStyleBackColor = False
@@ -510,7 +505,6 @@ Partial Class Form1
         Me.Button12.Location = New System.Drawing.Point(121, 19)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(106, 28)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button12, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Displays Info About Havok", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button12.TabIndex = 6
         Me.Button12.Text = "&Preferences"
         Me.Button12.UseVisualStyleBackColor = False
@@ -525,7 +519,6 @@ Partial Class Form1
         Me.Button1.Location = New System.Drawing.Point(6, 19)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(106, 28)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button1, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Check For Updates", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "&Updates"
         Me.Button1.UseVisualStyleBackColor = False
@@ -732,7 +725,6 @@ Partial Class Form1
         Me.Label9.Location = New System.Drawing.Point(50, 46)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(86, 20)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Label9, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Status/Click To Show Tool Window", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Label9.TabIndex = 28
         Me.Label9.Text = "Flooding..."
         Me.Label9.Visible = False
@@ -755,7 +747,6 @@ Partial Class Form1
         Me.ComboBox1.Location = New System.Drawing.Point(6, 27)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(170, 21)
-        Me.SuperTooltip1.SetSuperTooltip(Me.ComboBox1, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Choose You Method of Kaos", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.ComboBox1.TabIndex = 0
         '
         'NotifyIcon1
@@ -921,7 +912,6 @@ Partial Class Form1
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(32, 32)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.SuperTooltip1.SetSuperTooltip(Me.PictureBox2, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.PictureBox2.TabIndex = 27
         Me.PictureBox2.TabStop = False
         Me.PictureBox2.Visible = False
@@ -936,7 +926,6 @@ Partial Class Form1
         Me.Button10.Location = New System.Drawing.Point(290, 19)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(89, 28)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button10, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Resets The Application Session To Defaults", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button10.TabIndex = 4
         Me.Button10.Text = "R&eset"
         Me.Button10.UseVisualStyleBackColor = False
@@ -951,7 +940,6 @@ Partial Class Form1
         Me.Button9.Location = New System.Drawing.Point(195, 19)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(89, 28)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button9, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Pings The Site", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button9.TabIndex = 3
         Me.Button9.Text = "P&ing"
         Me.Button9.UseVisualStyleBackColor = False
@@ -966,7 +954,6 @@ Partial Class Form1
         Me.Button2.Location = New System.Drawing.Point(5, 19)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(89, 28)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button2, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Starts The Selected Weapon", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "St&art"
         Me.Button2.UseVisualStyleBackColor = False
@@ -982,7 +969,6 @@ Partial Class Form1
         Me.Button4.Location = New System.Drawing.Point(100, 19)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(89, 28)
-        Me.SuperTooltip1.SetSuperTooltip(Me.Button4, New DevComponents.DotNetBar.SuperTooltipInfo("", "", "Stops The Selected Weapon", Nothing, Nothing, DevComponents.DotNetBar.eTooltipColor.Gray, False, False, New System.Drawing.Size(0, 0)))
         Me.Button4.TabIndex = 2
         Me.Button4.Text = "St&op"
         Me.Button4.UseVisualStyleBackColor = False
@@ -1213,7 +1199,6 @@ Partial Class Form1
     Friend WithEvents NotifyIcon1 As System.Windows.Forms.NotifyIcon
     Friend WithEvents ReflectionImage1 As DevComponents.DotNetBar.Controls.ReflectionImage
     Friend WithEvents Button14 As System.Windows.Forms.Button
-    Friend WithEvents SuperTooltip1 As DevComponents.DotNetBar.SuperTooltip
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents Button10 As System.Windows.Forms.Button

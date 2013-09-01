@@ -145,12 +145,6 @@
         MLMd/wtebolG3sX+YwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="SuperTooltip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="SuperTooltip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="RichTextBox2.Text" xml:space="preserve">
     <value>Deavmi
 -
@@ -2064,7 +2058,4 @@ By The Way This Release Is Dedicated To My Best Friends</value>
         AElFTkSuQmCC
 </value>
   </data>
-  <metadata name="SuperTooltip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>

@@ -307,9 +307,9 @@ Public Class Form1
     End Sub
 
     Private Sub GetLastTyped()
-        TextBox1.Text = My.Settings.Havok_Enviroment_LastTyped_LastTypedIPAddress
-        TextBox2.Text = My.Settings.Havok_Enviroment_LastTyped_LastTypedMiscBox
-        TextBox3.Text = My.Settings.Havok_Enviroment_LastTyped_LastTypedPort
+        TextBox1.Text = My.Settings.Havok_Environment_LastTyped_LastTypedIPAddress
+        TextBox2.Text = My.Settings.Havok_Environment_LastTyped_LastTypedMiscBox
+        TextBox3.Text = My.Settings.Havok_Environment_LastTyped_LastTypedPort
     End Sub
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -319,7 +319,7 @@ Public Class Form1
 
 
         'Reads The User Settings For Havok
-        If My.Settings.Havok_Enviroment_HideOnStartup = "true" Then
+        If My.Settings.Havok_Environment_HideOnStartup = "true" Then
             'Hide The Main Havok Window
             Me.Hide()
         End If
@@ -389,7 +389,7 @@ Public Class Form1
             ToolStripStatusLabel2.Visible = False
         End If
         'Just Gets Sum More Settings
-        If My.Settings.Havok_Enviroment_Lockdown = "0" Then
+        If My.Settings.Havok_Environment_Lockdown = "0" Then
             'Deactivates Lockdown Mode
             EnableToolStripMenuItem1.Visible = True
             Me.Enabled = True
@@ -398,7 +398,7 @@ Public Class Form1
             ListBox1.Items.Add("---------------------------")
             ListBox1.Items.Add("Lockdown Mode Disabled!")
         End If
-        If My.Settings.Havok_Enviroment_Lockdown = "1" Then
+        If My.Settings.Havok_Environment_Lockdown = "1" Then
             'Activates Lockdown Mode
             EnableToolStripMenuItem1.Visible = False
             Me.Enabled = False
@@ -410,10 +410,10 @@ Public Class Form1
             ListBox1.Items.Add("Lockdown Mode Enabled!")
         End If
         'Check If LastTyped Is Activated
-        If My.Settings.Havok_Enviroment_RememberLastTyped = "true" Then
+        If My.Settings.Havok_Environment_RememberLastTyped = "true" Then
             GetLastTyped()
         End If
-        If My.Settings.Havok_Enviroment_RememberLastTyped = "false" Then
+        If My.Settings.Havok_Environment_RememberLastTyped = "false" Then
             'This Is Useless Putting Here, But I Always Do
         End If
         'Checks More Settings
@@ -431,11 +431,11 @@ Public Class Form1
         ToolStripMenuItem6.Text = My.User.Name.ToString
         OSToolStripMenuItem.Text = My.Computer.Info.OSFullName
         AaaaToolStripMenuItem.Text = My.Computer.Info.OSVersion
-        ComboBox1.Text = My.Settings.Havok_Enviroment_LastTyped_LastSelectedWeapon
+        ComboBox1.Text = My.Settings.Havok_Environment_LastTyped_LastSelectedWeapon
 
 
         'Lord Deavmied This
-        If My.Settings.Havok_Enviroment_FirstRun = "true" Then
+        If My.Settings.Havok_Environment_FirstRun = "true" Then
             LicenseAgreement.ShowDialog()
             NotifyIconContextMenuStrip1.Enabled = False
         End If
@@ -453,8 +453,8 @@ Public Class Form1
         Preferences.WebBrowser1.Navigate("http://www.gnu.org/licenses/gpl.txt")
         Preferences.WebBrowser2.Navigate("http://deavmi.3owl.com/index.php/User_talk:Deavmi")
         WebBrowser1StatusText.Start()
-       
-     
+
+
         NetMonTimer.Start()
 
         Label6.Text = "v" & My.Application.Info.Version.ToString
@@ -617,9 +617,9 @@ Public Class Form1
     End Sub
 
     Private Sub EnableToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EnableToolStripMenuItem1.Click
-        My.Settings.Havok_Enviroment_Lockdown = "1"
+        My.Settings.Havok_Environment_Lockdown = "1"
         My.Settings.Save()
-        If My.Settings.Havok_Enviroment_Lockdown = "1" Then
+        If My.Settings.Havok_Environment_Lockdown = "1" Then
             EnableToolStripMenuItem1.Visible = False
             Me.Enabled = False
             DisableToolStripMenuItem.Visible = True
@@ -633,9 +633,9 @@ Public Class Form1
     End Sub
 
     Private Sub DisableToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DisableToolStripMenuItem.Click
-        My.Settings.Havok_Enviroment_Lockdown = "0"
+        My.Settings.Havok_Environment_Lockdown = "0"
         My.Settings.Save()
-        If My.Settings.Havok_Enviroment_Lockdown = "0" Then
+        If My.Settings.Havok_Environment_Lockdown = "0" Then
             EnableToolStripMenuItem1.Visible = True
             Me.Enabled = True
             DisableToolStripMenuItem.Visible = False
@@ -784,7 +784,7 @@ Public Class Form1
         Else
             UDPFlooderStatsBox.Close()
         End If
-        My.Settings.Havok_Enviroment_LastTyped_LastSelectedWeapon = ComboBox1.Text.ToString
+        My.Settings.Havok_Environment_LastTyped_LastSelectedWeapon = ComboBox1.Text.ToString
         My.Settings.Save()
     End Sub
 
@@ -824,22 +824,22 @@ Public Class Form1
     End Sub
 
     Private Sub TextBox2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox2.TextChanged
-        If My.Settings.Havok_Enviroment_RememberLastTyped = "true" Then
-            My.Settings.Havok_Enviroment_LastTyped_LastTypedMiscBox = TextBox2.Text
+        If My.Settings.Havok_Environment_RememberLastTyped = "true" Then
+            My.Settings.Havok_Environment_LastTyped_LastTypedMiscBox = TextBox2.Text
             My.Settings.Save()
         End If
     End Sub
 
     Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
-        If My.Settings.Havok_Enviroment_RememberLastTyped = "true" Then
-            My.Settings.Havok_Enviroment_LastTyped_LastTypedIPAddress = TextBox1.Text
+        If My.Settings.Havok_Environment_RememberLastTyped = "true" Then
+            My.Settings.Havok_Environment_LastTyped_LastTypedIPAddress = TextBox1.Text
             My.Settings.Save()
         End If
     End Sub
 
     Private Sub TextBox3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox3.TextChanged
-        If My.Settings.Havok_Enviroment_RememberLastTyped = "true" Then
-            My.Settings.Havok_Enviroment_LastTyped_LastTypedPort = TextBox3.Text
+        If My.Settings.Havok_Environment_RememberLastTyped = "true" Then
+            My.Settings.Havok_Environment_LastTyped_LastTypedPort = TextBox3.Text
             My.Settings.Save()
         End If
     End Sub

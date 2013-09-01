@@ -14,28 +14,28 @@
     <Setting Name="Havok_Interface_ChestaGUI" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="Havok_Enviroment_Lockdown" Type="System.Int32" Scope="User">
+    <Setting Name="Havok_Environment_Lockdown" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="BrowserHomepageURL" Type="(Web Service URL)" Scope="User">
       <Value Profile="(Default)">about:blank</Value>
     </Setting>
-    <Setting Name="Havok_Enviroment_LastTyped_LastSelectedWeapon" Type="System.String" Scope="User">
+    <Setting Name="Havok_Environment_LastTyped_LastSelectedWeapon" Type="System.String" Scope="User">
       <Value Profile="(Default)">UDP-Flooder</Value>
     </Setting>
-    <Setting Name="Havok_Enviroment_FirstRun" Type="System.String" Scope="User">
+    <Setting Name="Havok_Environment_FirstRun" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
-    <Setting Name="Havok_Enviroment_LastTyped_LastTypedIPAddress" Type="System.String" Scope="User">
+    <Setting Name="Havok_Environment_LastTyped_LastTypedIPAddress" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Havok_Enviroment_LastTyped_LastTypedPort" Type="System.String" Scope="User">
+    <Setting Name="Havok_Environment_LastTyped_LastTypedPort" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Havok_Enviroment_LastTyped_LastTypedMiscBox" Type="System.String" Scope="User">
+    <Setting Name="Havok_Environment_LastTyped_LastTypedMiscBox" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Havok_Enviroment_RememberLastTyped" Type="System.String" Scope="User">
+    <Setting Name="Havok_Environment_RememberLastTyped" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
     <Setting Name="Havok_Interface_CurrentTimeClockEnabled" Type="System.String" Scope="User">
@@ -62,11 +62,14 @@
     <Setting Name="Havok_BrowserNotifyOnSecurityStateChanged" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
-    <Setting Name="Havok_Enviroment_HideOnStartup" Type="System.String" Scope="User">
+    <Setting Name="Havok_Environment_HideOnStartup" Type="System.String" Scope="User">
       <Value Profile="(Default)">false</Value>
     </Setting>
     <Setting Name="Havok_Extensions_NetMon_TimerInterval" Type="System.String" Scope="User">
       <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="Havok_Environment_DevMessage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">true</Value>
     </Setting>
   </Settings>
 </SettingsFile>
