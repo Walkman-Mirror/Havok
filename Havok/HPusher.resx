@@ -135,16 +135,16 @@
 </value>
   </data>
   <metadata name="HPusher_File_1_Uploader.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>972, 10</value>
+    <value>17, 17</value>
   </metadata>
   <metadata name="HPusher_File_4_Uploader.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1163, 10</value>
+    <value>196, 17</value>
   </metadata>
   <metadata name="HPusher_File_2_Uploader.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1354, 10</value>
+    <value>375, 17</value>
   </metadata>
   <metadata name="HPusher_File_3_Uploader.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 47</value>
+    <value>554, 17</value>
   </metadata>
   <data name="Button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -163,7 +163,7 @@
 </value>
   </data>
   <metadata name="HPusher_File_5_Uploader.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>208, 47</value>
+    <value>733, 17</value>
   </metadata>
   <data name="Button15.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

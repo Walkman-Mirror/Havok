@@ -49,7 +49,6 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.UDPFlooder = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.TextBox3 = New DevComponents.DotNetBar.Controls.TextBoxX()
@@ -127,6 +126,10 @@ Partial Class Form1
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewSessionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OnSameInstanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExternelInstanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator18 = New System.Windows.Forms.ToolStripSeparator()
         Me.MinimizeToTrayToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
         Me.QuitHavokToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -160,6 +163,7 @@ Partial Class Form1
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -249,7 +253,8 @@ Partial Class Form1
         Me.ToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton6.Name = "ToolStripButton6"
         Me.ToolStripButton6.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton6.Text = "ToolStripButton6"
+        Me.ToolStripButton6.Text = "Go"
+        Me.ToolStripButton6.ToolTipText = "Go"
         '
         'ToolStripSeparator13
         '
@@ -263,7 +268,7 @@ Partial Class Form1
         Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton5.Name = "ToolStripButton5"
         Me.ToolStripButton5.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton5.Text = "ToolStripButton1"
+        Me.ToolStripButton5.Text = "Back"
         '
         'ToolStripButton4
         '
@@ -272,7 +277,7 @@ Partial Class Form1
         Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton4.Name = "ToolStripButton4"
         Me.ToolStripButton4.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton4.Text = "ToolStripButton1"
+        Me.ToolStripButton4.Text = "Forward"
         '
         'ToolStripButton3
         '
@@ -425,9 +430,6 @@ Partial Class Form1
         Me.Button8.TabIndex = 12
         Me.Button8.Text = "X"
         Me.Button8.UseVisualStyleBackColor = False
-        '
-        'UDPFlooder
-        '
         '
         'GroupBox3
         '
@@ -747,7 +749,7 @@ Partial Class Form1
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"UDP-Flooder", "-----", "Remote-PC", "-----", "HGetter", "HPusher", "-----", "RouterLogin", "-----", "Page-Info", "Encryption-Level", "View-Source", "HTML-Live-Editor", "JS-Console"})
+        Me.ComboBox1.Items.AddRange(New Object() {"UDP-Flooder", "-----", "Remote-PC", "-----", "HGetter", "HPusher", "-----", "RouterAdmin", "-----", "Page-Info", "Encryption-Level", "View-Source", "HTML-Live-Editor", "JS-Console"})
         Me.ComboBox1.Location = New System.Drawing.Point(6, 27)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(170, 21)
@@ -1099,10 +1101,37 @@ Partial Class Form1
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MinimizeToTrayToolStripMenuItem, Me.ToolStripSeparator14, Me.QuitHavokToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewSessionToolStripMenuItem, Me.ToolStripSeparator18, Me.MinimizeToTrayToolStripMenuItem, Me.ToolStripSeparator14, Me.QuitHavokToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(35, 20)
         Me.FileToolStripMenuItem.Text = "&File"
+        '
+        'NewSessionToolStripMenuItem
+        '
+        Me.NewSessionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OnSameInstanceToolStripMenuItem, Me.ExternelInstanceToolStripMenuItem})
+        Me.NewSessionToolStripMenuItem.Name = "NewSessionToolStripMenuItem"
+        Me.NewSessionToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.NewSessionToolStripMenuItem.Text = "&New session"
+        Me.NewSessionToolStripMenuItem.ToolTipText = "Starts a new session"
+        '
+        'OnSameInstanceToolStripMenuItem
+        '
+        Me.OnSameInstanceToolStripMenuItem.Name = "OnSameInstanceToolStripMenuItem"
+        Me.OnSameInstanceToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.OnSameInstanceToolStripMenuItem.Text = "&On same instance"
+        Me.OnSameInstanceToolStripMenuItem.ToolTipText = "Starts a new session on the same instance"
+        '
+        'ExternelInstanceToolStripMenuItem
+        '
+        Me.ExternelInstanceToolStripMenuItem.Name = "ExternelInstanceToolStripMenuItem"
+        Me.ExternelInstanceToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.ExternelInstanceToolStripMenuItem.Text = "&Externel instance"
+        Me.ExternelInstanceToolStripMenuItem.ToolTipText = "Starts a new session on an externel instance"
+        '
+        'ToolStripSeparator18
+        '
+        Me.ToolStripSeparator18.Name = "ToolStripSeparator18"
+        Me.ToolStripSeparator18.Size = New System.Drawing.Size(157, 6)
         '
         'MinimizeToTrayToolStripMenuItem
         '
@@ -1377,7 +1406,6 @@ Partial Class Form1
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents UDPFlooder As System.Windows.Forms.Timer
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
     Friend WithEvents Button12 As System.Windows.Forms.Button
@@ -1507,5 +1535,10 @@ Partial Class Form1
     Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Timer2 As System.Windows.Forms.Timer
+    Friend WithEvents NewSessionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents OnSameInstanceToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ExternelInstanceToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator18 As System.Windows.Forms.ToolStripSeparator
 
 End Class

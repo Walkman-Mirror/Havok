@@ -441,7 +441,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://fs1.d-h.st/download/00073/LrZ/latest_nightly.zip")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://deavmi.github.io/Havok/updates/nightly/Release.exe")>  _
         Public Property Havok_Enviroment_NightlyMirrorURL() As String
             Get
                 Return CType(Me("Havok_Enviroment_NightlyMirrorURL"),String)
@@ -453,7 +453,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://fs1.d-h.st/download/00073/5lz/latest_stable.zip")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://deavmi.github.io/Havok/updates/stable/Release.exe")>  _
         Public Property Havok_Enviroment_StableMirrorURL() As String
             Get
                 Return CType(Me("Havok_Enviroment_StableMirrorURL"),String)
@@ -477,7 +477,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("/cfg/login")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public Property Havok_Weapons_Router_Login_LoginPageSlash() As String
             Get
                 Return CType(Me("Havok_Weapons_Router_Login_LoginPageSlash"),String)
@@ -496,6 +496,18 @@ Namespace My
             End Get
             Set
                 Me("Havok_Weapons_Router_Login_AutoOpenRouterPage") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
+        Public Property Havok_Environment_StartNewSessionsOnSameInstance() As String
+            Get
+                Return CType(Me("Havok_Environment_StartNewSessionsOnSameInstance"),String)
+            End Get
+            Set
+                Me("Havok_Environment_StartNewSessionsOnSameInstance") = value
             End Set
         End Property
     End Class

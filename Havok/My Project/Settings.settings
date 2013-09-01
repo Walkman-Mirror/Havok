@@ -99,18 +99,21 @@
       <Value Profile="(Default)">false</Value>
     </Setting>
     <Setting Name="Havok_Enviroment_NightlyMirrorURL" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://fs1.d-h.st/download/00073/LrZ/latest_nightly.zip</Value>
+      <Value Profile="(Default)">http://deavmi.github.io/Havok/updates/nightly/Release.exe</Value>
     </Setting>
     <Setting Name="Havok_Enviroment_StableMirrorURL" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://fs1.d-h.st/download/00073/5lz/latest_stable.zip</Value>
+      <Value Profile="(Default)">http://deavmi.github.io/Havok/updates/stable/Release.exe</Value>
     </Setting>
     <Setting Name="Havok_Weapons_Router_Login_GatewayIP" Type="System.String" Scope="User">
       <Value Profile="(Default)">192.168.1.1</Value>
     </Setting>
     <Setting Name="Havok_Weapons_Router_Login_LoginPageSlash" Type="System.String" Scope="User">
-      <Value Profile="(Default)">/cfg/login</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Havok_Weapons_Router_Login_AutoOpenRouterPage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">true</Value>
+    </Setting>
+    <Setting Name="Havok_Environment_StartNewSessionsOnSameInstance" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
   </Settings>

