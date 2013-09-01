@@ -158,10 +158,10 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Include="Checkforupdates.Designer.vb">
+      <DependentUpon>Checkforupdates.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="Checkforupdates.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Exit.Designer.vb">
@@ -227,6 +227,12 @@
     <Compile Include="RemotePC.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RouterLogin.Designer.vb">
+      <DependentUpon>RouterLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RouterLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Tolly.Designer.vb">
       <DependentUpon>Tolly.vb</DependentUpon>
     </Compile>
@@ -272,8 +278,8 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <EmbeddedResource Include="Checkforupdates.resx">
+      <DependentUpon>Checkforupdates.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Exit.resx">
       <DependentUpon>Exit.vb</DependentUpon>
@@ -305,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RemotePC.resx">
       <DependentUpon>RemotePC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RouterLogin.resx">
+      <DependentUpon>RouterLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tolly.resx">
       <DependentUpon>Tolly.vb</DependentUpon>
@@ -390,82 +399,82 @@
   <ItemGroup>
     <PublishFile Include="DevComponents.DotNetBar2">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevComponents.DotNetBar2.xml">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="EnvDTE">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="EnvDTE.xml">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="EnvDTE80">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="EnvDTE80.xml">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="geckofx-core-15.pdb">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="Geckofx-Winforms-15.pdb">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>

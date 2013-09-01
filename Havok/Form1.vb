@@ -102,22 +102,20 @@ Public Class Form1
         End If
 
 
+        'MULTISTAKING IS CURRENTLY IN PROGRESS STARTING FROM HERE
+        '!!!!!!!!!!!!!!!!!!!!!!!!
+        '!!!!!!!!!!!!!!!!!!!!!!!!
+        '!!!!!!!!!!!!!!!!!!!!!!!!
+        '!!!!!!!!!!!!!!!!!!!!!!!!
+        '!!!!!!!!!!!!!!!!!!!!!!!!
+        '!!!!!!!!!!!!!!!!!!!!!!!!
 
         If ComboBox1.Text = "HGetter" Then
-            ComboBox1.Enabled = "False"
-            PictureBox2.Show()
-            Label9.Visible = "True"
-            Label9.Text = "HGetter"
             ListBox1.Items.Add("---------------------------")
             ListBox1.Items.Add("Starting HGetter...")
             HGetter.Show()
-            Button2.Enabled = "False"
-            Button4.Enabled = "True"
-            PictureBox2.Show()
-            Label9.Visible = "True"
             Button2.Enabled = False
             Button4.Enabled = True
-
 
 
         End If
@@ -125,20 +123,26 @@ Public Class Form1
 
 
         If ComboBox1.Text = "HPusher" Then
-            ComboBox1.Enabled = "False"
-            PictureBox2.Show()
-            Label9.Visible = "True"
-            Label9.Text = "HPusher"
+        
             ListBox1.Items.Add("---------------------------")
             ListBox1.Items.Add("Starting HPusher...")
             HPusher.Show()
-            PictureBox2.Show()
-            Label9.Visible = "True"
-
             Button2.Enabled = False
             Button4.Enabled = True
 
+
         End If
+
+
+
+        'ENDING HERE
+        '!!!!!!!!!!!!!!!!!!!!!!!!
+        '!!!!!!!!!!!!!!!!!!!!!!!!
+        '!!!!!!!!!!!!!!!!!!!!!!!!
+        '!!!!!!!!!!!!!!!!!!!!!!!!
+        '!!!!!!!!!!!!!!!!!!!!!!!!
+        '!!!!!!!!!!!!!!!!!!!!!!!!
+
 
         If ComboBox1.Text = "Encryption-Level" Then
             ComboBox1.Enabled = "False"
@@ -239,6 +243,12 @@ Public Class Form1
         If ComboBox1.Text = "HGetter" Then
             HGetter.Close()
         End If
+
+        If ComboBox1.Text = "HPusher" Then
+            HPusher.Close()
+        End If
+
+
 
         If ComboBox1.Text = "Encryption-Level" Then
             EncryptionLevel.Close()
@@ -354,14 +364,14 @@ Public Class Form1
             Label1.ForeColor = Color.Black
             Label6.ForeColor = Color.Black
         End If
-        If My.Settings.Havok_Interface_VisualStyling = "0" Then
-            Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
+        If My.Settings.Havok_Interface_VisualStyling = "false" Then
+            Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
             Button15.Visible = False
             Button16.Visible = True
         End If
 
-        If My.Settings.Havok_Interface_VisualStyling = "1" Then
-            Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        If My.Settings.Havok_Interface_VisualStyling = "true" Then
+            Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
             Button15.Visible = True
             Button16.Visible = False
         End If
@@ -403,8 +413,10 @@ Public Class Form1
         If My.Settings.Havok_Environment_Lockdown = "0" Then
             'Deactivates Lockdown Mode
             EnableToolStripMenuItem1.Visible = True
+            EnableToolStripMenuItem.Visible = True
             Me.Enabled = True
             DisableToolStripMenuItem.Visible = False
+            DisableToolStripMenuItem1.Visible = False
             Label9.Visible = False
             ListBox1.Items.Add("---------------------------")
             ListBox1.Items.Add("Lockdown Mode Disabled!")
@@ -412,8 +424,10 @@ Public Class Form1
         If My.Settings.Havok_Environment_Lockdown = "1" Then
             'Activates Lockdown Mode
             EnableToolStripMenuItem1.Visible = False
+            EnableToolStripMenuItem.Visible = False
             Me.Enabled = False
             DisableToolStripMenuItem.Visible = True
+            DisableToolStripMenuItem1.Visible = True
             PictureBox2.Visible = True
             Label9.Visible = True
             Label9.Text = "Lockdown"
@@ -585,21 +599,20 @@ Public Class Form1
     End Sub
 
     Private Sub Button15_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button15.Click
-
-        My.Settings.Havok_Interface_VisualStyling = "0"
+        My.Settings.Havok_Interface_VisualStyling = "false"
         My.Settings.Save()
-        If My.Settings.Havok_Interface_VisualStyling = "0" Then
-            Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
+        If My.Settings.Havok_Interface_VisualStyling = "false" Then
+            Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
             Button15.Visible = False
             Button16.Visible = True
         End If
     End Sub
 
     Private Sub Button16_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button16.Click
-        My.Settings.Havok_Interface_VisualStyling = "1"
+        My.Settings.Havok_Interface_VisualStyling = "true"
         My.Settings.Save()
-        If My.Settings.Havok_Interface_VisualStyling.ToString = "1" Then
-            Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        If My.Settings.Havok_Interface_VisualStyling.ToString = "true" Then
+            Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
             Button15.Visible = True
             Button16.Visible = False
         End If
@@ -610,7 +623,11 @@ Public Class Form1
     End Sub
 
     Private Sub AboutHavokToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AboutHavokToolStripMenuItem.Click
-        Preferences.Show()
+        If Preferences.Visible = True Then
+
+        Else
+            Preferences.ShowDialog()
+        End If
     End Sub
 
     Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem1.Click
@@ -621,28 +638,16 @@ Public Class Form1
         Updates.Show()
     End Sub
 
-    Private Sub EnableToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EnableToolStripMenuItem.Click
-        GroupBox2.Visible = True
-        EnableToolStripMenuItem.Visible = False
-        DisbaleToolStripMenuItem.Visible = True
-    End Sub
-
-    Private Sub DisbaleToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DisbaleToolStripMenuItem.Click
-        GroupBox2.Visible = False
-        EnableToolStripMenuItem.Visible = True
-        DisbaleToolStripMenuItem.Visible = False
-    End Sub
-
     Private Sub EnableToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EnableToolStripMenuItem1.Click
         My.Settings.Havok_Environment_Lockdown = "1"
         My.Settings.Save()
         If My.Settings.Havok_Environment_Lockdown = "1" Then
             EnableToolStripMenuItem1.Visible = False
+            EnableToolStripMenuItem.Visible = False
             Me.Enabled = False
             DisableToolStripMenuItem.Visible = True
+            DisableToolStripMenuItem1.Visible = True
             PictureBox2.Visible = True
-            Label9.Visible = True
-            Label9.Text = "Lockdown"
             ListBox1.Items.Add("---------------------------")
             ListBox1.Items.Add("Lockdown Mode Enabled!")
             Label6.Text = "Lockdown Mode"
@@ -654,10 +659,11 @@ Public Class Form1
         My.Settings.Save()
         If My.Settings.Havok_Environment_Lockdown = "0" Then
             EnableToolStripMenuItem1.Visible = True
+            EnableToolStripMenuItem.Visible = True
             Me.Enabled = True
             DisableToolStripMenuItem.Visible = False
-            PictureBox2.Visible = False
-            Label9.Visible = False
+            DisableToolStripMenuItem1.Visible = False
+            PictureBox2.Visible = True
             ListBox1.Items.Add("---------------------------")
             ListBox1.Items.Add("Lockdown Mode Disabled!")
             Label6.Text = "v" & My.Application.Info.Version.ToString
@@ -723,26 +729,27 @@ Public Class Form1
         PictureBox2.Visible = True
         Label9.Visible = True
         Label9.Text = "Busy"
-        ListBox1.Items.Add("(GeckoFX) Navigating...")
+        ListBox1.Items.Add("[GeckoFX] (Main-Browser) Navigating...")
         GroupBox1.Text = "Web Browser - [Navigating]"
-        LabelX2.Text = "Navigating"
+        ToolStripLabel1.Text = "Navigating"
         WebBrowser1.Cursor = Cursors.AppStarting
         ToolStripProgressBar1.Visible = True
         OpenPageInDeafultBrowserToolStripMenuItem.Enabled = False
-        LabelX2.Text = "Waiting..."
+        ToolStripLabel1.Text = "Waiting..."
+        ToolStripLabel1.Enabled = False
     End Sub
 
     Private Sub WebBrowser1_Navigated(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WebBrowser1.Navigated
-        LabelX2.Text = WebBrowser1.DocumentTitle
+        ToolStripLabel1.Text = WebBrowser1.DocumentTitle
         PictureBox2.Visible = False
         Label9.Visible = False
-        ListBox1.Items.Add("(GeckoFX) Navigation Completed")
+        ListBox1.Items.Add("[GeckoFX] (Main-Browser) Navigation Completed")
         GroupBox1.Text = "Web Browser - [" & WebBrowser1.DocumentTitle.ToString & "]"
         TextBoxX1.Text = WebBrowser1.Document.Url.ToString
         WebBrowser1.Cursor = Cursors.Default
         ToolStripProgressBar1.Visible = False
         OpenPageInDeafultBrowserToolStripMenuItem.Enabled = True
-        LabelX2.Text = WebBrowser1.DocumentTitle.ToString
+        ToolStripLabel1.Text = WebBrowser1.DocumentTitle.ToString
     End Sub
 
     Private Sub Button17_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -795,6 +802,47 @@ Public Class Form1
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
+        'START MULTITASKING CODE HERE
+        'START MULTITASKING CODE HERE
+        'START MULTITASKING CODE HERE
+        'START MULTITASKING CODE HERE
+        'START MULTITASKING CODE HERE
+        'START MULTITASKING CODE HERE
+        'START MULTITASKING CODE HERE
+        'START MULTITASKING CODE HERE
+
+        If ComboBox1.Text = "HGetter" Then
+            If HGetter.Visible = True Then
+                Button2.Enabled = False
+                Button4.Enabled = True
+            Else
+                Button2.Enabled = True
+                Button4.Enabled = False
+            End If
+        End If
+
+        If ComboBox1.Text = "HPusher" Then
+            If HPusher.Visible = True Then
+                Button2.Enabled = False
+                Button4.Enabled = True
+            Else
+                Button2.Enabled = True
+                Button4.Enabled = False
+            End If
+        End If
+
+
+
+
+        'STOP MULTITASKING CODE HERE
+        'STOP MULTITASKING CODE HERE
+        'STOP MULTITASKING CODE HERE
+        'STOP MULTITASKING CODE HERE
+        'STOP MULTITASKING CODE HERE
+        'STOP MULTITASKING CODE HERE
+        'STOP MULTITASKING CODE HERE
+
+
         If ComboBox1.Text = "UDP-Flooder" Then
             UDPFlooderStatsBox.Show()
         Else
@@ -808,7 +856,7 @@ Public Class Form1
         NetStatus.Show()
     End Sub
 
-    Private Sub NetStatusToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NetStatusToolStripMenuItem1.Click
+    Private Sub NetStatusToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         NetStatus.Show()
     End Sub
 
@@ -872,7 +920,7 @@ Public Class Form1
         WebBrowser1.GoForward()
     End Sub
 
-    Private Sub LabelX2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LabelX2.DoubleClick
+    Private Sub LabelX2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripLabel1.DoubleClick
         'New feature coming here soon.
     End Sub
 
@@ -885,11 +933,11 @@ Public Class Form1
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AboutToolStripMenuItem.Click
-        Preferences.Show()
+        Preferences.ShowDialog()
     End Sub
 
     Private Sub PreferencesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreferencesToolStripMenuItem.Click
-        Preferences.Show()
+        Preferences.ShowDialog()
     End Sub
 
     Private Sub RestartToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RestartToolStripMenuItem.Click
@@ -907,6 +955,22 @@ Public Class Form1
         mailmachine.Port = ("")
         mailmachine.Credentials = "tristankildaire@gmail.com"
 
+    End Sub
+
+    Private Sub VisitDeavmisSIteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VisitDeavmisSIteToolStripMenuItem.Click
+        Process.Start("http://deavmi.github.io/Deavmi")
+    End Sub
+
+    Private Sub MinimizeToTrayToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MinimizeToTrayToolStripMenuItem1.Click
+        Me.Hide()
+    End Sub
+
+    Private Sub WebBrowser1_DocumentCompleted(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WebBrowser1.DocumentCompleted
+        ToolStripLabel1.Enabled = True
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        RouterLogin.Show()
     End Sub
 End Class
 

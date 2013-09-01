@@ -1,9 +1,5 @@
 ﻿Public Class PageInfo
 
-    Private Sub Button17_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button17.Click
-        Me.Close()
-    End Sub
-
     Private Sub PageInfo_Loaaad(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         If My.Settings.Havok_Interface_UseDoubleBuffers = "true" Then
             Me.DoubleBuffered = True

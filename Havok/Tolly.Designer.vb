@@ -52,6 +52,7 @@ Partial Class Tolly
         '
         Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX1.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX1.ForeColor = System.Drawing.Color.Black
         Me.LabelX1.Location = New System.Drawing.Point(12, 347)
         Me.LabelX1.Name = "LabelX1"
         Me.LabelX1.Size = New System.Drawing.Size(456, 30)
@@ -66,15 +67,13 @@ Partial Class Tolly
         '
         Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX2.ForeColor = System.Drawing.Color.Black
         Me.LabelX2.Location = New System.Drawing.Point(12, 383)
         Me.LabelX2.Name = "LabelX2"
         Me.LabelX2.Size = New System.Drawing.Size(456, 21)
         Me.LabelX2.TabIndex = 3
         Me.LabelX2.Text = "Version"
         Me.LabelX2.TextAlignment = System.Drawing.StringAlignment.Center
-        '
-        'StartupDepotChecker
-        '
         '
         'PictureBox1
         '

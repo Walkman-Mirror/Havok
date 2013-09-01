@@ -45,34 +45,54 @@ Public Class Preferences
         If My.Settings.Havok_Interface_UseDoubleBuffers = "false" Then
             CheckBox5.Checked = False
         End If
+        If My.Settings.Havok_Interface_VisualStyling = "true" Then
+            CheckBox6.Checked = True
+        End If
+        If My.Settings.Havok_Interface_VisualStyling = "false" Then
+            CheckBox6.Checked = False
+        End If
         If My.Settings.Havok_Interface_ChestaGUI = "0" Then
             Button3.Visible = True
             Button4.Visible = False
         End If
-        If My.Settings.Havok_Interface_ChestaGUI = "1" Then
-            Button3.Visible = False
-            Button4.Visible = True
+            If My.Settings.Havok_Interface_ChestaGUI = "1" Then
+                Button3.Visible = False
+                Button4.Visible = True
+            End If
+            If File.Exists("cheslyn") Then
+                Button13.Enabled = True
+            Else
+                Button13.Enabled = False
+            End If
+            If My.Settings.Havok_Interface_SystemStats = "1" Then
+                CheckBox1.Checked = True
+            End If
+            If My.Settings.Havok_Interface_SystemStats = "0" Then
+                CheckBox1.Checked = False
+            End If
+            If My.Settings.Havok_Interface_CurrentTimeClockEnabled = "true" Then
+                CheckBox2.Checked = True
+            End If
+            If My.Settings.Havok_Interface_CurrentTimeClockEnabled = "false" Then
+                CheckBox2.Checked = False
         End If
-        If File.Exists("cheslyn") Then
-            Button13.Enabled = True
-        Else
-            Button13.Enabled = False
+        If My.Settings.Havok_Enviroment_InstallNightlies = "true" Then
+            CheckBox7.Checked = True
+            LabelX6.Enabled = True
+            TextBoxX5.Enabled = True
+            Button27.Enabled = True
+            Button28.Enabled = True
         End If
-        GeckoWebBrowser1.Navigate("about:license")
-        TextBox3.Text = My.Settings.Havok_Weapons_UDPInterval.ToString
-        If My.Settings.Havok_Interface_SystemStats = "1" Then
-            CheckBox1.Checked = True
-        End If
-        If My.Settings.Havok_Interface_SystemStats = "0" Then
-            CheckBox1.Checked = False
-        End If
-        If My.Settings.Havok_Interface_CurrentTimeClockEnabled = "true" Then
-            CheckBox2.Checked = True
-        End If
-        If My.Settings.Havok_Interface_CurrentTimeClockEnabled = "false" Then
-            CheckBox2.Checked = False
+        If My.Settings.Havok_Enviroment_InstallNightlies = "false" Then
+            CheckBox7.Checked = False
+            LabelX6.Enabled = False
+            TextBoxX5.Enabled = False
+            Button27.Enabled = False
+            Button28.Enabled = False
         End If
         TextBoxX1.Text = My.Settings.Havok_Browser_HomepageURL
+            TextBox3.Text = My.Settings.Havok_Weapons_UDPInterval.ToString
+            GeckoWebBrowser1.Navigate("about:license")
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
@@ -164,15 +184,17 @@ Public Class Preferences
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        BrowserLiciousWindow.Show()
-        BrowserLiciousWindow.Text = "Gecko Configuration"
-        BrowserLiciousWindow.GeckoWebBrowser1.Navigate("about:config")
+        Dim lulala23 As BrowserLiciousWindow = New BrowserLiciousWindow
+        lulala23.Show()
+        lulala23.Text = "Gecko Configuration"
+        lulala23.GeckoWebBrowser1.Navigate("about:config")
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        BrowserLiciousWindow.Show()
-        BrowserLiciousWindow.Text = "Gecko Plugins"
-        BrowserLiciousWindow.GeckoWebBrowser1.Navigate("about:plugins")
+        Dim lulala24 As BrowserLiciousWindow = New BrowserLiciousWindow
+        lulala24.Show()
+        lulala24.Text = "Gecko Plugins"
+        lulala24.GeckoWebBrowser1.Navigate("about:plugins")
     End Sub
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
@@ -373,23 +395,37 @@ Public Class Preferences
 
     Private Sub CheckBox6_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox6.CheckedChanged
         If CheckBox6.Checked = True Then
-            My.Settings.Havok_Interface_VisualStyling = "1"
+            My.Settings.Havok_Interface_VisualStyling = "true"
             My.Settings.Save()
-            If My.Settings.Havok_Interface_VisualStyling = "1" Then
+            If My.Settings.Havok_Interface_VisualStyling = "true" Then
                 CheckBox6.Checked = True
-                Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+                Form1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
                 Form1.Button15.Visible = True
                 Form1.Button16.Visible = False
             End If
         Else
-            My.Settings.Havok_Interface_VisualStyling = "0"
+            My.Settings.Havok_Interface_VisualStyling = "false"
             My.Settings.Save()
-            If My.Settings.Havok_Interface_VisualStyling = "0" Then
+            If My.Settings.Havok_Interface_VisualStyling = "false" Then
                 CheckBox6.Checked = False
-                Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+                Form1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
                 Form1.Button15.Visible = False
                 Form1.Button16.Visible = True
             End If
         End If
+    End Sub
+
+    Private Sub CheckBox7_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox7.CheckedChanged
+        'CODE GOES HERE
+        'CODE GOES HERE
+        'CODE GOES HERE
+        'CODE GOES HERE
+        'CODE GOES HERE
+        'CODE GOES HERE
+        'CODE GOES HERE
+        'CODE GOES HERE
+        'CODE GOES HERE
+        'CODE GOES HERE
+        'CODE GOES HERE
     End Sub
 End Class

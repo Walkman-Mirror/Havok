@@ -24,6 +24,7 @@ Partial Class RemotePC
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RemotePC))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button13 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
@@ -46,7 +47,6 @@ Partial Class RemotePC
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button13 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -63,6 +63,17 @@ Partial Class RemotePC
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(516, 35)
         Me.Panel1.TabIndex = 12
+        '
+        'Button13
+        '
+        Me.Button13.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button13.Location = New System.Drawing.Point(438, -2)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(26, 23)
+        Me.Button13.TabIndex = 27
+        Me.Button13.Text = "_"
+        Me.Button13.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -334,17 +345,6 @@ Partial Class RemotePC
         Me.Button12.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button12.UseVisualStyleBackColor = False
         Me.Button12.Visible = False
-        '
-        'Button13
-        '
-        Me.Button13.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button13.Location = New System.Drawing.Point(438, -2)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(26, 23)
-        Me.Button13.TabIndex = 27
-        Me.Button13.Text = "_"
-        Me.Button13.UseVisualStyleBackColor = False
         '
         'RemotePC
         '

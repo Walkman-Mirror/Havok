@@ -68,10 +68,10 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
-        Public Property Havok_Interface_VisualStyling() As Integer
+         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
+        Public Property Havok_Interface_VisualStyling() As String
             Get
-                Return CType(Me("Havok_Interface_VisualStyling"),Integer)
+                Return CType(Me("Havok_Interface_VisualStyling"),String)
             End Get
             Set
                 Me("Havok_Interface_VisualStyling") = value
@@ -412,6 +412,90 @@ Namespace My
             End Get
             Set
                 Me("Havok_Weapons_RunOnStartup_WeaponName") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("gotta chnage this shit, and put the code in for it")>  _
+        Public Property Havok_Interface_StatusTextVisible() As String
+            Get
+                Return CType(Me("Havok_Interface_StatusTextVisible"),String)
+            End Get
+            Set
+                Me("Havok_Interface_StatusTextVisible") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
+        Public Property Havok_Enviroment_InstallNightlies() As String
+            Get
+                Return CType(Me("Havok_Enviroment_InstallNightlies"),String)
+            End Get
+            Set
+                Me("Havok_Enviroment_InstallNightlies") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://fs1.d-h.st/download/00073/LrZ/latest_nightly.zip")>  _
+        Public Property Havok_Enviroment_NightlyMirrorURL() As String
+            Get
+                Return CType(Me("Havok_Enviroment_NightlyMirrorURL"),String)
+            End Get
+            Set
+                Me("Havok_Enviroment_NightlyMirrorURL") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://fs1.d-h.st/download/00073/5lz/latest_stable.zip")>  _
+        Public Property Havok_Enviroment_StableMirrorURL() As String
+            Get
+                Return CType(Me("Havok_Enviroment_StableMirrorURL"),String)
+            End Get
+            Set
+                Me("Havok_Enviroment_StableMirrorURL") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("192.168.1.1")>  _
+        Public Property Havok_Weapons_Router_Login_GatewayIP() As String
+            Get
+                Return CType(Me("Havok_Weapons_Router_Login_GatewayIP"),String)
+            End Get
+            Set
+                Me("Havok_Weapons_Router_Login_GatewayIP") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("/cfg/login")>  _
+        Public Property Havok_Weapons_Router_Login_LoginPageSlash() As String
+            Get
+                Return CType(Me("Havok_Weapons_Router_Login_LoginPageSlash"),String)
+            End Get
+            Set
+                Me("Havok_Weapons_Router_Login_LoginPageSlash") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
+        Public Property Havok_Weapons_Router_Login_AutoOpenRouterPage() As String
+            Get
+                Return CType(Me("Havok_Weapons_Router_Login_AutoOpenRouterPage"),String)
+            End Get
+            Set
+                Me("Havok_Weapons_Router_Login_AutoOpenRouterPage") = value
             End Set
         End Property
     End Class

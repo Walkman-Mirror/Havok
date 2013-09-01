@@ -23,7 +23,7 @@
         Form1.PictureBox2.Visible = True
         Form1.Label9.Visible = True
         Form1.Label9.Text = "Busy"
-        Form1.ListBox1.Items.Add("[GeckoFX] (Other) Navigating...")
+        Form1.ListBox1.Items.Add("[GeckoFX] (What's-New) Navigating...")
         Me.Text = "What's New - [Fetching Changelog...]"
         Form1.ToolStripProgressBar1.Visible = True
     End Sub
@@ -31,7 +31,7 @@
     Private Sub GeckoWebBrowser1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GeckoWebBrowser1.Navigated
         Form1.PictureBox2.Visible = False
         Form1.Label9.Visible = False
-        Form1.ListBox1.Items.Add("[GeckoFX] (Other) Navigation Completed")
+        Form1.ListBox1.Items.Add("[GeckoFX] (What's-New) Navigation Completed")
         Me.Text = "What's New"
         Form1.ToolStripProgressBar1.Visible = False
     End Sub

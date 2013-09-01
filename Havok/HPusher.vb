@@ -71,12 +71,15 @@
         If HPusher_File_5_Uploader.IsBusy = True Then
             HPusher_File_5_Uploader.CancelAsync()
         End If
+        'multitasking
+        Form1.Button2.Enabled = True
+        Form1.Button4.Enabled = False
     End Sub
 
 
 
 
-    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Close()
     End Sub
 
@@ -515,7 +518,7 @@
         HPusher_File_5_Uploader.RunWorkerAsync()
     End Sub
 
-    Private Sub Button14_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button14.Click
+    Private Sub Button14_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Hide()
     End Sub
 End Class

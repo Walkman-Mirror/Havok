@@ -28,7 +28,7 @@ Partial Class Form1
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.WebBrowser1 = New Gecko.GeckoWebBrowser()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.LabelX2 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.TextBoxX1 = New System.Windows.Forms.ToolStripTextBox()
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
@@ -88,17 +88,11 @@ Partial Class Form1
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.NotifyIconContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.LogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EnableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DisbaleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.LockdownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EnableToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.NetStatusToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.DebugToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Weapo0nsToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AaaaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -107,6 +101,7 @@ Partial Class Form1
         Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutHavokToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.MinimizeToTrayToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Button10 = New System.Windows.Forms.Button()
@@ -127,15 +122,18 @@ Partial Class Form1
         Me.NetStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.NetMonTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.ReflectionImage1 = New DevComponents.DotNetBar.Controls.ReflectionImage()
+        Me.HavokLogo1 = New DevComponents.DotNetBar.Controls.ReflectionImage()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.BrowserContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MinimizeToTrayToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
         Me.QuitHavokToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LockdownToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DisableToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DebuggingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RestartToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -143,12 +141,25 @@ Partial Class Form1
         Me.GeckoFXToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator16 = New System.Windows.Forms.ToolStripSeparator()
         Me.WeaponsToolToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HGetterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StartToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StopToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.HelpToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HPusherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StartToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StopToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.HelpToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator15 = New System.Windows.Forms.ToolStripSeparator()
         Me.PreferencesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VisitDeavmisSIteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator17 = New System.Windows.Forms.ToolStripSeparator()
         Me.CheckForUpdatesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -207,7 +218,7 @@ Partial Class Form1
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LabelX2, Me.ToolStripSeparator3, Me.TextBoxX1, Me.ToolStripButton6, Me.ToolStripSeparator13, Me.ToolStripButton5, Me.ToolStripButton4, Me.ToolStripButton3, Me.ToolStripButton2, Me.ToolStripButton1})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.ToolStripSeparator3, Me.TextBoxX1, Me.ToolStripButton6, Me.ToolStripSeparator13, Me.ToolStripButton5, Me.ToolStripButton4, Me.ToolStripButton3, Me.ToolStripButton2, Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(3, 16)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
@@ -215,11 +226,11 @@ Partial Class Form1
         Me.ToolStrip1.TabIndex = 40
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'LabelX2
+        'ToolStripLabel1
         '
-        Me.LabelX2.Name = "LabelX2"
-        Me.LabelX2.Size = New System.Drawing.Size(80, 22)
-        Me.LabelX2.Text = "ToolStripLabel1"
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(80, 22)
+        Me.ToolStripLabel1.Text = "ToolStripLabel1"
         '
         'ToolStripSeparator3
         '
@@ -736,7 +747,7 @@ Partial Class Form1
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"UDP-Flooder", "-----", "Remote-PC", "-----", "HGetter", "HPusher", "-----", "Page-Info", "Encryption-Level", "View-Source", "HTML-Live-Editor", "-----", "JS-Console", "-----", "Gecko-Tools", "-----"})
+        Me.ComboBox1.Items.AddRange(New Object() {"UDP-Flooder", "-----", "Remote-PC", "-----", "HGetter", "HPusher", "-----", "RouterLogin", "-----", "Page-Info", "Encryption-Level", "View-Source", "HTML-Live-Editor", "JS-Console"})
         Me.ComboBox1.Location = New System.Drawing.Point(6, 27)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(170, 21)
@@ -745,8 +756,8 @@ Partial Class Form1
         'NotifyIcon1
         '
         Me.NotifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
-        Me.NotifyIcon1.BalloonTipText = "Havok Is Running..."
-        Me.NotifyIcon1.BalloonTipTitle = "Havok 3 Beta"
+        Me.NotifyIcon1.BalloonTipText = "Havok is running..."
+        Me.NotifyIcon1.BalloonTipTitle = "Havok"
         Me.NotifyIcon1.ContextMenuStrip = Me.NotifyIconContextMenuStrip1
         Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
         Me.NotifyIcon1.Text = "Havok"
@@ -755,40 +766,10 @@ Partial Class Form1
         'NotifyIconContextMenuStrip1
         '
         Me.NotifyIconContextMenuStrip1.BackColor = System.Drawing.SystemColors.ButtonShadow
-        Me.NotifyIconContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogToolStripMenuItem, Me.ToolStripSeparator5, Me.LockdownToolStripMenuItem, Me.ToolStripSeparator4, Me.NetStatusToolStripMenuItem1, Me.ToolStripSeparator1, Me.DebugToolsToolStripMenuItem, Me.ToolStripSeparator6, Me.ToolStripMenuItem6, Me.AaaaToolStripMenuItem, Me.OSToolStripMenuItem, Me.ToolStripSeparator12, Me.CheckForUpdatesToolStripMenuItem, Me.AboutHavokToolStripMenuItem, Me.ToolStripSeparator2, Me.ExitToolStripMenuItem})
+        Me.NotifyIconContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LockdownToolStripMenuItem, Me.ToolStripSeparator1, Me.Weapo0nsToolsToolStripMenuItem, Me.ToolStripSeparator6, Me.ToolStripMenuItem6, Me.AaaaToolStripMenuItem, Me.OSToolStripMenuItem, Me.ToolStripSeparator12, Me.CheckForUpdatesToolStripMenuItem, Me.AboutHavokToolStripMenuItem, Me.ToolStripSeparator2, Me.MinimizeToTrayToolStripMenuItem1, Me.ExitToolStripMenuItem})
         Me.NotifyIconContextMenuStrip1.Name = "NotifyIconContextMenuStrip1"
         Me.NotifyIconContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.NotifyIconContextMenuStrip1.Size = New System.Drawing.Size(183, 260)
-        '
-        'LogToolStripMenuItem
-        '
-        Me.LogToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnableToolStripMenuItem, Me.DisbaleToolStripMenuItem})
-        Me.LogToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LogToolStripMenuItem.Name = "LogToolStripMenuItem"
-        Me.LogToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
-        Me.LogToolStripMenuItem.Text = "&Log"
-        '
-        'EnableToolStripMenuItem
-        '
-        Me.EnableToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonShadow
-        Me.EnableToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EnableToolStripMenuItem.Name = "EnableToolStripMenuItem"
-        Me.EnableToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
-        Me.EnableToolStripMenuItem.Text = "&Enable"
-        Me.EnableToolStripMenuItem.Visible = False
-        '
-        'DisbaleToolStripMenuItem
-        '
-        Me.DisbaleToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonShadow
-        Me.DisbaleToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DisbaleToolStripMenuItem.Name = "DisbaleToolStripMenuItem"
-        Me.DisbaleToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
-        Me.DisbaleToolStripMenuItem.Text = "&Disable"
-        '
-        'ToolStripSeparator5
-        '
-        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(179, 6)
+        Me.NotifyIconContextMenuStrip1.Size = New System.Drawing.Size(183, 226)
         '
         'LockdownToolStripMenuItem
         '
@@ -813,29 +794,17 @@ Partial Class Form1
         Me.DisableToolStripMenuItem.Text = "&Disable"
         Me.DisableToolStripMenuItem.Visible = False
         '
-        'ToolStripSeparator4
-        '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(179, 6)
-        '
-        'NetStatusToolStripMenuItem1
-        '
-        Me.NetStatusToolStripMenuItem1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.NetStatusToolStripMenuItem1.Name = "NetStatusToolStripMenuItem1"
-        Me.NetStatusToolStripMenuItem1.Size = New System.Drawing.Size(182, 22)
-        Me.NetStatusToolStripMenuItem1.Text = "&NetStatus"
-        '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(179, 6)
         '
-        'DebugToolsToolStripMenuItem
+        'Weapo0nsToolsToolStripMenuItem
         '
-        Me.DebugToolsToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DebugToolsToolStripMenuItem.Name = "DebugToolsToolStripMenuItem"
-        Me.DebugToolsToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
-        Me.DebugToolsToolStripMenuItem.Text = "&Debug Tools"
+        Me.Weapo0nsToolsToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.Weapo0nsToolsToolStripMenuItem.Name = "Weapo0nsToolsToolStripMenuItem"
+        Me.Weapo0nsToolsToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
+        Me.Weapo0nsToolsToolStripMenuItem.Text = "&Weapons/Tools"
         '
         'ToolStripSeparator6
         '
@@ -889,6 +858,13 @@ Partial Class Form1
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         Me.ToolStripSeparator2.Size = New System.Drawing.Size(179, 6)
+        '
+        'MinimizeToTrayToolStripMenuItem1
+        '
+        Me.MinimizeToTrayToolStripMenuItem1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.MinimizeToTrayToolStripMenuItem1.Name = "MinimizeToTrayToolStripMenuItem1"
+        Me.MinimizeToTrayToolStripMenuItem1.Size = New System.Drawing.Size(182, 22)
+        Me.MinimizeToTrayToolStripMenuItem1.Text = "&Minimize to tray"
         '
         'ExitToolStripMenuItem
         '
@@ -1050,14 +1026,14 @@ Partial Class Form1
         '
         Me.OpenPageInDeafultBrowserToolStripMenuItem.Enabled = False
         Me.OpenPageInDeafultBrowserToolStripMenuItem.Name = "OpenPageInDeafultBrowserToolStripMenuItem"
-        Me.OpenPageInDeafultBrowserToolStripMenuItem.Size = New System.Drawing.Size(219, 22)
-        Me.OpenPageInDeafultBrowserToolStripMenuItem.Text = "&Open Page In Browser"
+        Me.OpenPageInDeafultBrowserToolStripMenuItem.Size = New System.Drawing.Size(258, 22)
+        Me.OpenPageInDeafultBrowserToolStripMenuItem.Text = "&Open page in external browser"
         '
         'NetStatusToolStripMenuItem
         '
         Me.NetStatusToolStripMenuItem.Name = "NetStatusToolStripMenuItem"
-        Me.NetStatusToolStripMenuItem.Size = New System.Drawing.Size(219, 22)
-        Me.NetStatusToolStripMenuItem.Text = "&Network connectivity status"
+        Me.NetStatusToolStripMenuItem.Size = New System.Drawing.Size(258, 22)
+        Me.NetStatusToolStripMenuItem.Text = "&Network connectivity status window"
         '
         'Timer1
         '
@@ -1065,19 +1041,19 @@ Partial Class Form1
         'NetMonTimer
         '
         '
-        'ReflectionImage1
+        'HavokLogo1
         '
-        Me.ReflectionImage1.BackColor = System.Drawing.Color.Transparent
+        Me.HavokLogo1.BackColor = System.Drawing.Color.Transparent
         '
         '
         '
-        Me.ReflectionImage1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.ReflectionImage1.BackgroundStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center
-        Me.ReflectionImage1.Image = CType(resources.GetObject("ReflectionImage1.Image"), System.Drawing.Image)
-        Me.ReflectionImage1.Location = New System.Drawing.Point(529, 62)
-        Me.ReflectionImage1.Name = "ReflectionImage1"
-        Me.ReflectionImage1.Size = New System.Drawing.Size(100, 52)
-        Me.ReflectionImage1.TabIndex = 33
+        Me.HavokLogo1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.HavokLogo1.BackgroundStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center
+        Me.HavokLogo1.Image = CType(resources.GetObject("HavokLogo1.Image"), System.Drawing.Image)
+        Me.HavokLogo1.Location = New System.Drawing.Point(529, 62)
+        Me.HavokLogo1.Name = "HavokLogo1"
+        Me.HavokLogo1.Size = New System.Drawing.Size(100, 52)
+        Me.HavokLogo1.TabIndex = 33
         '
         'SplitContainer1
         '
@@ -1110,15 +1086,10 @@ Partial Class Form1
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(855, 498)
         Me.TableLayoutPanel1.TabIndex = 40
         '
-        'BrowserContextMenuStrip1
-        '
-        Me.BrowserContextMenuStrip1.Name = "BrowserContextMenuStrip1"
-        Me.BrowserContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
-        '
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 35)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
@@ -1149,6 +1120,32 @@ Partial Class Form1
         Me.QuitHavokToolStripMenuItem.Name = "QuitHavokToolStripMenuItem"
         Me.QuitHavokToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.QuitHavokToolStripMenuItem.Text = "&Quit Havok"
+        '
+        'ViewToolStripMenuItem
+        '
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LockdownToolStripMenuItem1})
+        Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
+        Me.ViewToolStripMenuItem.Text = "&View"
+        '
+        'LockdownToolStripMenuItem1
+        '
+        Me.LockdownToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnableToolStripMenuItem, Me.DisableToolStripMenuItem1})
+        Me.LockdownToolStripMenuItem1.Name = "LockdownToolStripMenuItem1"
+        Me.LockdownToolStripMenuItem1.Size = New System.Drawing.Size(132, 22)
+        Me.LockdownToolStripMenuItem1.Text = "&Lockdown"
+        '
+        'EnableToolStripMenuItem
+        '
+        Me.EnableToolStripMenuItem.Name = "EnableToolStripMenuItem"
+        Me.EnableToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.EnableToolStripMenuItem.Text = "&Enable"
+        '
+        'DisableToolStripMenuItem1
+        '
+        Me.DisableToolStripMenuItem1.Name = "DisableToolStripMenuItem1"
+        Me.DisableToolStripMenuItem1.Size = New System.Drawing.Size(119, 22)
+        Me.DisableToolStripMenuItem1.Text = "&Disable"
         '
         'ToolsToolStripMenuItem
         '
@@ -1189,9 +1186,70 @@ Partial Class Form1
         '
         'WeaponsToolToolStripMenuItem
         '
+        Me.WeaponsToolToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HGetterToolStripMenuItem, Me.HPusherToolStripMenuItem})
         Me.WeaponsToolToolStripMenuItem.Name = "WeaponsToolToolStripMenuItem"
         Me.WeaponsToolToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
         Me.WeaponsToolToolStripMenuItem.Text = "&Weapons/Tools"
+        '
+        'HGetterToolStripMenuItem
+        '
+        Me.HGetterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartToolStripMenuItem, Me.StopToolStripMenuItem, Me.ToolStripSeparator5, Me.HelpToolStripMenuItem1})
+        Me.HGetterToolStripMenuItem.Name = "HGetterToolStripMenuItem"
+        Me.HGetterToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.HGetterToolStripMenuItem.Text = "H&Getter"
+        '
+        'StartToolStripMenuItem
+        '
+        Me.StartToolStripMenuItem.Name = "StartToolStripMenuItem"
+        Me.StartToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
+        Me.StartToolStripMenuItem.Text = "St&art"
+        '
+        'StopToolStripMenuItem
+        '
+        Me.StopToolStripMenuItem.Name = "StopToolStripMenuItem"
+        Me.StopToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
+        Me.StopToolStripMenuItem.Text = "St&op"
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(106, 6)
+        '
+        'HelpToolStripMenuItem1
+        '
+        Me.HelpToolStripMenuItem1.Name = "HelpToolStripMenuItem1"
+        Me.HelpToolStripMenuItem1.Size = New System.Drawing.Size(109, 22)
+        Me.HelpToolStripMenuItem1.Text = "&Help"
+        '
+        'HPusherToolStripMenuItem
+        '
+        Me.HPusherToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartToolStripMenuItem1, Me.StopToolStripMenuItem1, Me.ToolStripSeparator4, Me.HelpToolStripMenuItem2})
+        Me.HPusherToolStripMenuItem.Name = "HPusherToolStripMenuItem"
+        Me.HPusherToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.HPusherToolStripMenuItem.Text = "H&Pusher"
+        '
+        'StartToolStripMenuItem1
+        '
+        Me.StartToolStripMenuItem1.Name = "StartToolStripMenuItem1"
+        Me.StartToolStripMenuItem1.Size = New System.Drawing.Size(109, 22)
+        Me.StartToolStripMenuItem1.Text = "St&art"
+        '
+        'StopToolStripMenuItem1
+        '
+        Me.StopToolStripMenuItem1.Name = "StopToolStripMenuItem1"
+        Me.StopToolStripMenuItem1.Size = New System.Drawing.Size(109, 22)
+        Me.StopToolStripMenuItem1.Text = "St&op"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(106, 6)
+        '
+        'HelpToolStripMenuItem2
+        '
+        Me.HelpToolStripMenuItem2.Name = "HelpToolStripMenuItem2"
+        Me.HelpToolStripMenuItem2.Size = New System.Drawing.Size(109, 22)
+        Me.HelpToolStripMenuItem2.Text = "&Help"
         '
         'ToolStripSeparator15
         '
@@ -1206,10 +1264,21 @@ Partial Class Form1
         '
         'HelpToolStripMenuItem
         '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CheckForUpdatesToolStripMenuItem1, Me.AboutToolStripMenuItem})
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VisitDeavmisSIteToolStripMenuItem, Me.ToolStripSeparator17, Me.CheckForUpdatesToolStripMenuItem1, Me.AboutToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
         Me.HelpToolStripMenuItem.Text = "&Help"
+        '
+        'VisitDeavmisSIteToolStripMenuItem
+        '
+        Me.VisitDeavmisSIteToolStripMenuItem.Name = "VisitDeavmisSIteToolStripMenuItem"
+        Me.VisitDeavmisSIteToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
+        Me.VisitDeavmisSIteToolStripMenuItem.Text = "&Visit Deavmi's site"
+        '
+        'ToolStripSeparator17
+        '
+        Me.ToolStripSeparator17.Name = "ToolStripSeparator17"
+        Me.ToolStripSeparator17.Size = New System.Drawing.Size(170, 6)
         '
         'CheckForUpdatesToolStripMenuItem1
         '
@@ -1234,12 +1303,22 @@ Partial Class Form1
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Havok"
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(216, 98)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 42
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(863, 736)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.TableLayoutPanel1)
@@ -1252,7 +1331,7 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.ReflectionImage1)
+        Me.Controls.Add(Me.HavokLogo1)
         Me.Cursor = System.Windows.Forms.Cursors.Cross
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -1314,7 +1393,7 @@ Partial Class Form1
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents Button13 As System.Windows.Forms.Button
     Friend WithEvents NotifyIcon1 As System.Windows.Forms.NotifyIcon
-    Friend WithEvents ReflectionImage1 As DevComponents.DotNetBar.Controls.ReflectionImage
+    Friend WithEvents HavokLogo1 As DevComponents.DotNetBar.Controls.ReflectionImage
     Friend WithEvents Button14 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button9 As System.Windows.Forms.Button
@@ -1336,17 +1415,11 @@ Partial Class Form1
     Friend WithEvents LogContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutHavokToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents DebugToolsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents CheckForUpdatesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LogToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EnableToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents DisbaleToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents LockdownToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EnableToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DisableToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents Label6 As DevComponents.DotNetBar.LabelX
     Friend WithEvents ToolStripSeparator6 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents AppInfoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -1380,13 +1453,11 @@ Partial Class Form1
     Friend WithEvents ToolStripDropDownButton1 As System.Windows.Forms.ToolStripDropDownButton
     Friend WithEvents OpenPageInDeafultBrowserToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NetStatusToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents NetStatusToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents NetMonTimer As System.Windows.Forms.Timer
     Friend WithEvents TextBox1 As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
-    Friend WithEvents LabelX2 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents TextBoxX1 As System.Windows.Forms.ToolStripTextBox
     Friend WithEvents ToolStripButton6 As System.Windows.Forms.ToolStripButton
@@ -1398,7 +1469,6 @@ Partial Class Form1
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
     Friend WithEvents WebBrowser1 As Gecko.GeckoWebBrowser
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents BrowserContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -1417,5 +1487,25 @@ Partial Class Form1
     Friend WithEvents ToolStripSeparator16 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents WeaponsToolToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GeckoFXToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator17 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents VisitDeavmisSIteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MinimizeToTrayToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Weapo0nsToolsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ViewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents LockdownToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EnableToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DisableToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents HGetterToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents StartToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents StopToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents HPusherToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents StartToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents StopToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 
 End Class

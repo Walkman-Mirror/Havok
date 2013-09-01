@@ -68,6 +68,7 @@ Partial Class Preferences
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.TabPage21 = New System.Windows.Forms.TabPage()
         Me.TabControl6 = New System.Windows.Forms.TabControl()
+        Me.TabPage25 = New System.Windows.Forms.TabPage()
         Me.TabPage24 = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button17 = New System.Windows.Forms.Button()
@@ -113,6 +114,16 @@ Partial Class Preferences
         Me.LabelX4 = New DevComponents.DotNetBar.LabelX()
         Me.LabelX3 = New DevComponents.DotNetBar.LabelX()
         Me.TabPage20 = New System.Windows.Forms.TabPage()
+        Me.GroupBox10 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
+        Me.Button27 = New System.Windows.Forms.Button()
+        Me.Button28 = New System.Windows.Forms.Button()
+        Me.TextBoxX5 = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.LabelX6 = New DevComponents.DotNetBar.LabelX()
+        Me.Button18 = New System.Windows.Forms.Button()
+        Me.Button19 = New System.Windows.Forms.Button()
+        Me.TextBoxX3 = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.LabelX5 = New DevComponents.DotNetBar.LabelX()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Button16 = New System.Windows.Forms.Button()
         Me.Button13 = New System.Windows.Forms.Button()
@@ -130,7 +141,6 @@ Partial Class Preferences
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.TabPage25 = New System.Windows.Forms.TabPage()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -172,6 +182,7 @@ Partial Class Preferences
         Me.TabPage19.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
         Me.TabPage20.SuspendLayout()
+        Me.GroupBox10.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -241,7 +252,7 @@ Partial Class Preferences
         Me.TabPage3.Controls.Add(Me.TabControl3)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(561, 326)
+        Me.TabPage3.Size = New System.Drawing.Size(561, 382)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Credits"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -256,7 +267,7 @@ Partial Class Preferences
         Me.TabControl3.Location = New System.Drawing.Point(0, 0)
         Me.TabControl3.Name = "TabControl3"
         Me.TabControl3.SelectedIndex = 0
-        Me.TabControl3.Size = New System.Drawing.Size(561, 326)
+        Me.TabControl3.Size = New System.Drawing.Size(561, 382)
         Me.TabControl3.TabIndex = 0
         '
         'TabPage7
@@ -265,7 +276,7 @@ Partial Class Preferences
         Me.TabPage7.Location = New System.Drawing.Point(4, 22)
         Me.TabPage7.Name = "TabPage7"
         Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(553, 300)
+        Me.TabPage7.Size = New System.Drawing.Size(553, 356)
         Me.TabPage7.TabIndex = 0
         Me.TabPage7.Text = "Coders"
         Me.TabPage7.UseVisualStyleBackColor = True
@@ -277,7 +288,7 @@ Partial Class Preferences
         Me.RichTextBox2.Location = New System.Drawing.Point(3, 3)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.ReadOnly = True
-        Me.RichTextBox2.Size = New System.Drawing.Size(547, 294)
+        Me.RichTextBox2.Size = New System.Drawing.Size(547, 350)
         Me.RichTextBox2.TabIndex = 0
         Me.RichTextBox2.Text = resources.GetString("RichTextBox2.Text")
         '
@@ -287,7 +298,7 @@ Partial Class Preferences
         Me.TabPage8.Location = New System.Drawing.Point(4, 22)
         Me.TabPage8.Name = "TabPage8"
         Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage8.Size = New System.Drawing.Size(553, 300)
+        Me.TabPage8.Size = New System.Drawing.Size(553, 356)
         Me.TabPage8.TabIndex = 1
         Me.TabPage8.Text = "GUI/Interface"
         Me.TabPage8.UseVisualStyleBackColor = True
@@ -299,7 +310,7 @@ Partial Class Preferences
         Me.RichTextBox3.Location = New System.Drawing.Point(3, 3)
         Me.RichTextBox3.Name = "RichTextBox3"
         Me.RichTextBox3.ReadOnly = True
-        Me.RichTextBox3.Size = New System.Drawing.Size(547, 294)
+        Me.RichTextBox3.Size = New System.Drawing.Size(547, 350)
         Me.RichTextBox3.TabIndex = 1
         Me.RichTextBox3.Text = resources.GetString("RichTextBox3.Text")
         '
@@ -308,7 +319,7 @@ Partial Class Preferences
         Me.TabPage9.Controls.Add(Me.RichTextBox4)
         Me.TabPage9.Location = New System.Drawing.Point(4, 22)
         Me.TabPage9.Name = "TabPage9"
-        Me.TabPage9.Size = New System.Drawing.Size(553, 300)
+        Me.TabPage9.Size = New System.Drawing.Size(553, 356)
         Me.TabPage9.TabIndex = 2
         Me.TabPage9.Text = "Graphics"
         Me.TabPage9.UseVisualStyleBackColor = True
@@ -320,7 +331,7 @@ Partial Class Preferences
         Me.RichTextBox4.Location = New System.Drawing.Point(0, 0)
         Me.RichTextBox4.Name = "RichTextBox4"
         Me.RichTextBox4.ReadOnly = True
-        Me.RichTextBox4.Size = New System.Drawing.Size(553, 300)
+        Me.RichTextBox4.Size = New System.Drawing.Size(553, 356)
         Me.RichTextBox4.TabIndex = 1
         Me.RichTextBox4.Text = resources.GetString("RichTextBox4.Text")
         '
@@ -330,7 +341,7 @@ Partial Class Preferences
         Me.TabPage11.Controls.Add(Me.PictureBox2)
         Me.TabPage11.Location = New System.Drawing.Point(4, 22)
         Me.TabPage11.Name = "TabPage11"
-        Me.TabPage11.Size = New System.Drawing.Size(553, 300)
+        Me.TabPage11.Size = New System.Drawing.Size(553, 356)
         Me.TabPage11.TabIndex = 3
         Me.TabPage11.Text = "Special Thanks"
         Me.TabPage11.UseVisualStyleBackColor = True
@@ -343,7 +354,7 @@ Partial Class Preferences
         Me.PictureBox4.Dock = System.Windows.Forms.DockStyle.Right
         Me.PictureBox4.Location = New System.Drawing.Point(174, 0)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(379, 300)
+        Me.PictureBox4.Size = New System.Drawing.Size(379, 356)
         Me.PictureBox4.TabIndex = 1
         Me.PictureBox4.TabStop = False
         '
@@ -355,7 +366,7 @@ Partial Class Preferences
         Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
         Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(168, 300)
+        Me.PictureBox2.Size = New System.Drawing.Size(168, 356)
         Me.PictureBox2.TabIndex = 0
         Me.PictureBox2.TabStop = False
         Me.PictureBox2.Tag = "XC"
@@ -365,7 +376,7 @@ Partial Class Preferences
         Me.TabPage4.Controls.Add(Me.TabControl2)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(561, 326)
+        Me.TabPage4.Size = New System.Drawing.Size(561, 382)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "License"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -378,7 +389,7 @@ Partial Class Preferences
         Me.TabControl2.Location = New System.Drawing.Point(0, 0)
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.SelectedIndex = 0
-        Me.TabControl2.Size = New System.Drawing.Size(561, 326)
+        Me.TabControl2.Size = New System.Drawing.Size(561, 382)
         Me.TabControl2.TabIndex = 0
         '
         'TabPage5
@@ -387,7 +398,7 @@ Partial Class Preferences
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(553, 300)
+        Me.TabPage5.Size = New System.Drawing.Size(553, 356)
         Me.TabPage5.TabIndex = 0
         Me.TabPage5.Text = "Havok"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -400,7 +411,7 @@ Partial Class Preferences
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
         Me.WebBrowser1.ScriptErrorsSuppressed = True
-        Me.WebBrowser1.Size = New System.Drawing.Size(547, 294)
+        Me.WebBrowser1.Size = New System.Drawing.Size(547, 350)
         Me.WebBrowser1.TabIndex = 0
         '
         'TabPage6
@@ -408,7 +419,7 @@ Partial Class Preferences
         Me.TabPage6.Controls.Add(Me.GeckoWebBrowser1)
         Me.TabPage6.Location = New System.Drawing.Point(4, 22)
         Me.TabPage6.Name = "TabPage6"
-        Me.TabPage6.Size = New System.Drawing.Size(553, 300)
+        Me.TabPage6.Size = New System.Drawing.Size(553, 356)
         Me.TabPage6.TabIndex = 1
         Me.TabPage6.Text = "Gecko"
         Me.TabPage6.UseVisualStyleBackColor = True
@@ -420,7 +431,7 @@ Partial Class Preferences
         Me.GeckoWebBrowser1.Location = New System.Drawing.Point(0, 0)
         Me.GeckoWebBrowser1.Name = "GeckoWebBrowser1"
         Me.GeckoWebBrowser1.NoDefaultContextMenu = True
-        Me.GeckoWebBrowser1.Size = New System.Drawing.Size(553, 300)
+        Me.GeckoWebBrowser1.Size = New System.Drawing.Size(553, 356)
         Me.GeckoWebBrowser1.TabIndex = 0
         Me.GeckoWebBrowser1.UseHttpActivityObserver = False
         '
@@ -430,7 +441,7 @@ Partial Class Preferences
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(561, 326)
+        Me.TabPage1.Size = New System.Drawing.Size(561, 382)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Changelog"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -442,7 +453,7 @@ Partial Class Preferences
         Me.RichTextBox1.Location = New System.Drawing.Point(3, 3)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(555, 320)
+        Me.RichTextBox1.Size = New System.Drawing.Size(555, 376)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
         '
@@ -452,7 +463,7 @@ Partial Class Preferences
         Me.TabPage13.Location = New System.Drawing.Point(4, 22)
         Me.TabPage13.Name = "TabPage13"
         Me.TabPage13.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage13.Size = New System.Drawing.Size(561, 326)
+        Me.TabPage13.Size = New System.Drawing.Size(561, 382)
         Me.TabPage13.TabIndex = 6
         Me.TabPage13.Text = "News"
         Me.TabPage13.UseVisualStyleBackColor = True
@@ -465,7 +476,7 @@ Partial Class Preferences
         Me.WebBrowser2.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser2.Name = "WebBrowser2"
         Me.WebBrowser2.ScriptErrorsSuppressed = True
-        Me.WebBrowser2.Size = New System.Drawing.Size(555, 320)
+        Me.WebBrowser2.Size = New System.Drawing.Size(555, 376)
         Me.WebBrowser2.TabIndex = 36
         '
         'TabPage10
@@ -478,7 +489,7 @@ Partial Class Preferences
         Me.TabPage10.Controls.Add(Me.Label8)
         Me.TabPage10.Location = New System.Drawing.Point(4, 22)
         Me.TabPage10.Name = "TabPage10"
-        Me.TabPage10.Size = New System.Drawing.Size(561, 326)
+        Me.TabPage10.Size = New System.Drawing.Size(561, 382)
         Me.TabPage10.TabIndex = 4
         Me.TabPage10.Text = "Experimental"
         Me.TabPage10.UseVisualStyleBackColor = True
@@ -588,7 +599,7 @@ Partial Class Preferences
         Me.TabPage14.Location = New System.Drawing.Point(4, 22)
         Me.TabPage14.Name = "TabPage14"
         Me.TabPage14.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage14.Size = New System.Drawing.Size(553, 300)
+        Me.TabPage14.Size = New System.Drawing.Size(553, 356)
         Me.TabPage14.TabIndex = 0
         Me.TabPage14.Text = "General"
         Me.TabPage14.UseVisualStyleBackColor = True
@@ -690,13 +701,22 @@ Partial Class Preferences
         Me.TabControl6.Size = New System.Drawing.Size(547, 350)
         Me.TabControl6.TabIndex = 1
         '
+        'TabPage25
+        '
+        Me.TabPage25.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage25.Name = "TabPage25"
+        Me.TabPage25.Size = New System.Drawing.Size(539, 324)
+        Me.TabPage25.TabIndex = 1
+        Me.TabPage25.Text = "General"
+        Me.TabPage25.UseVisualStyleBackColor = True
+        '
         'TabPage24
         '
         Me.TabPage24.Controls.Add(Me.GroupBox1)
         Me.TabPage24.Location = New System.Drawing.Point(4, 22)
         Me.TabPage24.Name = "TabPage24"
         Me.TabPage24.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage24.Size = New System.Drawing.Size(539, 268)
+        Me.TabPage24.Size = New System.Drawing.Size(539, 324)
         Me.TabPage24.TabIndex = 0
         Me.TabPage24.Text = "UDP Flooder"
         Me.TabPage24.UseVisualStyleBackColor = True
@@ -746,7 +766,7 @@ Partial Class Preferences
         Me.TabPage15.Location = New System.Drawing.Point(4, 22)
         Me.TabPage15.Name = "TabPage15"
         Me.TabPage15.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage15.Size = New System.Drawing.Size(553, 300)
+        Me.TabPage15.Size = New System.Drawing.Size(553, 356)
         Me.TabPage15.TabIndex = 1
         Me.TabPage15.Text = "Debugging"
         Me.TabPage15.UseVisualStyleBackColor = True
@@ -830,7 +850,7 @@ Partial Class Preferences
         Me.TabPage16.Controls.Add(Me.GroupBox2)
         Me.TabPage16.Location = New System.Drawing.Point(4, 22)
         Me.TabPage16.Name = "TabPage16"
-        Me.TabPage16.Size = New System.Drawing.Size(553, 300)
+        Me.TabPage16.Size = New System.Drawing.Size(553, 356)
         Me.TabPage16.TabIndex = 2
         Me.TabPage16.Text = "GeckoFX"
         Me.TabPage16.UseVisualStyleBackColor = True
@@ -927,7 +947,7 @@ Partial Class Preferences
         Me.TabPage17.Controls.Add(Me.GroupBox3)
         Me.TabPage17.Location = New System.Drawing.Point(4, 22)
         Me.TabPage17.Name = "TabPage17"
-        Me.TabPage17.Size = New System.Drawing.Size(553, 300)
+        Me.TabPage17.Size = New System.Drawing.Size(553, 356)
         Me.TabPage17.TabIndex = 3
         Me.TabPage17.Text = "XUL"
         Me.TabPage17.UseVisualStyleBackColor = True
@@ -1058,6 +1078,7 @@ Partial Class Preferences
         '
         Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX1.ForeColor = System.Drawing.Color.Black
         Me.LabelX1.Location = New System.Drawing.Point(6, 19)
         Me.LabelX1.Name = "LabelX1"
         Me.LabelX1.Size = New System.Drawing.Size(72, 23)
@@ -1070,7 +1091,7 @@ Partial Class Preferences
         Me.TabPage23.Location = New System.Drawing.Point(4, 22)
         Me.TabPage23.Name = "TabPage23"
         Me.TabPage23.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage23.Size = New System.Drawing.Size(545, 274)
+        Me.TabPage23.Size = New System.Drawing.Size(545, 330)
         Me.TabPage23.TabIndex = 1
         Me.TabPage23.Text = "Cookies"
         Me.TabPage23.UseVisualStyleBackColor = True
@@ -1110,6 +1131,7 @@ Partial Class Preferences
         '
         Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX2.ForeColor = System.Drawing.Color.Black
         Me.LabelX2.Location = New System.Drawing.Point(6, 19)
         Me.LabelX2.Name = "LabelX2"
         Me.LabelX2.Size = New System.Drawing.Size(91, 23)
@@ -1145,7 +1167,7 @@ Partial Class Preferences
         Me.TabPage19.Controls.Add(Me.GroupBox7)
         Me.TabPage19.Location = New System.Drawing.Point(4, 22)
         Me.TabPage19.Name = "TabPage19"
-        Me.TabPage19.Size = New System.Drawing.Size(553, 300)
+        Me.TabPage19.Size = New System.Drawing.Size(553, 356)
         Me.TabPage19.TabIndex = 5
         Me.TabPage19.Text = "Strings"
         Me.TabPage19.UseVisualStyleBackColor = True
@@ -1227,21 +1249,156 @@ Partial Class Preferences
         '
         'TabPage20
         '
+        Me.TabPage20.Controls.Add(Me.GroupBox10)
         Me.TabPage20.Controls.Add(Me.GroupBox4)
         Me.TabPage20.Location = New System.Drawing.Point(4, 22)
         Me.TabPage20.Name = "TabPage20"
-        Me.TabPage20.Size = New System.Drawing.Size(553, 300)
+        Me.TabPage20.Size = New System.Drawing.Size(553, 356)
         Me.TabPage20.TabIndex = 6
         Me.TabPage20.Text = "Others"
         Me.TabPage20.UseVisualStyleBackColor = True
+        '
+        'GroupBox10
+        '
+        Me.GroupBox10.Controls.Add(Me.CheckBox7)
+        Me.GroupBox10.Controls.Add(Me.Button27)
+        Me.GroupBox10.Controls.Add(Me.Button28)
+        Me.GroupBox10.Controls.Add(Me.TextBoxX5)
+        Me.GroupBox10.Controls.Add(Me.LabelX6)
+        Me.GroupBox10.Controls.Add(Me.Button18)
+        Me.GroupBox10.Controls.Add(Me.Button19)
+        Me.GroupBox10.Controls.Add(Me.TextBoxX3)
+        Me.GroupBox10.Controls.Add(Me.LabelX5)
+        Me.GroupBox10.Location = New System.Drawing.Point(3, 3)
+        Me.GroupBox10.Name = "GroupBox10"
+        Me.GroupBox10.Size = New System.Drawing.Size(547, 146)
+        Me.GroupBox10.TabIndex = 40
+        Me.GroupBox10.TabStop = False
+        Me.GroupBox10.Text = "Updates"
+        '
+        'CheckBox7
+        '
+        Me.CheckBox7.AutoSize = True
+        Me.CheckBox7.Location = New System.Drawing.Point(188, 58)
+        Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.Size = New System.Drawing.Size(133, 17)
+        Me.CheckBox7.TabIndex = 47
+        Me.CheckBox7.Text = "Enable nightly updates"
+        Me.CheckBox7.UseVisualStyleBackColor = True
+        '
+        'Button27
+        '
+        Me.Button27.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button27.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button27.Location = New System.Drawing.Point(327, 107)
+        Me.Button27.Name = "Button27"
+        Me.Button27.Size = New System.Drawing.Size(104, 27)
+        Me.Button27.TabIndex = 46
+        Me.Button27.Text = "&Set as mirror"
+        Me.Button27.UseVisualStyleBackColor = False
+        '
+        'Button28
+        '
+        Me.Button28.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button28.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button28.Location = New System.Drawing.Point(437, 107)
+        Me.Button28.Name = "Button28"
+        Me.Button28.Size = New System.Drawing.Size(104, 27)
+        Me.Button28.TabIndex = 45
+        Me.Button28.Text = "&Reset to default"
+        Me.Button28.UseVisualStyleBackColor = False
+        '
+        'TextBoxX5
+        '
+        Me.TextBoxX5.BackColor = System.Drawing.Color.White
+        '
+        '
+        '
+        Me.TextBoxX5.Border.Class = "TextBoxBorder"
+        Me.TextBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.TextBoxX5.ForeColor = System.Drawing.Color.Black
+        Me.TextBoxX5.Location = New System.Drawing.Point(156, 81)
+        Me.TextBoxX5.Name = "TextBoxX5"
+        Me.TextBoxX5.Size = New System.Drawing.Size(385, 20)
+        Me.TextBoxX5.TabIndex = 44
+        Me.TextBoxX5.WatermarkText = "Input URL"
+        '
+        'LabelX6
+        '
+        '
+        '
+        '
+        Me.LabelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX6.ForeColor = System.Drawing.Color.Black
+        Me.LabelX6.Location = New System.Drawing.Point(6, 78)
+        Me.LabelX6.Name = "LabelX6"
+        Me.LabelX6.Size = New System.Drawing.Size(144, 23)
+        Me.LabelX6.TabIndex = 43
+        Me.LabelX6.Text = "Nightly update mirror url:"
+        '
+        'Button18
+        '
+        Me.Button18.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button18.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button18.Location = New System.Drawing.Point(327, 48)
+        Me.Button18.Name = "Button18"
+        Me.Button18.Size = New System.Drawing.Size(104, 27)
+        Me.Button18.TabIndex = 42
+        Me.Button18.Text = "&Set as mirror"
+        Me.Button18.UseVisualStyleBackColor = False
+        '
+        'Button19
+        '
+        Me.Button19.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button19.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button19.Location = New System.Drawing.Point(437, 48)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Size = New System.Drawing.Size(104, 27)
+        Me.Button19.TabIndex = 41
+        Me.Button19.Text = "&Reset to default"
+        Me.Button19.UseVisualStyleBackColor = False
+        '
+        'TextBoxX3
+        '
+        Me.TextBoxX3.BackColor = System.Drawing.Color.White
+        '
+        '
+        '
+        Me.TextBoxX3.Border.Class = "TextBoxBorder"
+        Me.TextBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.TextBoxX3.ForeColor = System.Drawing.Color.Black
+        Me.TextBoxX3.Location = New System.Drawing.Point(156, 22)
+        Me.TextBoxX3.Name = "TextBoxX3"
+        Me.TextBoxX3.Size = New System.Drawing.Size(385, 20)
+        Me.TextBoxX3.TabIndex = 40
+        Me.TextBoxX3.WatermarkText = "Input URL"
+        '
+        'LabelX5
+        '
+        '
+        '
+        '
+        Me.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX5.ForeColor = System.Drawing.Color.Black
+        Me.LabelX5.Location = New System.Drawing.Point(6, 19)
+        Me.LabelX5.Name = "LabelX5"
+        Me.LabelX5.Size = New System.Drawing.Size(144, 23)
+        Me.LabelX5.TabIndex = 39
+        Me.LabelX5.Text = "Stable update mirror url:"
         '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.Button16)
         Me.GroupBox4.Controls.Add(Me.Button13)
-        Me.GroupBox4.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox4.Location = New System.Drawing.Point(3, 155)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(230, 116)
+        Me.GroupBox4.Size = New System.Drawing.Size(230, 92)
         Me.GroupBox4.TabIndex = 39
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Others"
@@ -1251,7 +1408,7 @@ Partial Class Preferences
         Me.Button16.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button16.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button16.Location = New System.Drawing.Point(6, 79)
+        Me.Button16.Location = New System.Drawing.Point(6, 52)
         Me.Button16.Name = "Button16"
         Me.Button16.Size = New System.Drawing.Size(218, 27)
         Me.Button16.TabIndex = 38
@@ -1263,7 +1420,7 @@ Partial Class Preferences
         Me.Button13.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button13.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button13.Location = New System.Drawing.Point(6, 46)
+        Me.Button13.Location = New System.Drawing.Point(6, 19)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(218, 27)
         Me.Button13.TabIndex = 37
@@ -1288,7 +1445,7 @@ Partial Class Preferences
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(561, 326)
+        Me.TabPage2.Size = New System.Drawing.Size(561, 382)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "About"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -1440,15 +1597,6 @@ Partial Class Preferences
         Me.PictureBox3.TabIndex = 30
         Me.PictureBox3.TabStop = False
         '
-        'TabPage25
-        '
-        Me.TabPage25.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage25.Name = "TabPage25"
-        Me.TabPage25.Size = New System.Drawing.Size(539, 324)
-        Me.TabPage25.TabIndex = 1
-        Me.TabPage25.Text = "General"
-        Me.TabPage25.UseVisualStyleBackColor = True
-        '
         'Preferences
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1508,6 +1656,8 @@ Partial Class Preferences
         Me.TabPage19.ResumeLayout(False)
         Me.GroupBox7.ResumeLayout(False)
         Me.TabPage20.ResumeLayout(False)
+        Me.GroupBox10.ResumeLayout(False)
+        Me.GroupBox10.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
@@ -1624,4 +1774,14 @@ Partial Class Preferences
     Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox6 As System.Windows.Forms.CheckBox
     Friend WithEvents TabPage25 As System.Windows.Forms.TabPage
+    Friend WithEvents GroupBox10 As System.Windows.Forms.GroupBox
+    Friend WithEvents Button18 As System.Windows.Forms.Button
+    Friend WithEvents Button19 As System.Windows.Forms.Button
+    Friend WithEvents TextBoxX3 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents LabelX5 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents Button27 As System.Windows.Forms.Button
+    Friend WithEvents Button28 As System.Windows.Forms.Button
+    Friend WithEvents TextBoxX5 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents LabelX6 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents CheckBox7 As System.Windows.Forms.CheckBox
 End Class

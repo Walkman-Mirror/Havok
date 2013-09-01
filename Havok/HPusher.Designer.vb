@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class HPusher
-    Inherits System.Windows.Forms.Form
+    Inherits DevComponents.DotNetBar.Metro.MetroForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -26,11 +26,6 @@ Partial Class HPusher
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button14 = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -73,8 +68,6 @@ Partial Class HPusher
         Me.Label1 = New System.Windows.Forms.Label()
         Me.HPusher_File_5_Uploader = New System.ComponentModel.BackgroundWorker()
         Me.Button15 = New System.Windows.Forms.Button()
-        Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -117,61 +110,6 @@ Partial Class HPusher
         Me.Button11.TabIndex = 54
         Me.Button11.Text = "G"
         Me.Button11.UseVisualStyleBackColor = False
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.Panel1.Controls.Add(Me.Button14)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.Button8)
-        Me.Panel1.Location = New System.Drawing.Point(-6, -1)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(543, 35)
-        Me.Panel1.TabIndex = 21
-        '
-        'Button14
-        '
-        Me.Button14.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button14.Location = New System.Drawing.Point(466, -2)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(26, 23)
-        Me.Button14.TabIndex = 26
-        Me.Button14.Text = "_"
-        Me.Button14.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(-1, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(46, 46)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox1.TabIndex = 20
-        Me.PictureBox1.TabStop = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Ubuntu", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label5.Location = New System.Drawing.Point(209, 11)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(83, 24)
-        Me.Label5.TabIndex = 14
-        Me.Label5.Text = "HPusher"
-        '
-        'Button8
-        '
-        Me.Button8.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Location = New System.Drawing.Point(498, -2)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(26, 23)
-        Me.Button8.TabIndex = 12
-        Me.Button8.Text = "X"
-        Me.Button8.UseVisualStyleBackColor = False
         '
         'Button10
         '
@@ -233,7 +171,7 @@ Partial Class HPusher
         Me.Button1.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(185, 292)
+        Me.Button1.Location = New System.Drawing.Point(185, 267)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(167, 28)
         Me.Button1.TabIndex = 24
@@ -289,9 +227,9 @@ Partial Class HPusher
         Me.GroupBox2.Controls.Add(Me.Label14)
         Me.GroupBox2.Controls.Add(Me.Label13)
         Me.GroupBox2.Controls.Add(Me.Label12)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 215)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 186)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(506, 71)
+        Me.GroupBox2.Size = New System.Drawing.Size(513, 75)
         Me.GroupBox2.TabIndex = 25
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Status"
@@ -380,7 +318,7 @@ Partial Class HPusher
         Me.Button2.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(12, 292)
+        Me.Button2.Location = New System.Drawing.Point(12, 267)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(167, 28)
         Me.Button2.TabIndex = 23
@@ -487,12 +425,12 @@ Partial Class HPusher
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 40)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(506, 168)
+        Me.GroupBox1.Size = New System.Drawing.Size(513, 169)
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Files To Upload"
+        Me.GroupBox1.Text = "Files to upload"
         '
         'Label9
         '
@@ -582,7 +520,7 @@ Partial Class HPusher
         Me.Button15.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button15.Image = CType(resources.GetObject("Button15.Image"), System.Drawing.Image)
         Me.Button15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button15.Location = New System.Drawing.Point(419, 292)
+        Me.Button15.Location = New System.Drawing.Point(426, 267)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(99, 28)
         Me.Button15.TabIndex = 26
@@ -593,14 +531,13 @@ Partial Class HPusher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(530, 333)
+        Me.ClientSize = New System.Drawing.Size(537, 307)
         Me.Controls.Add(Me.Button15)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -608,9 +545,6 @@ Partial Class HPusher
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Tag = "XC"
         Me.Text = "HPusher"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -621,10 +555,6 @@ Partial Class HPusher
     Friend WithEvents Button13 As System.Windows.Forms.Button
     Friend WithEvents Button12 As System.Windows.Forms.Button
     Friend WithEvents Button11 As System.Windows.Forms.Button
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents Button10 As System.Windows.Forms.Button
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
@@ -666,6 +596,5 @@ Partial Class HPusher
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents HPusher_File_5_Uploader As System.ComponentModel.BackgroundWorker
-    Friend WithEvents Button14 As System.Windows.Forms.Button
     Friend WithEvents Button15 As System.Windows.Forms.Button
 End Class
