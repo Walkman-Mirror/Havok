@@ -171,7 +171,7 @@ Partial Class HPusher
         Me.Button1.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(185, 267)
+        Me.Button1.Location = New System.Drawing.Point(185, 274)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(167, 28)
         Me.Button1.TabIndex = 24
@@ -227,9 +227,9 @@ Partial Class HPusher
         Me.GroupBox2.Controls.Add(Me.Label14)
         Me.GroupBox2.Controls.Add(Me.Label13)
         Me.GroupBox2.Controls.Add(Me.Label12)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 186)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 187)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(513, 75)
+        Me.GroupBox2.Size = New System.Drawing.Size(508, 81)
         Me.GroupBox2.TabIndex = 25
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Status"
@@ -318,7 +318,7 @@ Partial Class HPusher
         Me.Button2.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(12, 267)
+        Me.Button2.Location = New System.Drawing.Point(12, 274)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(167, 28)
         Me.Button2.TabIndex = 23
@@ -427,7 +427,7 @@ Partial Class HPusher
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(513, 169)
+        Me.GroupBox1.Size = New System.Drawing.Size(508, 169)
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Files to upload"
@@ -520,7 +520,7 @@ Partial Class HPusher
         Me.Button15.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button15.Image = CType(resources.GetObject("Button15.Image"), System.Drawing.Image)
         Me.Button15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button15.Location = New System.Drawing.Point(426, 267)
+        Me.Button15.Location = New System.Drawing.Point(421, 274)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(99, 28)
         Me.Button15.TabIndex = 26
@@ -531,7 +531,7 @@ Partial Class HPusher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(537, 307)
+        Me.ClientSize = New System.Drawing.Size(532, 314)
         Me.Controls.Add(Me.Button15)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox2)
