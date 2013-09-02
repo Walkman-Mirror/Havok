@@ -436,6 +436,12 @@ Public Class Form1
         If My.Settings.Havok_Interface_CurrentTimeClockEnabled = "false" Then
             Label11.Visible = False
         End If
+        If My.Settings.Havok_Interface_UseDoubleBuffers = "true" Then
+            Me.DoubleBuffered = True
+        End If
+        If My.Settings.Havok_Interface_UseDoubleBuffers = "false" Then
+            Me.DoubleBuffered = False
+        End If
         NetMonTimer.Interval = My.Settings.Havok_Extensions_NetMon_TimerInterval.ToString
         '----------
 
@@ -874,6 +880,26 @@ Public Class Form1
 
     Private Sub MinimizeToTrayToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MinimizeToTrayToolStripMenuItem.Click
         Me.Hide()
+    End Sub
+
+    Private Sub CheckForUpdatesToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckForUpdatesToolStripMenuItem1.Click
+        Updates.Show()
+    End Sub
+
+    Private Sub AboutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AboutToolStripMenuItem.Click
+        Preferences.Show()
+    End Sub
+
+    Private Sub PreferencesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PreferencesToolStripMenuItem.Click
+        Preferences.Show()
+    End Sub
+
+    Private Sub RestartToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RestartToolStripMenuItem.Click
+        Application.Restart()
+    End Sub
+
+    Private Sub BreakDebuggerToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BreakDebuggerToolStripMenuItem.Click
+        Debugger.Break()
     End Sub
 End Class
 

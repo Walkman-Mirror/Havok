@@ -3,6 +3,12 @@
    
 
     Private Sub HPusher_Loaaaad(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If My.Settings.Havok_Interface_UseDoubleBuffers = "true" Then
+            Me.DoubleBuffered = True
+        End If
+        If My.Settings.Havok_Interface_UseDoubleBuffers = "false" Then
+            Me.DoubleBuffered = False
+        End If
         Form1.ListBox1.Items.Add("---------------------------")
         Form1.ListBox1.Items.Add("HPusher Has Started!")
         'Set Status Texts In The Status Group Box

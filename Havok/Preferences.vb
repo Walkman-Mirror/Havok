@@ -18,6 +18,12 @@ Public Class Preferences
     End Sub
 
     Private Sub About_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If My.Settings.Havok_Interface_UseDoubleBuffers = "true" Then
+            Me.DoubleBuffered = True
+        End If
+        If My.Settings.Havok_Interface_UseDoubleBuffers = "false" Then
+            Me.DoubleBuffered = False
+        End If
         Label6.Text = My.Application.Info.Version.Major.ToString & " Beta-Nightly"
         Label12.Text = "XUL Runner Version: " & Gecko.Xpcom.XulRunnerVersion.ToString
         If My.Settings.Havok_Interface_ChestaGUI = "0" Then

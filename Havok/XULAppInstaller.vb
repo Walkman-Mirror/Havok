@@ -1,14 +1,14 @@
 ﻿Public Class XULAppInstaller
 
-    Private Sub Checkname_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Checkname.Tick
-        Button1.Text = "&Install " & TextBox3.Text
-    End Sub
-
     Private Sub XULAppInstaller_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If My.Settings.Havok_Interface_UseDoubleBuffers = "true" Then
+            Me.DoubleBuffered = True
+        End If
+        If My.Settings.Havok_Interface_UseDoubleBuffers = "false" Then
+            Me.DoubleBuffered = False
+        End If
         Preferences.Enabled = False
-        Checkname.Start()
     End Sub
-
 
     Private Sub XULAppInstaller_Clsoign(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.FormClosing
         Preferences.Enabled = True
@@ -27,5 +27,9 @@
         MsgBox(TextBox3.Text & " Has Been Installed!")
         Me.LabelX4.Visible = False
         Me.Enabled = True
+    End Sub
+
+    Private Sub TextBox3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox3.TextChanged
+        Button1.Text = "&Install " & TextBox3.Text
     End Sub
 End Class

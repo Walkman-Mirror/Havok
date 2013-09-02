@@ -77,5 +77,8 @@
     <Setting Name="Havok_Interface_MenuStripEnabled" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
+    <Setting Name="Havok_Interface_UseDoubleBuffers" Type="System.String" Scope="User">
+      <Value Profile="(Default)">false</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

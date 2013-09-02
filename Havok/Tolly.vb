@@ -2,6 +2,12 @@
 Public Class Tolly
 
     Private Sub Tolly_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If My.Settings.Havok_Interface_UseDoubleBuffers = "true" Then
+            Me.DoubleBuffered = True
+        End If
+        If My.Settings.Havok_Interface_UseDoubleBuffers = "false" Then
+            Me.DoubleBuffered = False
+        End If
         LabelX1.ForeColor = Color.Black
         LabelX2.ForeColor = Color.Black
         LabelX1.Text = My.Application.Info.ProductName

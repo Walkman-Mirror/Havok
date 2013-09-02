@@ -53,6 +53,12 @@
     End Sub
 
     Private Sub GeckoWebBrowser1_Claaaaaaick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GeckoWebBrowser1.Navigated
+        If My.Settings.Havok_Interface_UseDoubleBuffers = "true" Then
+            Me.DoubleBuffered = True
+        End If
+        If My.Settings.Havok_Interface_UseDoubleBuffers = "false" Then
+            Me.DoubleBuffered = False
+        End If
         Form1.PictureBox2.Visible = False
         Form1.Label9.Visible = False
         Form1.ListBox1.Items.Add("Loading Web Page 6... [Done]")
@@ -69,10 +75,6 @@
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
         GeckoWebBrowser1.GoForward()
-    End Sub
-
-    Private Sub LabelX1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LabelX1.Click
-
     End Sub
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click

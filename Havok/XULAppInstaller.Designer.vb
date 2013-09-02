@@ -131,9 +131,6 @@ Partial Class XULAppInstaller
         Me.TextBoxX2.TabIndex = 37
         Me.TextBoxX2.WatermarkText = "Input Destination"
         '
-        'Checkname
-        '
-        '
         'LabelX4
         '
         '

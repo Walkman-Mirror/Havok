@@ -354,6 +354,18 @@ Namespace My
                 Me("Havok_Interface_MenuStripEnabled") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
+        Public Property Havok_Interface_UseDoubleBuffers() As String
+            Get
+                Return CType(Me("Havok_Interface_UseDoubleBuffers"),String)
+            End Get
+            Set
+                Me("Havok_Interface_UseDoubleBuffers") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

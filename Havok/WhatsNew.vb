@@ -5,6 +5,12 @@
     End Sub
 
     Private Sub WhatsNew_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If My.Settings.Havok_Interface_UseDoubleBuffers = "true" Then
+            Me.DoubleBuffered = True
+        End If
+        If My.Settings.Havok_Interface_UseDoubleBuffers = "false" Then
+            Me.DoubleBuffered = False
+        End If
         Me.Text = "Welcome To " & My.Application.Info.ProductName & "!"
         LabelX1.Text = "Welcome To " & My.Application.Info.ProductName & "!"
     End Sub

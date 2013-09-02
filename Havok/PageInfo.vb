@@ -5,6 +5,12 @@
     End Sub
 
     Private Sub PageInfo_Loaaad(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If My.Settings.Havok_Interface_UseDoubleBuffers = "true" Then
+            Me.DoubleBuffered = True
+        End If
+        If My.Settings.Havok_Interface_UseDoubleBuffers = "false" Then
+            Me.DoubleBuffered = False
+        End If
         Form1.ListBox1.Items.Add("---------------------------")
         Form1.ListBox1.Items.Add("Page-Info Has Started!")
         Label1.Text = Form1.WebBrowser1.DocumentTitle
