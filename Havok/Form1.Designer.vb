@@ -24,7 +24,6 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.WebBrowser1 = New Gecko.GeckoWebBrowser()
@@ -133,6 +132,12 @@ Partial Class Form1
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.BrowserContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QuitHavokToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MinimizeToTrayToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
         Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -152,18 +157,8 @@ Partial Class Form1
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Ubuntu", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(315, 23)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(228, 79)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Havok"
         '
         'Label2
         '
@@ -184,7 +179,7 @@ Partial Class Form1
         Me.GroupBox1.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(479, 391)
+        Me.GroupBox1.Size = New System.Drawing.Size(479, 418)
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Web Browser"
@@ -195,7 +190,7 @@ Partial Class Form1
         Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.WebBrowser1.Location = New System.Drawing.Point(3, 41)
         Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(473, 347)
+        Me.WebBrowser1.Size = New System.Drawing.Size(473, 374)
         Me.WebBrowser1.TabIndex = 41
         Me.WebBrowser1.UseHttpActivityObserver = False
         '
@@ -424,7 +419,7 @@ Partial Class Form1
         Me.GroupBox3.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(849, 63)
+        Me.GroupBox3.Size = New System.Drawing.Size(849, 68)
         Me.GroupBox3.TabIndex = 15
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Target"
@@ -488,7 +483,7 @@ Partial Class Form1
         Me.GroupBox5.Controls.Add(Me.Button12)
         Me.GroupBox5.Controls.Add(Me.Button1)
         Me.GroupBox5.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox5.Location = New System.Drawing.Point(618, 597)
+        Me.GroupBox5.Location = New System.Drawing.Point(618, 651)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(238, 60)
         Me.GroupBox5.TabIndex = 19
@@ -529,7 +524,7 @@ Partial Class Form1
         Me.GroupBox6.Controls.Add(Me.TextBox2)
         Me.GroupBox6.Controls.Add(Me.Label4)
         Me.GroupBox6.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox6.Location = New System.Drawing.Point(400, 597)
+        Me.GroupBox6.Location = New System.Drawing.Point(400, 651)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(212, 60)
         Me.GroupBox6.TabIndex = 20
@@ -568,7 +563,7 @@ Partial Class Form1
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox2.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(366, 391)
+        Me.GroupBox2.Size = New System.Drawing.Size(366, 418)
         Me.GroupBox2.TabIndex = 26
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Log"
@@ -584,7 +579,7 @@ Partial Class Form1
         Me.ListBox1.ItemHeight = 16
         Me.ListBox1.Location = New System.Drawing.Point(3, 16)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(360, 372)
+        Me.ListBox1.Size = New System.Drawing.Size(360, 399)
         Me.ListBox1.TabIndex = 0
         '
         'LogContextMenuStrip1
@@ -722,7 +717,7 @@ Partial Class Form1
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Ubuntu", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(50, 46)
+        Me.Label9.Location = New System.Drawing.Point(50, 95)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(86, 20)
         Me.Label9.TabIndex = 28
@@ -733,7 +728,7 @@ Partial Class Form1
         '
         Me.GroupBox7.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox7.Controls.Add(Me.ComboBox1)
-        Me.GroupBox7.Location = New System.Drawing.Point(674, 46)
+        Me.GroupBox7.Location = New System.Drawing.Point(674, 68)
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.Size = New System.Drawing.Size(182, 64)
         Me.GroupBox7.TabIndex = 30
@@ -908,7 +903,7 @@ Partial Class Form1
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(12, 41)
+        Me.PictureBox2.Location = New System.Drawing.Point(12, 90)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(32, 32)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -981,7 +976,7 @@ Partial Class Form1
         Me.GroupBox4.Controls.Add(Me.Button2)
         Me.GroupBox4.Controls.Add(Me.Button4)
         Me.GroupBox4.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox4.Location = New System.Drawing.Point(7, 597)
+        Me.GroupBox4.Location = New System.Drawing.Point(7, 651)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(384, 60)
         Me.GroupBox4.TabIndex = 18
@@ -1005,7 +1000,7 @@ Partial Class Form1
         Me.Label6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.Label6.Font = New System.Drawing.Font("Ubuntu Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(285, 96)
+        Me.Label6.Location = New System.Drawing.Point(286, 126)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(306, 23)
         Me.Label6.TabIndex = 37
@@ -1016,7 +1011,7 @@ Partial Class Form1
         '
         Me.StatusStrip1.BackColor = System.Drawing.Color.Transparent
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripProgressBar1, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel1, Me.ToolStripDropDownButton1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 665)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 714)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(863, 22)
         Me.StatusStrip1.TabIndex = 39
@@ -1078,7 +1073,7 @@ Partial Class Form1
         Me.ReflectionImage1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.ReflectionImage1.BackgroundStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center
         Me.ReflectionImage1.Image = CType(resources.GetObject("ReflectionImage1.Image"), System.Drawing.Image)
-        Me.ReflectionImage1.Location = New System.Drawing.Point(527, 38)
+        Me.ReflectionImage1.Location = New System.Drawing.Point(527, 60)
         Me.ReflectionImage1.Name = "ReflectionImage1"
         Me.ReflectionImage1.Size = New System.Drawing.Size(100, 64)
         Me.ReflectionImage1.TabIndex = 33
@@ -1086,7 +1081,7 @@ Partial Class Form1
         'SplitContainer1
         '
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer1.Location = New System.Drawing.Point(3, 72)
+        Me.SplitContainer1.Location = New System.Drawing.Point(3, 77)
         Me.SplitContainer1.Name = "SplitContainer1"
         '
         'SplitContainer1.Panel1
@@ -1096,7 +1091,7 @@ Partial Class Form1
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.GroupBox2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(849, 391)
+        Me.SplitContainer1.Size = New System.Drawing.Size(849, 418)
         Me.SplitContainer1.SplitterDistance = 479
         Me.SplitContainer1.TabIndex = 1
         '
@@ -1106,12 +1101,12 @@ Partial Class Form1
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.SplitContainer1, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.GroupBox3, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(4, 125)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(4, 147)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.94737!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.05264!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(855, 466)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(855, 498)
         Me.TableLayoutPanel1.TabIndex = 40
         '
         'BrowserContextMenuStrip1
@@ -1119,27 +1114,75 @@ Partial Class Form1
         Me.BrowserContextMenuStrip1.Name = "BrowserContextMenuStrip1"
         Me.BrowserContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 35)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.MenuStrip1.Size = New System.Drawing.Size(863, 24)
+        Me.MenuStrip1.TabIndex = 41
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Ubuntu", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(316, 53)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(228, 79)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Havok"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MinimizeToTrayToolStripMenuItem, Me.ToolStripSeparator14, Me.QuitHavokToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(35, 20)
+        Me.FileToolStripMenuItem.Text = "&File"
+        '
+        'QuitHavokToolStripMenuItem
+        '
+        Me.QuitHavokToolStripMenuItem.Name = "QuitHavokToolStripMenuItem"
+        Me.QuitHavokToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.QuitHavokToolStripMenuItem.Text = "&Quit Havok"
+        '
+        'MinimizeToTrayToolStripMenuItem
+        '
+        Me.MinimizeToTrayToolStripMenuItem.Name = "MinimizeToTrayToolStripMenuItem"
+        Me.MinimizeToTrayToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.MinimizeToTrayToolStripMenuItem.Text = "&Minimize to tray"
+        '
+        'ToolStripSeparator14
+        '
+        Me.ToolStripSeparator14.Name = "ToolStripSeparator14"
+        Me.ToolStripSeparator14.Size = New System.Drawing.Size(157, 6)
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(863, 687)
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.ClientSize = New System.Drawing.Size(863, 736)
         Me.Controls.Add(Me.StatusStrip1)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.ReflectionImage1)
-        Me.Controls.Add(Me.GroupBox7)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox6)
         Me.Controls.Add(Me.GroupBox4)
-        Me.Controls.Add(Me.GroupBox5)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.GroupBox7)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.ReflectionImage1)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label6)
         Me.Cursor = System.Windows.Forms.Cursors.Cross
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -1169,12 +1212,13 @@ Partial Class Form1
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
@@ -1282,5 +1326,11 @@ Partial Class Form1
     Friend WithEvents WebBrowser1 As Gecko.GeckoWebBrowser
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents BrowserContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MinimizeToTrayToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator14 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents QuitHavokToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

@@ -376,6 +376,15 @@
     <None Include="Resources\1374278940_Network_connection.png" />
   </ItemGroup>
   <ItemGroup>
+    <COMReference Include="ITDETECTORLib">
+      <Guid>{D6995525-B33A-4980-A106-9DF58570CC66}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
     <COMReference Include="stdole">
       <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
       <VersionMajor>2</VersionMajor>

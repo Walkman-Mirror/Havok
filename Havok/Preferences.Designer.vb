@@ -125,6 +125,7 @@ Partial Class Preferences
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -589,6 +590,7 @@ Partial Class Preferences
         '
         'GroupBox8
         '
+        Me.GroupBox8.Controls.Add(Me.CheckBox2)
         Me.GroupBox8.Controls.Add(Me.CheckBox1)
         Me.GroupBox8.Location = New System.Drawing.Point(6, 6)
         Me.GroupBox8.Name = "GroupBox8"
@@ -1378,6 +1380,16 @@ Partial Class Preferences
         Me.PictureBox3.TabIndex = 30
         Me.PictureBox3.TabStop = False
         '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(6, 42)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(152, 17)
+        Me.CheckBox2.TabIndex = 45
+        Me.CheckBox2.Text = "Enable Current Time Clock"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
         'Preferences
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1547,4 +1559,5 @@ Partial Class Preferences
     Friend WithEvents LabelX4 As DevComponents.DotNetBar.LabelX
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
 End Class

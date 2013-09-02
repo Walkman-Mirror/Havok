@@ -71,5 +71,11 @@
     <Setting Name="Havok_Environment_DevMessage" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
+    <Setting Name="Havok_Interface_WindowHeaderBarEnabled" Type="System.String" Scope="User">
+      <Value Profile="(Default)">true</Value>
+    </Setting>
+    <Setting Name="Havok_Interface_MenuStripEnabled" Type="System.String" Scope="User">
+      <Value Profile="(Default)">true</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

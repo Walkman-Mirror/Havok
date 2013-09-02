@@ -319,6 +319,18 @@ Public Class Form1
 
 
         'Reads The User Settings For Havok
+        If My.Settings.Havok_Interface_WindowHeaderBarEnabled = "true" Then
+            Panel1.Visible = True
+        End If
+        If My.Settings.Havok_Interface_WindowHeaderBarEnabled = "false" Then
+            Panel1.Visible = False
+        End If
+        If My.Settings.Havok_Interface_MenuStripEnabled = "true" Then
+            MenuStrip1.Visible = True
+        End If
+        If My.Settings.Havok_Interface_MenuStripEnabled = "false" Then
+            MenuStrip1.Visible = False
+        End If
         If My.Settings.Havok_Environment_HideOnStartup = "true" Then
             'Hide The Main Havok Window
             Me.Hide()
@@ -858,6 +870,10 @@ Public Class Form1
 
     Private Sub LabelX2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LabelX2.DoubleClick
         'New feature coming here soon.
+    End Sub
+
+    Private Sub MinimizeToTrayToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MinimizeToTrayToolStripMenuItem.Click
+        Me.Hide()
     End Sub
 End Class
 

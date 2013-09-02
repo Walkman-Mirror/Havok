@@ -330,6 +330,30 @@ Namespace My
                 Me("Havok_Environment_DevMessage") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
+        Public Property Havok_Interface_WindowHeaderBarEnabled() As String
+            Get
+                Return CType(Me("Havok_Interface_WindowHeaderBarEnabled"),String)
+            End Get
+            Set
+                Me("Havok_Interface_WindowHeaderBarEnabled") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
+        Public Property Havok_Interface_MenuStripEnabled() As String
+            Get
+                Return CType(Me("Havok_Interface_MenuStripEnabled"),String)
+            End Get
+            Set
+                Me("Havok_Interface_MenuStripEnabled") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

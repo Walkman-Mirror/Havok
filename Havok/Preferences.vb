@@ -41,6 +41,12 @@ Public Class Preferences
         If My.Settings.Havok_Interface_SystemStats = "0" Then
             CheckBox1.Checked = False
         End If
+        If My.Settings.Havok_Interface_CurrentTimeClockEnabled = "true" Then
+            CheckBox2.Checked = True
+        End If
+        If My.Settings.Havok_Interface_CurrentTimeClockEnabled = "false" Then
+            CheckBox2.Checked = False
+        End If
         TextBoxX1.Text = My.Settings.BrowserHomepageURL
     End Sub
 
@@ -266,6 +272,24 @@ Public Class Preferences
                 CheckBox1.Checked = False
                 Form1.Label7.Visible = False
                 Form1.Label10.Visible = False
+            End If
+        End If
+    End Sub
+
+    Private Sub CheckBox2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox2.CheckedChanged
+        If CheckBox2.Checked = True Then
+            My.Settings.Havok_Interface_CurrentTimeClockEnabled = "true"
+            My.Settings.Save()
+            If My.Settings.Havok_Interface_CurrentTimeClockEnabled = "true" Then
+                CheckBox2.Checked = True
+                Form1.Label11.Visible = True
+            End If
+        Else
+            My.Settings.Havok_Interface_CurrentTimeClockEnabled = "false"
+            My.Settings.Save()
+            If My.Settings.Havok_Interface_CurrentTimeClockEnabled = "false" Then
+                CheckBox2.Checked = False
+                Form1.Label11.Visible = False
             End If
         End If
     End Sub
