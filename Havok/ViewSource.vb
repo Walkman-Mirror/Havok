@@ -50,6 +50,12 @@
         Form1.Label9.Text = "Loading Web Page 6..."
         Form1.ListBox1.Items.Add("Loading Web Page 6...")
         LabelX1.Text = "Getting Source Code..."
+        If My.Settings.Havok_Weapons_ViewSource_AutoRefresh = "true" Then
+
+        End If
+        If My.Settings.Havok_Weapons_ViewSource_AutoRefresh = "false" Then
+            Button17.Enabled = False
+        End If
     End Sub
 
     Private Sub GeckoWebBrowser1_Claaaaaaick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GeckoWebBrowser1.Navigated
@@ -63,10 +69,12 @@
         Form1.Label9.Visible = False
         Form1.ListBox1.Items.Add("Loading Web Page 6... [Done]")
         LabelX1.Text = "Viewing Source: " & GeckoWebBrowser1.Url.ToString
-    End Sub
+        If My.Settings.Havok_Weapons_ViewSource_AutoRefresh = "true" Then
 
-    Private Sub GeckoWebBrowser1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GeckoWebBrowser1.Click
-
+        End If
+        If My.Settings.Havok_Weapons_ViewSource_AutoRefresh = "false" Then
+            Button17.Enabled = True
+        End If
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
@@ -79,5 +87,9 @@
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
         Me.Hide()
+    End Sub
+
+    Private Sub AutomaticRefresher_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AutomaticRefresher.Tick
+        GeckoWebBrowser1.Navigate("view-source:" & Form1.WebBrowser1.Url.ToString)
     End Sub
 End Class

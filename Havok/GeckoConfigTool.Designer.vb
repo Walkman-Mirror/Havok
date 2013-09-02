@@ -32,7 +32,7 @@ Partial Class BrowserLiciousWindow
         Me.GeckoWebBrowser1.Location = New System.Drawing.Point(0, 0)
         Me.GeckoWebBrowser1.Name = "GeckoWebBrowser1"
         Me.GeckoWebBrowser1.NoDefaultContextMenu = True
-        Me.GeckoWebBrowser1.Size = New System.Drawing.Size(874, 568)
+        Me.GeckoWebBrowser1.Size = New System.Drawing.Size(882, 572)
         Me.GeckoWebBrowser1.TabIndex = 0
         Me.GeckoWebBrowser1.UseHttpActivityObserver = False
         '
@@ -40,7 +40,7 @@ Partial Class BrowserLiciousWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(874, 568)
+        Me.ClientSize = New System.Drawing.Size(882, 572)
         Me.Controls.Add(Me.GeckoWebBrowser1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False

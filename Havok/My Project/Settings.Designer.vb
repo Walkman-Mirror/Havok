@@ -57,12 +57,12 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("100")>  _
-        Public Property Weapons_UDPInterval() As Integer
+        Public Property Havok_Weapons_UDPInterval() As Integer
             Get
-                Return CType(Me("Weapons_UDPInterval"),Integer)
+                Return CType(Me("Havok_Weapons_UDPInterval"),Integer)
             End Get
             Set
-                Me("Weapons_UDPInterval") = value
+                Me("Havok_Weapons_UDPInterval") = value
             End Set
         End Property
         
@@ -118,12 +118,12 @@ Namespace My
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
          Global.System.Configuration.DefaultSettingValueAttribute("about:blank")>  _
-        Public Property BrowserHomepageURL() As String
+        Public Property Havok_Browser_HomepageURL() As String
             Get
-                Return CType(Me("BrowserHomepageURL"),String)
+                Return CType(Me("Havok_Browser_HomepageURL"),String)
             End Get
             Set
-                Me("BrowserHomepageURL") = value
+                Me("Havok_Browser_HomepageURL") = value
             End Set
         End Property
         
@@ -286,12 +286,12 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
-        Public Property Havok_BrowserNotifyOnSecurityStateChanged() As String
+        Public Property Havok_Browser_NotifyOnSecurityStateChanged() As String
             Get
-                Return CType(Me("Havok_BrowserNotifyOnSecurityStateChanged"),String)
+                Return CType(Me("Havok_Browser_NotifyOnSecurityStateChanged"),String)
             End Get
             Set
-                Me("Havok_BrowserNotifyOnSecurityStateChanged") = value
+                Me("Havok_Browser_NotifyOnSecurityStateChanged") = value
             End Set
         End Property
         
@@ -364,6 +364,30 @@ Namespace My
             End Get
             Set
                 Me("Havok_Interface_UseDoubleBuffers") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
+        Public Property Havok_Weapons_ViewSource_AutoRefresh() As String
+            Get
+                Return CType(Me("Havok_Weapons_ViewSource_AutoRefresh"),String)
+            End Get
+            Set
+                Me("Havok_Weapons_ViewSource_AutoRefresh") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("100")>  _
+        Public Property Havok_Weapons_ViewSource_AutoRefresh_RefreshInterval() As String
+            Get
+                Return CType(Me("Havok_Weapons_ViewSource_AutoRefresh_RefreshInterval"),String)
+            End Get
+            Set
+                Me("Havok_Weapons_ViewSource_AutoRefresh_RefreshInterval") = value
             End Set
         End Property
     End Class

@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
   <Profiles />
   <Settings>
-    <Setting Name="Weapons_UDPInterval" Type="System.Int32" Scope="User">
+    <Setting Name="Havok_Weapons_UDPInterval" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">100</Value>
     </Setting>
     <Setting Name="Havok_Interface_VisualStyling" Type="System.Int32" Scope="User">
@@ -17,7 +17,7 @@
     <Setting Name="Havok_Environment_Lockdown" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="BrowserHomepageURL" Type="(Web Service URL)" Scope="User">
+    <Setting Name="Havok_Browser_HomepageURL" Type="(Web Service URL)" Scope="User">
       <Value Profile="(Default)">about:blank</Value>
     </Setting>
     <Setting Name="Havok_Environment_LastTyped_LastSelectedWeapon" Type="System.String" Scope="User">
@@ -59,7 +59,7 @@
     <Setting Name="Havok_Interface_Browser_NotifyOnJavascriptError" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
-    <Setting Name="Havok_BrowserNotifyOnSecurityStateChanged" Type="System.String" Scope="User">
+    <Setting Name="Havok_Browser_NotifyOnSecurityStateChanged" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
     <Setting Name="Havok_Environment_HideOnStartup" Type="System.String" Scope="User">
@@ -79,6 +79,12 @@
     </Setting>
     <Setting Name="Havok_Interface_UseDoubleBuffers" Type="System.String" Scope="User">
       <Value Profile="(Default)">false</Value>
+    </Setting>
+    <Setting Name="Havok_Weapons_ViewSource_AutoRefresh" Type="System.String" Scope="User">
+      <Value Profile="(Default)">false</Value>
+    </Setting>
+    <Setting Name="Havok_Weapons_ViewSource_AutoRefresh_RefreshInterval" Type="System.String" Scope="User">
+      <Value Profile="(Default)">100</Value>
     </Setting>
   </Settings>
 </SettingsFile>

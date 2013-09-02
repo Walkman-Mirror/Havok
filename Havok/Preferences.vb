@@ -40,7 +40,7 @@ Public Class Preferences
             Button13.Enabled = False
         End If
         GeckoWebBrowser1.Navigate("about:license")
-        TextBox3.Text = My.Settings.Weapons_UDPInterval.ToString
+        TextBox3.Text = My.Settings.Havok_Weapons_UDPInterval.ToString
         If My.Settings.Havok_Interface_SystemStats = "1" Then
             CheckBox1.Checked = True
         End If
@@ -53,7 +53,7 @@ Public Class Preferences
         If My.Settings.Havok_Interface_CurrentTimeClockEnabled = "false" Then
             CheckBox2.Checked = False
         End If
-        TextBoxX1.Text = My.Settings.BrowserHomepageURL
+        TextBoxX1.Text = My.Settings.Havok_Browser_HomepageURL
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
@@ -139,9 +139,9 @@ Public Class Preferences
     End Sub
 
     Private Sub Button17_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button17.Click
-        My.Settings.Weapons_UDPInterval = TextBox3.Text
+        My.Settings.Havok_Weapons_UDPInterval = TextBox3.Text
         My.Settings.Save()
-        Form1.UDPFlooder.Interval = My.Settings.Weapons_UDPInterval.ToString
+        Form1.UDPFlooder.Interval = My.Settings.Havok_Weapons_UDPInterval.ToString
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -244,14 +244,14 @@ Public Class Preferences
     End Sub
 
     Private Sub Button24_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button24.Click
-        My.Settings.BrowserHomepageURL = TextBoxX1.Text
+        My.Settings.Havok_Browser_HomepageURL = TextBoxX1.Text
         My.Settings.Save()
     End Sub
 
     Private Sub Button22_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button22.Click
-        My.Settings.BrowserHomepageURL = "about:blank"
+        My.Settings.Havok_Browser_HomepageURL = "about:blank"
         My.Settings.Save()
-        TextBoxX1.Text = My.Settings.BrowserHomepageURL
+        TextBoxX1.Text = My.Settings.Havok_Browser_HomepageURL
     End Sub
 
     Private Sub Button21_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button21.Click

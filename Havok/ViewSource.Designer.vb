@@ -22,8 +22,10 @@ Partial Class ViewSource
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ViewSource))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
@@ -34,7 +36,7 @@ Partial Class ViewSource
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.LabelX1 = New DevComponents.DotNetBar.LabelX()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.AutomaticRefresher = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -50,6 +52,17 @@ Partial Class ViewSource
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(600, 35)
         Me.Panel1.TabIndex = 21
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Location = New System.Drawing.Point(520, -2)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(26, 23)
+        Me.Button5.TabIndex = 45
+        Me.Button5.Text = "_"
+        Me.Button5.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -166,16 +179,8 @@ Partial Class ViewSource
         Me.LabelX1.TabIndex = 44
         Me.LabelX1.TextAlignment = System.Drawing.StringAlignment.Center
         '
-        'Button5
+        'AutomaticRefresher
         '
-        Me.Button5.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Location = New System.Drawing.Point(520, -2)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(26, 23)
-        Me.Button5.TabIndex = 45
-        Me.Button5.Text = "_"
-        Me.Button5.UseVisualStyleBackColor = False
         '
         'ViewSource
         '
@@ -213,4 +218,5 @@ Partial Class ViewSource
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents LabelX1 As DevComponents.DotNetBar.LabelX
     Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents AutomaticRefresher As System.Windows.Forms.Timer
 End Class

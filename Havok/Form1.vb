@@ -466,7 +466,7 @@ Public Class Form1
 
         ListBox1.Items.Add("---------------------------")
         'Navigate The Main WebBrowser (WebBrowser1 On Form1) 
-        WebBrowser1.Navigate(My.Settings.BrowserHomepageURL.ToString)
+        WebBrowser1.Navigate(My.Settings.Havok_Browser_HomepageURL.ToString)
         'Navigate ABout Form's Two WebBrowsers (WebBrowser1 and WebBrwoser2 On About)
         Preferences.WebBrowser1.Navigate("http://www.gnu.org/licenses/gpl.txt")
         Preferences.WebBrowser2.Navigate("http://deavmi.3owl.com/index.php/User_talk:Deavmi")
@@ -487,7 +487,7 @@ Public Class Form1
     Private Sub Button10_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
         Preferences.WebBrowser2.Refresh()
         ListBox1.Items.Clear()
-        WebBrowser1.Navigate(My.Settings.BrowserHomepageURL.ToString)
+        WebBrowser1.Navigate(My.Settings.Havok_Browser_HomepageURL.ToString)
         If ComboBox1.Text = "UDP-Flooder" Then
             ComboBox1.Enabled = "True"
             ListBox1.Items.Add("---------------------------")
@@ -501,31 +501,31 @@ Public Class Form1
             TextBox3.Enabled = "True"
             Button2.Enabled = "True"
             Button4.Enabled = "False"
-            WebBrowser1.Navigate(My.Settings.BrowserHomepageURL.ToString)
+            WebBrowser1.Navigate(My.Settings.Havok_Browser_HomepageURL.ToString)
         End If
         If ComboBox1.Text = "HGetter" Then
             HGetter.Close()
-            WebBrowser1.Navigate(My.Settings.BrowserHomepageURL.ToString)
+            WebBrowser1.Navigate(My.Settings.Havok_Browser_HomepageURL.ToString)
         End If
         If ComboBox1.Text = "Remote-PC" Then
             RemotePC.Close()
-            WebBrowser1.Navigate(My.Settings.BrowserHomepageURL.ToString)
+            WebBrowser1.Navigate(My.Settings.Havok_Browser_HomepageURL.ToString)
         End If
         If ComboBox1.Text = "Encryption-Level" Then
             EncryptionLevel.Close()
-            WebBrowser1.Navigate(My.Settings.BrowserHomepageURL.ToString)
+            WebBrowser1.Navigate(My.Settings.Havok_Browser_HomepageURL.ToString)
         End If
         If ComboBox1.Text = "HPusher" Then
             HPusher.Close()
-            WebBrowser1.Navigate(My.Settings.BrowserHomepageURL.ToString)
+            WebBrowser1.Navigate(My.Settings.Havok_Browser_HomepageURL.ToString)
         End If
         If ComboBox1.Text = "Page-Info" Then
             PageInfo.Close()
-            WebBrowser1.Navigate(My.Settings.BrowserHomepageURL.ToString)
+            WebBrowser1.Navigate(My.Settings.Havok_Browser_HomepageURL.ToString)
         End If
         If ComboBox1.Text = "View-Source" Then
             ViewSource.Close()
-            WebBrowser1.Navigate(My.Settings.BrowserHomepageURL.ToString)
+            WebBrowser1.Navigate(My.Settings.Havok_Browser_HomepageURL.ToString)
         End If
     End Sub
 
@@ -747,7 +747,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button17_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        WebBrowser1.Navigate(My.Settings.BrowserHomepageURL.ToString)
+        WebBrowser1.Navigate(My.Settings.Havok_Browser_HomepageURL.ToString)
     End Sub
 
     Private Sub WebBrowser1_JavascriptError(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WebBrowser1.JavascriptError
@@ -769,10 +769,10 @@ Public Class Form1
     End Sub
 
     Private Sub WebBrowser1_SecurityStateChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        If My.Settings.Havok_BrowserNotifyOnSecurityStateChanged = "true" Then
+        If My.Settings.Havok_Browser_NotifyOnSecurityStateChanged = "true" Then
             ListBox1.Items.Add("The Security State Has Been Changed!")
         End If
-        If My.Settings.Havok_BrowserNotifyOnSecurityStateChanged = "false" Then
+        If My.Settings.Havok_Browser_NotifyOnSecurityStateChanged = "false" Then
             'DO NOTHIN, This Really doesn't need to be here
         End If
 
