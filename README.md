@@ -1,4 +1,4 @@
 Havok
 =====
 
-Havok I A Free and Open-Source Networking Tool and Web Tool For Windows.
+Havok is a free and open-source networking tool and web tool for Windows.
