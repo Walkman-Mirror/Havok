@@ -86,5 +86,11 @@
     <Setting Name="Havok_Weapons_ViewSource_AutoRefresh_RefreshInterval" Type="System.String" Scope="User">
       <Value Profile="(Default)">100</Value>
     </Setting>
+    <Setting Name="Havok_Weapons_RunOnStartup" Type="System.String" Scope="User">
+      <Value Profile="(Default)">false</Value>
+    </Setting>
+    <Setting Name="Havok_Weapons_RunOnStartup_WeaponName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

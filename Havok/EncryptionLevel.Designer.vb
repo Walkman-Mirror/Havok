@@ -24,13 +24,13 @@ Partial Class EncryptionLevel
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EncryptionLevel))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -47,6 +47,17 @@ Partial Class EncryptionLevel
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(543, 35)
         Me.Panel1.TabIndex = 14
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(472, -2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(26, 23)
+        Me.Button1.TabIndex = 21
+        Me.Button1.Text = "_"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -107,23 +118,12 @@ Partial Class EncryptionLevel
         Me.Button2.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(12, 138)
+        Me.Button2.Location = New System.Drawing.Point(395, 138)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(129, 28)
         Me.Button2.TabIndex = 16
         Me.Button2.Text = "&Refresh"
         Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(472, -2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(26, 23)
-        Me.Button1.TabIndex = 21
-        Me.Button1.Text = "_"
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'EncryptionLevel
         '

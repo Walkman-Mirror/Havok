@@ -47,8 +47,8 @@
     Private Sub GeckoWebBrowser1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GeckoWebBrowser1.Navigating
         Form1.PictureBox2.Visible = True
         Form1.Label9.Visible = True
-        Form1.Label9.Text = "Loading Web Page 6..."
-        Form1.ListBox1.Items.Add("Loading Web Page 6...")
+        Form1.Label9.Text = "Busy"
+        Form1.ListBox1.Items.Add("(GeckoFX) Navigating...")
         LabelX1.Text = "Getting Source Code..."
         If My.Settings.Havok_Weapons_ViewSource_AutoRefresh = "true" Then
 
@@ -67,7 +67,7 @@
         End If
         Form1.PictureBox2.Visible = False
         Form1.Label9.Visible = False
-        Form1.ListBox1.Items.Add("Loading Web Page 6... [Done]")
+        Form1.ListBox1.Items.Add("(GeckoFX) Navigation Completed")
         LabelX1.Text = "Viewing Source: " & GeckoWebBrowser1.Url.ToString
         If My.Settings.Havok_Weapons_ViewSource_AutoRefresh = "true" Then
 

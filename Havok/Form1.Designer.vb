@@ -136,15 +136,19 @@ Partial Class Form1
         Me.MinimizeToTrayToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
         Me.QuitHavokToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DebuggingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RestartToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BreakDebuggerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CheckForUpdatesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GeckoFXToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator16 = New System.Windows.Forms.ToolStripSeparator()
+        Me.WeaponsToolToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator15 = New System.Windows.Forms.ToolStripSeparator()
         Me.PreferencesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckForUpdatesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -186,7 +190,7 @@ Partial Class Form1
         Me.GroupBox1.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(479, 441)
+        Me.GroupBox1.Size = New System.Drawing.Size(479, 440)
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Web Browser"
@@ -197,7 +201,7 @@ Partial Class Form1
         Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.WebBrowser1.Location = New System.Drawing.Point(3, 41)
         Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(473, 397)
+        Me.WebBrowser1.Size = New System.Drawing.Size(473, 396)
         Me.WebBrowser1.TabIndex = 41
         Me.WebBrowser1.UseHttpActivityObserver = False
         '
@@ -425,7 +429,7 @@ Partial Class Form1
         Me.GroupBox3.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(849, 45)
+        Me.GroupBox3.Size = New System.Drawing.Size(849, 46)
         Me.GroupBox3.TabIndex = 15
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Target"
@@ -557,7 +561,7 @@ Partial Class Form1
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox2.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(366, 441)
+        Me.GroupBox2.Size = New System.Drawing.Size(366, 440)
         Me.GroupBox2.TabIndex = 26
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Log"
@@ -573,7 +577,7 @@ Partial Class Form1
         Me.ListBox1.ItemHeight = 16
         Me.ListBox1.Location = New System.Drawing.Point(3, 16)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(360, 422)
+        Me.ListBox1.Size = New System.Drawing.Size(360, 421)
         Me.ListBox1.TabIndex = 0
         '
         'LogContextMenuStrip1
@@ -994,9 +998,9 @@ Partial Class Form1
         Me.Label6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.Label6.Font = New System.Drawing.Font("Ubuntu Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(286, 126)
+        Me.Label6.Location = New System.Drawing.Point(286, 120)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(306, 23)
+        Me.Label6.Size = New System.Drawing.Size(306, 29)
         Me.Label6.TabIndex = 37
         Me.Label6.Text = "version"
         Me.Label6.TextAlignment = System.Drawing.StringAlignment.Center
@@ -1055,6 +1059,9 @@ Partial Class Form1
         Me.NetStatusToolStripMenuItem.Size = New System.Drawing.Size(219, 22)
         Me.NetStatusToolStripMenuItem.Text = "&Network connectivity status"
         '
+        'Timer1
+        '
+        '
         'NetMonTimer
         '
         '
@@ -1067,15 +1074,15 @@ Partial Class Form1
         Me.ReflectionImage1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.ReflectionImage1.BackgroundStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center
         Me.ReflectionImage1.Image = CType(resources.GetObject("ReflectionImage1.Image"), System.Drawing.Image)
-        Me.ReflectionImage1.Location = New System.Drawing.Point(527, 60)
+        Me.ReflectionImage1.Location = New System.Drawing.Point(529, 62)
         Me.ReflectionImage1.Name = "ReflectionImage1"
-        Me.ReflectionImage1.Size = New System.Drawing.Size(100, 64)
+        Me.ReflectionImage1.Size = New System.Drawing.Size(100, 52)
         Me.ReflectionImage1.TabIndex = 33
         '
         'SplitContainer1
         '
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer1.Location = New System.Drawing.Point(3, 54)
+        Me.SplitContainer1.Location = New System.Drawing.Point(3, 55)
         Me.SplitContainer1.Name = "SplitContainer1"
         '
         'SplitContainer1.Panel1
@@ -1085,7 +1092,7 @@ Partial Class Form1
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.GroupBox2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(849, 441)
+        Me.SplitContainer1.Size = New System.Drawing.Size(849, 440)
         Me.SplitContainer1.SplitterDistance = 479
         Me.SplitContainer1.TabIndex = 1
         '
@@ -1143,27 +1150,9 @@ Partial Class Form1
         Me.QuitHavokToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.QuitHavokToolStripMenuItem.Text = "&Quit Havok"
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Ubuntu", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(316, 53)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(228, 79)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Havok"
-        '
-        'HelpToolStripMenuItem
-        '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CheckForUpdatesToolStripMenuItem1, Me.AboutToolStripMenuItem})
-        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
-        Me.HelpToolStripMenuItem.Text = "&Help"
-        '
         'ToolsToolStripMenuItem
         '
-        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DebuggingToolStripMenuItem, Me.PreferencesToolStripMenuItem})
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DebuggingToolStripMenuItem, Me.GeckoFXToolStripMenuItem, Me.ToolStripSeparator16, Me.WeaponsToolToolStripMenuItem, Me.ToolStripSeparator15, Me.PreferencesToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
         Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.ToolsToolStripMenuItem.Text = "&Tools"
@@ -1172,7 +1161,7 @@ Partial Class Form1
         '
         Me.DebuggingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RestartToolStripMenuItem, Me.BreakDebuggerToolStripMenuItem})
         Me.DebuggingToolStripMenuItem.Name = "DebuggingToolStripMenuItem"
-        Me.DebuggingToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DebuggingToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
         Me.DebuggingToolStripMenuItem.Text = "&Debugging"
         '
         'RestartToolStripMenuItem
@@ -1187,11 +1176,40 @@ Partial Class Form1
         Me.BreakDebuggerToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.BreakDebuggerToolStripMenuItem.Text = "&Break debugger"
         '
-        'AboutToolStripMenuItem
+        'GeckoFXToolStripMenuItem
         '
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
-        Me.AboutToolStripMenuItem.Text = "&About Havok"
+        Me.GeckoFXToolStripMenuItem.Name = "GeckoFXToolStripMenuItem"
+        Me.GeckoFXToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.GeckoFXToolStripMenuItem.Text = "&GeckoFX"
+        '
+        'ToolStripSeparator16
+        '
+        Me.ToolStripSeparator16.Name = "ToolStripSeparator16"
+        Me.ToolStripSeparator16.Size = New System.Drawing.Size(156, 6)
+        '
+        'WeaponsToolToolStripMenuItem
+        '
+        Me.WeaponsToolToolStripMenuItem.Name = "WeaponsToolToolStripMenuItem"
+        Me.WeaponsToolToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.WeaponsToolToolStripMenuItem.Text = "&Weapons/Tools"
+        '
+        'ToolStripSeparator15
+        '
+        Me.ToolStripSeparator15.Name = "ToolStripSeparator15"
+        Me.ToolStripSeparator15.Size = New System.Drawing.Size(156, 6)
+        '
+        'PreferencesToolStripMenuItem
+        '
+        Me.PreferencesToolStripMenuItem.Name = "PreferencesToolStripMenuItem"
+        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.PreferencesToolStripMenuItem.Text = "&Preferences"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CheckForUpdatesToolStripMenuItem1, Me.AboutToolStripMenuItem})
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
+        Me.HelpToolStripMenuItem.Text = "&Help"
         '
         'CheckForUpdatesToolStripMenuItem1
         '
@@ -1199,11 +1217,22 @@ Partial Class Form1
         Me.CheckForUpdatesToolStripMenuItem1.Size = New System.Drawing.Size(173, 22)
         Me.CheckForUpdatesToolStripMenuItem1.Text = "&Check for updates"
         '
-        'PreferencesToolStripMenuItem
+        'AboutToolStripMenuItem
         '
-        Me.PreferencesToolStripMenuItem.Name = "PreferencesToolStripMenuItem"
-        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.PreferencesToolStripMenuItem.Text = "&Preferences"
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
+        Me.AboutToolStripMenuItem.Text = "&About Havok"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Ubuntu", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(316, 47)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(228, 79)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Havok"
         '
         'Form1
         '
@@ -1221,9 +1250,9 @@ Partial Class Form1
         Me.Controls.Add(Me.GroupBox7)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.ReflectionImage1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.ReflectionImage1)
         Me.Cursor = System.Windows.Forms.Cursors.Cross
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -1384,5 +1413,9 @@ Partial Class Form1
     Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CheckForUpdatesToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PreferencesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator15 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator16 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents WeaponsToolToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GeckoFXToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

@@ -390,6 +390,30 @@ Namespace My
                 Me("Havok_Weapons_ViewSource_AutoRefresh_RefreshInterval") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
+        Public Property Havok_Weapons_RunOnStartup() As String
+            Get
+                Return CType(Me("Havok_Weapons_RunOnStartup"),String)
+            End Get
+            Set
+                Me("Havok_Weapons_RunOnStartup") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Havok_Weapons_RunOnStartup_WeaponName() As String
+            Get
+                Return CType(Me("Havok_Weapons_RunOnStartup_WeaponName"),String)
+            End Get
+            Set
+                Me("Havok_Weapons_RunOnStartup_WeaponName") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

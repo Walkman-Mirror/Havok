@@ -8,15 +8,15 @@ Public Class EncryptionLevel
 
 
         'Checks The Encryption Level Of Web Browser 1 a.k.a "WebBrowser1" On Form1
-        If Form1.WebBrowser1.SecurityState = GeckoSecurityState.Secure Then
+        If Form1.WebBrowser1.SecurityState = GeckoSecurityState.Secure = True Then
             Label1.Text = "Encryption Level: Secure"
             Label1.ForeColor = Color.Green
         End If
-        If Form1.WebBrowser1.SecurityState = GeckoSecurityState.Insecure Then
+        If Form1.WebBrowser1.SecurityState = GeckoSecurityState.Insecure = True Then
             Label1.Text = "Encryption Level: Insecure"
             Label1.ForeColor = Color.Red
         End If
-        If Form1.WebBrowser1.SecurityState = GeckoSecurityState.Broken Then
+        If Form1.WebBrowser1.SecurityState = GeckoSecurityState.Broken = True Then
             Label1.Text = "Encryption Level: Broken"
             Label1.ForeColor = Color.Blue
         End If
@@ -55,15 +55,15 @@ Public Class EncryptionLevel
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         'Checks The Encryption Level Of Web Browser 1 a.k.a "WebBrowser1" On Form1
-        If Form1.WebBrowser1.SecurityState = GeckoSecurityState.Secure Then
+        If Form1.WebBrowser1.SecurityState = GeckoSecurityState.Secure = True Then
             Label1.Text = "Encryption Level: Secure"
             Label1.ForeColor = Color.Green
         End If
-        If Form1.WebBrowser1.SecurityState = GeckoSecurityState.Insecure Then
+        If Form1.WebBrowser1.SecurityState = GeckoSecurityState.Insecure = True Then
             Label1.Text = "Encryption Level: Insecure"
             Label1.ForeColor = Color.Red
         End If
-        If Form1.WebBrowser1.SecurityState = GeckoSecurityState.Broken Then
+        If Form1.WebBrowser1.SecurityState = GeckoSecurityState.Broken = True Then
             Label1.Text = "Encryption Level: Broken"
             Label1.ForeColor = Color.Blue
         End If

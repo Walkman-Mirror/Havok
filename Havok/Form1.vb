@@ -3,8 +3,7 @@ Imports System.Diagnostics
 Imports System.Text
 Imports System.Net
 Imports System.IO
-Imports System.Security.Cryptography
-
+Imports System.Net.Mail
 Public Class Form1
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -457,13 +456,13 @@ Public Class Form1
             LicenseAgreement.ShowDialog()
             NotifyIconContextMenuStrip1.Enabled = False
         End If
+        'Show the Notify icon's ballontip message
         NotifyIcon1.ShowBalloonTip(50)
         ListBox1.Items.Add("Welcome To " & My.Application.Info.ProductName)
         ListBox1.Items.Add("Version " & My.Application.Info.Version.ToString)
         ListBox1.Items.Add(My.Application.Info.Copyright)
         ListBox1.Items.Add("")
         ListBox1.Items.Add("Visit the project: http://deavmi.github.io/Havok")
-
         ListBox1.Items.Add("---------------------------")
         'Navigate The Main WebBrowser (WebBrowser1 On Form1) 
         WebBrowser1.Navigate(My.Settings.Havok_Browser_HomepageURL.ToString)
@@ -723,8 +722,8 @@ Public Class Form1
     Private Sub WebBrowser1_Navigating(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WebBrowser1.Navigating
         PictureBox2.Visible = True
         Label9.Visible = True
-        Label9.Text = "Loading Web Page 1..."
-        ListBox1.Items.Add("Loading Web Page 1...")
+        Label9.Text = "Busy"
+        ListBox1.Items.Add("(GeckoFX) Navigating...")
         GroupBox1.Text = "Web Browser - [Navigating]"
         LabelX2.Text = "Navigating"
         WebBrowser1.Cursor = Cursors.AppStarting
@@ -737,7 +736,7 @@ Public Class Form1
         LabelX2.Text = WebBrowser1.DocumentTitle
         PictureBox2.Visible = False
         Label9.Visible = False
-        ListBox1.Items.Add("Loading Web Page 1... [Done]")
+        ListBox1.Items.Add("(GeckoFX) Navigation Completed")
         GroupBox1.Text = "Web Browser - [" & WebBrowser1.DocumentTitle.ToString & "]"
         TextBoxX1.Text = WebBrowser1.Document.Url.ToString
         WebBrowser1.Cursor = Cursors.Default
@@ -775,7 +774,6 @@ Public Class Form1
         If My.Settings.Havok_Browser_NotifyOnSecurityStateChanged = "false" Then
             'DO NOTHIN, This Really doesn't need to be here
         End If
-
     End Sub
 
     Private Sub Network_Avalibility_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -900,6 +898,15 @@ Public Class Form1
 
     Private Sub BreakDebuggerToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BreakDebuggerToolStripMenuItem.Click
         Debugger.Break()
+    End Sub
+
+    Private Sub Timer1_Tick_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        Dim mailmachine As New Mail.SmtpClient
+        mailmachine = New Mail.SmtpClient("", "")
+        mailmachine.Host = ("stmp.googlemail.com")
+        mailmachine.Port = ("")
+        mailmachine.Credentials = "tristankildaire@gmail.com"
+
     End Sub
 End Class
 

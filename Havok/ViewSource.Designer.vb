@@ -60,7 +60,7 @@ Partial Class ViewSource
         Me.Button5.Location = New System.Drawing.Point(520, -2)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(26, 23)
-        Me.Button5.TabIndex = 45
+        Me.Button5.TabIndex = 6
         Me.Button5.Text = "_"
         Me.Button5.UseVisualStyleBackColor = False
         '
@@ -92,7 +92,7 @@ Partial Class ViewSource
         Me.Button8.Location = New System.Drawing.Point(552, -2)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(26, 23)
-        Me.Button8.TabIndex = 12
+        Me.Button8.TabIndex = 6
         Me.Button8.Text = "X"
         Me.Button8.UseVisualStyleBackColor = False
         '
@@ -101,10 +101,12 @@ Partial Class ViewSource
         Me.Button17.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button17.Font = New System.Drawing.Font("Ubuntu", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button17.Image = CType(resources.GetObject("Button17.Image"), System.Drawing.Image)
+        Me.Button17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button17.Location = New System.Drawing.Point(435, 468)
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(138, 27)
-        Me.Button17.TabIndex = 35
+        Me.Button17.TabIndex = 1
         Me.Button17.Text = "&Refresh Source"
         Me.Button17.UseVisualStyleBackColor = False
         '
@@ -116,7 +118,7 @@ Partial Class ViewSource
         Me.Button1.Location = New System.Drawing.Point(13, 468)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(138, 27)
-        Me.Button1.TabIndex = 36
+        Me.Button1.TabIndex = 2
         Me.Button1.Text = "&Copy To Clipboard"
         Me.Button1.UseVisualStyleBackColor = False
         '
@@ -128,7 +130,7 @@ Partial Class ViewSource
         Me.Button2.Location = New System.Drawing.Point(157, 468)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(138, 27)
-        Me.Button2.TabIndex = 37
+        Me.Button2.TabIndex = 3
         Me.Button2.Text = "&Save As Text File "
         Me.Button2.UseVisualStyleBackColor = False
         '
@@ -150,7 +152,7 @@ Partial Class ViewSource
         Me.Button3.Location = New System.Drawing.Point(13, 41)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(37, 29)
-        Me.Button3.TabIndex = 42
+        Me.Button3.TabIndex = 4
         Me.Button3.Text = "&<"
         Me.Button3.UseVisualStyleBackColor = False
         '
@@ -162,7 +164,7 @@ Partial Class ViewSource
         Me.Button4.Location = New System.Drawing.Point(56, 41)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(37, 29)
-        Me.Button4.TabIndex = 43
+        Me.Button4.TabIndex = 5
         Me.Button4.Text = "&>"
         Me.Button4.UseVisualStyleBackColor = False
         '

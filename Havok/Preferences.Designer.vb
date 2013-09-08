@@ -60,6 +60,11 @@ Partial Class Preferences
         Me.TabControl4 = New System.Windows.Forms.TabControl()
         Me.TabPage14 = New System.Windows.Forms.TabPage()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.TabPage21 = New System.Windows.Forms.TabPage()
         Me.TabControl6 = New System.Windows.Forms.TabControl()
@@ -125,7 +130,7 @@ Partial Class Preferences
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.TabPage25 = New System.Windows.Forms.TabPage()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -228,7 +233,7 @@ Partial Class Preferences
         Me.TabControl1.Location = New System.Drawing.Point(12, 40)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(569, 352)
+        Me.TabControl1.Size = New System.Drawing.Size(569, 408)
         Me.TabControl1.TabIndex = 14
         '
         'TabPage3
@@ -554,7 +559,7 @@ Partial Class Preferences
         Me.TabPage12.Controls.Add(Me.TabControl4)
         Me.TabPage12.Location = New System.Drawing.Point(4, 22)
         Me.TabPage12.Name = "TabPage12"
-        Me.TabPage12.Size = New System.Drawing.Size(561, 326)
+        Me.TabPage12.Size = New System.Drawing.Size(561, 382)
         Me.TabPage12.TabIndex = 7
         Me.TabPage12.Text = "Settings"
         Me.TabPage12.UseVisualStyleBackColor = True
@@ -573,7 +578,7 @@ Partial Class Preferences
         Me.TabControl4.Location = New System.Drawing.Point(0, 0)
         Me.TabControl4.Name = "TabControl4"
         Me.TabControl4.SelectedIndex = 0
-        Me.TabControl4.Size = New System.Drawing.Size(561, 326)
+        Me.TabControl4.Size = New System.Drawing.Size(561, 382)
         Me.TabControl4.TabIndex = 41
         '
         'TabPage14
@@ -590,14 +595,68 @@ Partial Class Preferences
         '
         'GroupBox8
         '
+        Me.GroupBox8.Controls.Add(Me.CheckBox6)
+        Me.GroupBox8.Controls.Add(Me.CheckBox5)
+        Me.GroupBox8.Controls.Add(Me.CheckBox4)
+        Me.GroupBox8.Controls.Add(Me.CheckBox3)
         Me.GroupBox8.Controls.Add(Me.CheckBox2)
         Me.GroupBox8.Controls.Add(Me.CheckBox1)
         Me.GroupBox8.Location = New System.Drawing.Point(6, 6)
         Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Size = New System.Drawing.Size(395, 198)
+        Me.GroupBox8.Size = New System.Drawing.Size(197, 160)
         Me.GroupBox8.TabIndex = 0
         Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "General"
+        '
+        'CheckBox6
+        '
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.Location = New System.Drawing.Point(6, 134)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(168, 17)
+        Me.CheckBox6.TabIndex = 49
+        Me.CheckBox6.Text = "Enable Windows Visual Styles"
+        Me.CheckBox6.UseVisualStyleBackColor = True
+        '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Location = New System.Drawing.Point(6, 111)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(129, 17)
+        Me.CheckBox5.TabIndex = 48
+        Me.CheckBox5.Text = "Enable DoubleBuffers"
+        Me.CheckBox5.UseVisualStyleBackColor = True
+        '
+        'CheckBox4
+        '
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Location = New System.Drawing.Point(6, 65)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(97, 17)
+        Me.CheckBox4.TabIndex = 47
+        Me.CheckBox4.Text = "Enable Header"
+        Me.CheckBox4.UseVisualStyleBackColor = True
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Location = New System.Drawing.Point(6, 88)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(110, 17)
+        Me.CheckBox3.TabIndex = 46
+        Me.CheckBox3.Text = "Enable MenuStrip"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(6, 42)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(152, 17)
+        Me.CheckBox2.TabIndex = 45
+        Me.CheckBox2.Text = "Enable Current Time Clock"
+        Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'CheckBox1
         '
@@ -615,19 +674,20 @@ Partial Class Preferences
         Me.TabPage21.Location = New System.Drawing.Point(4, 22)
         Me.TabPage21.Name = "TabPage21"
         Me.TabPage21.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage21.Size = New System.Drawing.Size(553, 300)
+        Me.TabPage21.Size = New System.Drawing.Size(553, 356)
         Me.TabPage21.TabIndex = 7
         Me.TabPage21.Text = "Weapons/Tools"
         Me.TabPage21.UseVisualStyleBackColor = True
         '
         'TabControl6
         '
+        Me.TabControl6.Controls.Add(Me.TabPage25)
         Me.TabControl6.Controls.Add(Me.TabPage24)
         Me.TabControl6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl6.Location = New System.Drawing.Point(3, 3)
         Me.TabControl6.Name = "TabControl6"
         Me.TabControl6.SelectedIndex = 0
-        Me.TabControl6.Size = New System.Drawing.Size(547, 294)
+        Me.TabControl6.Size = New System.Drawing.Size(547, 350)
         Me.TabControl6.TabIndex = 1
         '
         'TabPage24
@@ -912,7 +972,7 @@ Partial Class Preferences
         Me.TabPage18.Controls.Add(Me.TabControl5)
         Me.TabPage18.Location = New System.Drawing.Point(4, 22)
         Me.TabPage18.Name = "TabPage18"
-        Me.TabPage18.Size = New System.Drawing.Size(553, 300)
+        Me.TabPage18.Size = New System.Drawing.Size(553, 356)
         Me.TabPage18.TabIndex = 4
         Me.TabPage18.Text = "Web Browser"
         Me.TabPage18.UseVisualStyleBackColor = True
@@ -925,7 +985,7 @@ Partial Class Preferences
         Me.TabControl5.Location = New System.Drawing.Point(0, 0)
         Me.TabControl5.Name = "TabControl5"
         Me.TabControl5.SelectedIndex = 0
-        Me.TabControl5.Size = New System.Drawing.Size(553, 300)
+        Me.TabControl5.Size = New System.Drawing.Size(553, 356)
         Me.TabControl5.TabIndex = 41
         '
         'TabPage22
@@ -934,7 +994,7 @@ Partial Class Preferences
         Me.TabPage22.Location = New System.Drawing.Point(4, 22)
         Me.TabPage22.Name = "TabPage22"
         Me.TabPage22.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage22.Size = New System.Drawing.Size(545, 274)
+        Me.TabPage22.Size = New System.Drawing.Size(545, 330)
         Me.TabPage22.TabIndex = 0
         Me.TabPage22.Text = "General"
         Me.TabPage22.UseVisualStyleBackColor = True
@@ -1380,21 +1440,20 @@ Partial Class Preferences
         Me.PictureBox3.TabIndex = 30
         Me.PictureBox3.TabStop = False
         '
-        'CheckBox2
+        'TabPage25
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(6, 42)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(152, 17)
-        Me.CheckBox2.TabIndex = 45
-        Me.CheckBox2.Text = "Enable Current Time Clock"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.TabPage25.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage25.Name = "TabPage25"
+        Me.TabPage25.Size = New System.Drawing.Size(539, 324)
+        Me.TabPage25.TabIndex = 1
+        Me.TabPage25.Text = "General"
+        Me.TabPage25.UseVisualStyleBackColor = True
         '
         'Preferences
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(593, 404)
+        Me.ClientSize = New System.Drawing.Size(593, 460)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -1560,4 +1619,9 @@ Partial Class Preferences
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox4 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox6 As System.Windows.Forms.CheckBox
+    Friend WithEvents TabPage25 As System.Windows.Forms.TabPage
 End Class

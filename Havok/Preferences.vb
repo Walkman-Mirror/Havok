@@ -2,6 +2,7 @@
 Imports Gecko.Xpcom
 Imports Gecko.CookieManager
 Imports Gecko
+Imports System.Windows.Forms
 
 Public Class Preferences
 
@@ -26,6 +27,24 @@ Public Class Preferences
         End If
         Label6.Text = My.Application.Info.Version.Major.ToString & " Beta-Nightly"
         Label12.Text = "XUL Runner Version: " & Gecko.Xpcom.XulRunnerVersion.ToString
+        If My.Settings.Havok_Interface_MenuStripEnabled = "true" Then
+            CheckBox3.Checked = True
+        End If
+        If My.Settings.Havok_Interface_MenuStripEnabled = "false" Then
+            CheckBox3.Checked = False
+        End If
+        If My.Settings.Havok_Interface_WindowHeaderBarEnabled = "true" Then
+            CheckBox4.Checked = True
+        End If
+        If My.Settings.Havok_Interface_WindowHeaderBarEnabled = "false" Then
+            CheckBox4.Checked = False
+        End If
+        If My.Settings.Havok_Interface_UseDoubleBuffers = "true" Then
+            CheckBox5.Checked = True
+        End If
+        If My.Settings.Havok_Interface_UseDoubleBuffers = "false" Then
+            CheckBox5.Checked = False
+        End If
         If My.Settings.Havok_Interface_ChestaGUI = "0" Then
             Button3.Visible = True
             Button4.Visible = False
@@ -296,6 +315,80 @@ Public Class Preferences
             If My.Settings.Havok_Interface_CurrentTimeClockEnabled = "false" Then
                 CheckBox2.Checked = False
                 Form1.Label11.Visible = False
+            End If
+        End If
+    End Sub
+
+    Private Sub CheckBox4_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox4.CheckedChanged
+        If CheckBox4.Checked = True Then
+            My.Settings.Havok_Interface_WindowHeaderBarEnabled = "true"
+            My.Settings.Save()
+            If My.Settings.Havok_Interface_WindowHeaderBarEnabled = "true" Then
+                CheckBox4.Checked = True
+                Form1.Panel1.Visible = True
+            End If
+        Else
+            My.Settings.Havok_Interface_WindowHeaderBarEnabled = "false"
+            My.Settings.Save()
+            If My.Settings.Havok_Interface_WindowHeaderBarEnabled = "false" Then
+                CheckBox4.Checked = False
+                Form1.Panel1.Visible = False
+            End If
+        End If
+    End Sub
+
+    Private Sub CheckBox3_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox3.CheckedChanged
+        If CheckBox3.Checked = True Then
+            My.Settings.Havok_Interface_MenuStripEnabled = "true"
+            My.Settings.Save()
+            If My.Settings.Havok_Interface_MenuStripEnabled = "true" Then
+                CheckBox3.Checked = True
+                Form1.MenuStrip1.Visible = True
+            End If
+        Else
+            My.Settings.Havok_Interface_MenuStripEnabled = "false"
+            My.Settings.Save()
+            If My.Settings.Havok_Interface_MenuStripEnabled = "false" Then
+                CheckBox3.Checked = False
+                Form1.MenuStrip1.Visible = False
+            End If
+        End If
+    End Sub
+
+    Private Sub CheckBox5_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox5.CheckedChanged
+        If CheckBox5.Checked = True Then
+            My.Settings.Havok_Interface_UseDoubleBuffers = "true"
+            My.Settings.Save()
+            If My.Settings.Havok_Interface_UseDoubleBuffers = "true" Then
+                CheckBox5.Checked = True
+            End If
+        Else
+            My.Settings.Havok_Interface_UseDoubleBuffers = "false"
+            My.Settings.Save()
+            If My.Settings.Havok_Interface_UseDoubleBuffers = "false" Then
+                CheckBox5.Checked = False
+            End If
+        End If
+    End Sub
+
+    Private Sub CheckBox6_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox6.CheckedChanged
+        If CheckBox6.Checked = True Then
+            My.Settings.Havok_Interface_VisualStyling = "1"
+            My.Settings.Save()
+            If My.Settings.Havok_Interface_VisualStyling = "1" Then
+                CheckBox6.Checked = True
+                Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+                Form1.Button15.Visible = True
+                Form1.Button16.Visible = False
+            End If
+        Else
+            My.Settings.Havok_Interface_VisualStyling = "0"
+            My.Settings.Save()
+            If My.Settings.Havok_Interface_VisualStyling = "0" Then
+                CheckBox6.Checked = False
+                Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+                Form1.Button15.Visible = False
+                Form1.Button16.Visible = True
             End If
         End If
     End Sub
