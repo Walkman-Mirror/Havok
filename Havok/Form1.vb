@@ -317,18 +317,16 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        
+        ListBox1.Items.Add("Starting Up...")
 
-        'We Put This Here, Or Chesta Will Not Be Happy
-        Label6.ForeColor = Color.Black
-        'Dat Is Racist, Soz Bra
 
-        'Reads The USer Settings For Havok
+
+        'Reads The User Settings For Havok
         If My.Settings.HideOnStartup = "true" Then
             'Hide The Main Havok Window
             Me.Hide()
         End If
-        If My.Settings.ChestaGUI = "1" Then
+        If My.Settings.Havok_Interface_ChestaGUI = "1" Then
             'Activate The Chesta Mod/Mode
             ListBox1.BackColor = Color.Black
             ListBox1.ForeColor = Color.LimeGreen
@@ -338,7 +336,7 @@ Public Class Form1
             Label1.ForeColor = Color.Lime
             Label6.ForeColor = Color.Lime
         End If
-        If My.Settings.ChestaGUI = "0" Then
+        If My.Settings.Havok_Interface_ChestaGUI = "0" Then
             'Deactivate The Chesta Mod/Mode
             ListBox1.BackColor = Color.White
             ListBox1.ForeColor = Color.Black
@@ -348,23 +346,23 @@ Public Class Form1
             Label1.ForeColor = Color.Black
             Label6.ForeColor = Color.Black
         End If
-        If My.Settings.VisualStyling = "0" Then
+        If My.Settings.Havok_Interface_VisualStyling = "0" Then
             Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
             Button15.Visible = False
             Button16.Visible = True
         End If
 
-        If My.Settings.VisualStyling = "1" Then
+        If My.Settings.Havok_Interface_VisualStyling = "1" Then
             Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
             Button15.Visible = True
             Button16.Visible = False
         End If
-        If My.Settings.SystemStats = "1" Then
+        If My.Settings.Havok_Interface_SystemStats = "1" Then
             Label7.Visible = True
             Label10.Visible = True
             SystemStats.Start()
         End If
-        If My.Settings.SystemStats = "0" Then
+        If My.Settings.Havok_Interface_SystemStats = "0" Then
             Label7.Visible = False
             Label10.Visible = False
         End If
@@ -402,7 +400,6 @@ Public Class Form1
             NotifyIconContextMenuStrip1.Enabled = False
         End If
         NotifyIcon1.ShowBalloonTip(50)
-        ListBox1.Items.Add("Starting Up...")
         ListBox1.Items.Add("Welcome To " & My.Application.Info.ProductName)
         ListBox1.Items.Add("Version " & My.Application.Info.Version.ToString)
         ListBox1.Items.Add(My.Application.Info.Copyright)
@@ -426,7 +423,7 @@ Public Class Form1
         OSToolStripMenuItem.Text = My.Computer.Info.OSFullName
         AaaaToolStripMenuItem.Text = My.Computer.Info.OSVersion
         'Just Gets Sum More Settings
-        If My.Settings.Lockdown = "0" Then
+        If My.Settings.Havok_Feature_Lockdown = "0" Then
             'Deactivates Lockdown Mode
             EnableToolStripMenuItem1.Visible = True
             Me.Enabled = True
@@ -436,7 +433,7 @@ Public Class Form1
             ListBox1.Items.Add("---------------------------")
             ListBox1.Items.Add("Lockdown Mode Disabled!")
         End If
-        If My.Settings.Lockdown = "1" Then
+        If My.Settings.Havok_Feature_Lockdown = "1" Then
             'Activates Lockdown Mode
             EnableToolStripMenuItem1.Visible = False
             Me.Enabled = False
@@ -576,9 +573,9 @@ Public Class Form1
 
     Private Sub Button15_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button15.Click
 
-        My.Settings.VisualStyling = "0"
+        My.Settings.Havok_Interface_VisualStyling = "0"
         My.Settings.Save()
-        If My.Settings.VisualStyling = "0" Then
+        If My.Settings.Havok_Interface_VisualStyling = "0" Then
             Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
             Button15.Visible = False
             Button16.Visible = True
@@ -586,9 +583,9 @@ Public Class Form1
     End Sub
 
     Private Sub Button16_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button16.Click
-        My.Settings.VisualStyling = "1"
+        My.Settings.Havok_Interface_VisualStyling = "1"
         My.Settings.Save()
-        If My.Settings.VisualStyling.ToString = "1" Then
+        If My.Settings.Havok_Interface_VisualStyling.ToString = "1" Then
             Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
             Button15.Visible = True
             Button16.Visible = False
@@ -624,9 +621,9 @@ Public Class Form1
     End Sub
 
     Private Sub EnableToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EnableToolStripMenuItem1.Click
-        My.Settings.Lockdown = "1"
+        My.Settings.Havok_Feature_Lockdown = "1"
         My.Settings.Save()
-        If My.Settings.Lockdown = "1" Then
+        If My.Settings.Havok_Feature_Lockdown = "1" Then
             EnableToolStripMenuItem1.Visible = False
             Me.Enabled = False
             DisableToolStripMenuItem.Visible = True
@@ -640,9 +637,9 @@ Public Class Form1
     End Sub
 
     Private Sub DisableToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DisableToolStripMenuItem.Click
-        My.Settings.Lockdown = "0"
+        My.Settings.Havok_Feature_Lockdown = "0"
         My.Settings.Save()
-        If My.Settings.Lockdown = "0" Then
+        If My.Settings.Havok_Feature_Lockdown = "0" Then
             EnableToolStripMenuItem1.Visible = True
             Me.Enabled = True
             DisableToolStripMenuItem.Visible = False
@@ -862,7 +859,8 @@ Public Class Form1
         GLOIP = IPAddress.Parse(TextBox1.Text)
         tcpclient.Connect(GLOIP, TextBox3.Text)
         bytCommand = Encoding.ASCII.GetBytes(TextBox2.Text)
-        tcpclient.Client.Send(bytcommand)
+        tcpclient.Connect(GLOIP, TextBox3.Text)
+
 
 
 

@@ -5,7 +5,7 @@ Public Class Updates
         Form1.PictureBox2.Visible = False
         Form1.Label9.Visible = False
         Form1.ListBox1.Items.Add("Loading Web Page 2... [Done]")
-        Label1.Text = "Checking for updates has completed."
+        Label1.Text = "Finishing up..."
     End Sub
 
     Private Sub GeckoWebBrowser1_Navigating(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GeckoWebBrowser1.Navigating
@@ -18,8 +18,15 @@ Public Class Updates
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         GeckoWebBrowser1.Visible = True
-        GeckoWebBrowser1.Navigate("http://deavmi.github.io/Havok")
+        GeckoWebBrowser1.Navigate("http://deavmi.github.io/Havok/#application")
     End Sub
 
+    Private Sub GeckoWebBrowser1_DocumentCompleted(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GeckoWebBrowser1.DocumentCompleted
+        Label1.Text = "Update check completed!"
+    End Sub
 
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        MsgBox("We will now open a link in your browser to download the update package, sorry but Google ites doesn't allow direct file downloads.")
+        Process.Start("")
+    End Sub
 End Class

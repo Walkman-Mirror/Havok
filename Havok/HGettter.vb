@@ -31,12 +31,7 @@ Public Class HGettter
         If HGetter_File_5_Downloader.IsBusy = True Then
             HGetter_File_5_Downloader.CancelAsync()
         End If
-
     End Sub
-
-
-
-
 
     Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Close()
@@ -54,9 +49,7 @@ Public Class HGettter
             Label1.ForeColor = Color.Green
             Label7.ForeColor = Color.Green
             My.Computer.Network.DownloadFile(TextBox2.Text, TextBox6.Text)
-
         End If
-
     End Sub
 
     Private Sub HGetter_File_1_Downloader_RunWorkerCompleted(ByVal sender As System.Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles HGetter_File_1_Downloader.RunWorkerCompleted
@@ -102,11 +95,32 @@ Public Class HGettter
     End Sub
 
     Private Sub HGetter_File_4_Downloader_RunWorkerCompleted(ByVal sender As System.Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles HGetter_File_4_Downloader.RunWorkerCompleted
+        If TextBox5.Text = "" And TextBox4.Text = "" Then
 
+        Else
+
+            Label15.Text = "File 4: Idle"
+            Label6.ForeColor = Color.Red
+            Label4.ForeColor = Color.Red
+            Button6.Enabled = False
+            Button12.Enabled = True
+            TextBox5.Enabled = True
+            TextBox4.Enabled = True
+        End If
     End Sub
 
     Private Sub HGetter_File_5_Downloader_RunWorkerCompleted(ByVal sender As System.Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles HGetter_File_5_Downloader.RunWorkerCompleted
+        If TextBox10.Text = "" And TextBox9.Text = "" Then
 
+        Else
+            Label16.Text = "File 5: Idle"
+            Label11.ForeColor = Color.Red
+            Label10.ForeColor = Color.Red
+            Button7.Enabled = False
+            Button13.Enabled = True
+            TextBox10.Enabled = True
+            TextBox9.Enabled = True
+        End If
     End Sub
 
 
@@ -357,9 +371,6 @@ Public Class HGettter
             TextBox10.Enabled = True
         End If
 
-
-
-
     End Sub
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         HGetter_File_1_Downloader.RunWorkerAsync()
@@ -372,7 +383,6 @@ Public Class HGettter
     Private Sub HGettter_Closed(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.FormClosed
         Form1.ListBox1.Items.Add("---------------------------")
         Form1.ListBox1.Items.Add("HGetter Has Stopped!")
-
     End Sub
 
 
@@ -479,13 +489,6 @@ Public Class HGettter
             Label6.ForeColor = Color.Green
             Label4.ForeColor = Color.Green
             My.Computer.Network.DownloadFile(TextBox5.Text, TextBox4.Text)
-            Label15.Text = "File 4: Idle"
-            Label6.ForeColor = Color.Red
-            Label4.ForeColor = Color.Red
-            Button6.Enabled = False
-            Button12.Enabled = True
-            TextBox5.Enabled = True
-            TextBox4.Enabled = True
         End If
     End Sub
 
@@ -525,13 +528,7 @@ Public Class HGettter
             Label11.ForeColor = Color.Green
             Label10.ForeColor = Color.Green
             My.Computer.Network.DownloadFile(TextBox10.Text, TextBox9.Text)
-            Label16.Text = "File 5: Idle"
-            Label11.ForeColor = Color.Red
-            Label10.ForeColor = Color.Red
-            Button7.Enabled = False
-            Button13.Enabled = True
-            TextBox10.Enabled = True
-            TextBox9.Enabled = True
+       
         End If
     End Sub
 
@@ -546,9 +543,5 @@ Public Class HGettter
 
     Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button13.Click
         HGetter_File_5_Downloader.RunWorkerAsync()
-    End Sub
-
-    Private Sub Button14_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Me.Hide()
     End Sub
 End Class

@@ -19,11 +19,11 @@ Public Class Preferences
 
     Private Sub About_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Label12.Text = "XUL Runner Version: " & Gecko.Xpcom.XulRunnerVersion.ToString
-        If My.Settings.ChestaGUI = "0" Then
+        If My.Settings.Havok_Interface_ChestaGUI = "0" Then
             Button3.Visible = True
             Button4.Visible = False
         End If
-        If My.Settings.ChestaGUI = "1" Then
+        If My.Settings.Havok_Interface_ChestaGUI = "1" Then
             Button3.Visible = False
             Button4.Visible = True
         End If
@@ -33,12 +33,12 @@ Public Class Preferences
             Button13.Enabled = False
         End If
         GeckoWebBrowser1.Navigate("about:license")
-        TextBox3.Text = My.Settings.UDPInterval.ToString
-        If My.Settings.SystemStats = "1" Then
+        TextBox3.Text = My.Settings.Weapons_UDPInterval.ToString
+        If My.Settings.Havok_Interface_SystemStats = "1" Then
             Button19.Visible = True
             Button18.Visible = False
         End If
-        If My.Settings.SystemStats = "0" Then
+        If My.Settings.Havok_Interface_SystemStats = "0" Then
             Button19.Visible = False
             Button18.Visible = True
         End If
@@ -46,9 +46,9 @@ Public Class Preferences
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        My.Settings.ChestaGUI = "1"
+        My.Settings.Havok_Interface_ChestaGUI = "1"
         My.Settings.Save()
-        If My.Settings.ChestaGUI = "1" Then
+        If My.Settings.Havok_Interface_ChestaGUI = "1" Then
             'Activate The Chesta Mod/Mode
             Button3.Visible = False
             Button4.Visible = True
@@ -63,9 +63,9 @@ Public Class Preferences
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        My.Settings.ChestaGUI = "0"
+        My.Settings.Havok_Interface_ChestaGUI = "0"
         My.Settings.Save()
-        If My.Settings.ChestaGUI = "0" Then
+        If My.Settings.Havok_Interface_ChestaGUI = "0" Then
             'Deactivate The Chesta Mod/Mode
             Button3.Visible = True
             Button4.Visible = False
@@ -128,9 +128,9 @@ Public Class Preferences
     End Sub
 
     Private Sub Button17_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button17.Click
-        My.Settings.UDPInterval = TextBox3.Text
+        My.Settings.Weapons_UDPInterval = TextBox3.Text
         My.Settings.Save()
-        Form1.UDPFlooder.Interval = My.Settings.UDPInterval.ToString
+        Form1.UDPFlooder.Interval = My.Settings.Weapons_UDPInterval.ToString
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -233,9 +233,9 @@ Public Class Preferences
     End Sub
 
     Private Sub Button19_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button19.Click
-        My.Settings.SystemStats = "0"
+        My.Settings.Havok_Interface_SystemStats = "0"
         My.Settings.Save()
-        If My.Settings.SystemStats = "0" Then
+        If My.Settings.Havok_Interface_SystemStats = "0" Then
             Button18.Visible = True
             Button19.Visible = False
             Form1.Label7.Visible = False
@@ -244,9 +244,9 @@ Public Class Preferences
     End Sub
 
     Private Sub Button18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button18.Click
-        My.Settings.SystemStats = "1"
+        My.Settings.Havok_Interface_SystemStats = "1"
         My.Settings.Save()
-        If My.Settings.SystemStats = "1" Then
+        If My.Settings.Havok_Interface_SystemStats = "1" Then
             Button18.Visible = False
             Button19.Visible = True
             Form1.Label7.Visible = True

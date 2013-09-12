@@ -22,7 +22,6 @@ Partial Class LicenseAgreement
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LicenseAgreement))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -50,7 +49,8 @@ Partial Class LicenseAgreement
         Me.RichTextBox1.ReadOnly = True
         Me.RichTextBox1.Size = New System.Drawing.Size(754, 513)
         Me.RichTextBox1.TabIndex = 1
-        Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
+        Me.RichTextBox1.Text = "This software is registered under GNU's General Public License Version 3 (GPLv3) " & _
+            "which can be obtained at <http://gnu.org/licenses/gpl.txt>"
         '
         'Button1
         '

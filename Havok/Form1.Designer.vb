@@ -38,6 +38,7 @@ Partial Class Form1
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
         Me.WebBrowser1 = New Gecko.GeckoWebBrowser()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button16 = New System.Windows.Forms.Button()
@@ -134,7 +135,6 @@ Partial Class Form1
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
         Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -274,6 +274,11 @@ Partial Class Form1
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
         Me.ToolStripButton1.Text = "ToolStripButton1"
+        '
+        'ToolStripSeparator14
+        '
+        Me.ToolStripSeparator14.Name = "ToolStripSeparator14"
+        Me.ToolStripSeparator14.Size = New System.Drawing.Size(6, 25)
         '
         'WebBrowser1
         '
@@ -1018,6 +1023,7 @@ Partial Class Form1
         '
         Me.Label6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.Label6.Font = New System.Drawing.Font("Ubuntu Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.Location = New System.Drawing.Point(285, 96)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(306, 23)
@@ -1070,7 +1076,7 @@ Partial Class Form1
         '
         Me.OpenPageInDeafultBrowserToolStripMenuItem.Enabled = False
         Me.OpenPageInDeafultBrowserToolStripMenuItem.Name = "OpenPageInDeafultBrowserToolStripMenuItem"
-        Me.OpenPageInDeafultBrowserToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.OpenPageInDeafultBrowserToolStripMenuItem.Size = New System.Drawing.Size(219, 22)
         Me.OpenPageInDeafultBrowserToolStripMenuItem.Text = "&Open Page In Browser"
         '
         'NetStatusToolStripMenuItem
@@ -1114,7 +1120,7 @@ Partial Class Form1
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(129, 49)
+        Me.Button3.Location = New System.Drawing.Point(164, 79)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 40
@@ -1124,20 +1130,15 @@ Partial Class Form1
         'Timer2
         '
         '
-        'ToolStripSeparator14
-        '
-        Me.ToolStripSeparator14.Name = "ToolStripSeparator14"
-        Me.ToolStripSeparator14.Size = New System.Drawing.Size(6, 25)
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(863, 687)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.StatusStrip1)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ReflectionImage1)
         Me.Controls.Add(Me.GroupBox7)

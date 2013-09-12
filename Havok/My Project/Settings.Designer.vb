@@ -57,60 +57,60 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("100")>  _
-        Public Property UDPInterval() As Integer
+        Public Property Weapons_UDPInterval() As Integer
             Get
-                Return CType(Me("UDPInterval"),Integer)
+                Return CType(Me("Weapons_UDPInterval"),Integer)
             End Get
             Set
-                Me("UDPInterval") = value
+                Me("Weapons_UDPInterval") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
-        Public Property VisualStyling() As Integer
+        Public Property Havok_Interface_VisualStyling() As Integer
             Get
-                Return CType(Me("VisualStyling"),Integer)
+                Return CType(Me("Havok_Interface_VisualStyling"),Integer)
             End Get
             Set
-                Me("VisualStyling") = value
+                Me("Havok_Interface_VisualStyling") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
-        Public Property SystemStats() As Integer
+        Public Property Havok_Interface_SystemStats() As Integer
             Get
-                Return CType(Me("SystemStats"),Integer)
+                Return CType(Me("Havok_Interface_SystemStats"),Integer)
             End Get
             Set
-                Me("SystemStats") = value
+                Me("Havok_Interface_SystemStats") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property ChestaGUI() As Integer
+        Public Property Havok_Interface_ChestaGUI() As Integer
             Get
-                Return CType(Me("ChestaGUI"),Integer)
+                Return CType(Me("Havok_Interface_ChestaGUI"),Integer)
             End Get
             Set
-                Me("ChestaGUI") = value
+                Me("Havok_Interface_ChestaGUI") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property Lockdown() As Integer
+        Public Property Havok_Feature_Lockdown() As Integer
             Get
-                Return CType(Me("Lockdown"),Integer)
+                Return CType(Me("Havok_Feature_Lockdown"),Integer)
             End Get
             Set
-                Me("Lockdown") = value
+                Me("Havok_Feature_Lockdown") = value
             End Set
         End Property
         

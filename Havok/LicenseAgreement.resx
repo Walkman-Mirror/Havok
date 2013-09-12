@@ -117,24 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RichTextBox1.Text" xml:space="preserve">
-    <value>By Using This Software You Agree To.
-
-* Using It For Good Purposes Only (e.g Penetration Testing On Your Own Servers)
-* Not Using This For Evil Purposes
-
-I Am Not Liable For What You Get Up To, Use At Your Own Risk.
-
-Havok Is Registered Under The General Public License (GPL) Version 3
-
-This License Can be Found At: &lt;http://www.gnu.org/licenses/gpl.txt&gt;
-
-
-I a.k.a Deavmi Hopes You Enjoy Havok 3! The Latest and So Far The Greatest Version. ~Deavmi
-
-
-Special Thanks To My Family and Friends and deadmau5's "Aural Psynapse (Original Mix)" All of These Factors Made My Life Great and Therefore, Havok 3 Great!</value>
-  </data>
   <metadata name="LaTooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

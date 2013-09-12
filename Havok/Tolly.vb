@@ -8,10 +8,10 @@ Public Class Tolly
         LabelX2.Text = My.Application.Info.Version.ToString
         ProgressBarX1.Text = "Starting Up..."
         StartupDepotChecker.RunWorkerAsync()
-        If My.Settings.ChestaGUI = "1" Then
+        If My.Settings.Havok_Interface_ChestaGUI = "1" Then
             ProgressBarX1.Text = "Starting Up... (With Chesta)"
         End If
-        If My.Settings.ChestaGUI = "0" Then
+        If My.Settings.Havok_Interface_ChestaGUI = "0" Then
             ProgressBarX1.Text = "Starting Up..."
         End If
     End Sub
