@@ -18,6 +18,6 @@ Public Class LicenseAgreement
     End Sub
 
     Private Sub LicenseAgreement_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        WhatsNew.GeckoWebBrowser1.Navigate("http://deavmi.3owl.com/wp-content/projects/havok/changelog.html")
+        WhatsNew.GeckoWebBrowser1.Navigate("http://deavmi.github.io/Havok/#changelog")
     End Sub
 End Class

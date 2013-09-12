@@ -403,10 +403,6 @@ Public Class Form1
         End If
         NotifyIcon1.ShowBalloonTip(50)
         ListBox1.Items.Add("Starting Up...")
-        MsgBox("Havok 3 Is Beta, HGetter's and HPusher's Background Workers a.k.a The Downloader and Uploader (Respectively) Their Processes, Cannot Be Canceled, To End Them You Need To Exit Havok or Restart Havok, This Can Be Done From The Settings Tab In The About Window. Thanks. ~Deavmi")
-
-
-
         ListBox1.Items.Add("Welcome To " & My.Application.Info.ProductName)
         ListBox1.Items.Add("Version " & My.Application.Info.Version.ToString)
         ListBox1.Items.Add(My.Application.Info.Copyright)
@@ -420,19 +416,6 @@ Public Class Form1
         ListBox1.Items.Add("http://deavmi.3owl.com/projects/havok .")
         ListBox1.Items.Add("---------------------------")
         PictureBox2.Visible = True
-        Preferences.Label4.Text = My.Application.Info.Version.ToString
-        'CHANGE THIS LATER WHEN NOT BETA
-        '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        'Get The About Form Ready To RUmble 
-        Preferences.Label6.Text = My.Application.Info.Version.Major & " Beta"
-        Preferences.Label11.Text = My.Application.Info.Trademark
-        Preferences.Label2.Text = My.Application.Info.Description
-        Preferences.Label1.Text = My.Application.Info.ProductName
         'Navigate The Main WebBrowser (WebBrowser1 On Form1) 
         WebBrowser1.Navigate(My.Settings.BrowserHomepageURL.ToString)
         'Navigate ABout Form's Two WebBrowsers (WebBrowser1 and WebBrwoser2 On About)
@@ -482,7 +465,7 @@ Public Class Form1
         NetMonTimer.Start()
         ComboBox1.Text = My.Settings.LastSelectedWeapon
         Label6.Text = "v" & My.Application.Info.Version.ToString
-
+        MsgBox("Havok 3 Is Beta, HGetter's and HPusher's Background Workers a.k.a The Downloader and Uploader (Respectively) Their Processes, Cannot Be Canceled, To End Them You Need To Exit Havok or Restart Havok, This Can Be Done From The Settings Tab In The About Window. Thanks. ~Deavmi")
 
         'Just A Lil' Joke           
         If File.Exists("cheslyn") = True Then
