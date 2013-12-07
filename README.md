@@ -1,4 +1,4 @@
-Havok GH Pages Branch
+Havok project site
 =====
 
-This is the source code for Havok's project site hosted on GitHub pages.
+This is just the source code of the KeyStatus site on GitHub Pages.
