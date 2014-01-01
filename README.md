@@ -12,3 +12,7 @@ bugs at tristankildaire@gmail.com
 Please note on install time, Havok does require the dynamic link library "DevComponents.DotNetbar2.dll", so when you install Havok, this file will automatically be downloaded. But for developers, please use the ShitBrick-Tool to download this file with ease <http://bit.ly/shitbrick-utility>
 
 This description will soon be replaced by a way better one.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/deavmi/havok/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
