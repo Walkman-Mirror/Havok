@@ -116,7 +116,27 @@
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Havok maintained by <a href="https://github.com/deavmi">deavmi</a></p>
+        <!--
+This script was provided by this project: http://dogewidget.bitmindo.com/
+-->
+<div>
+      <script src="http://cdn.bitmindo.com/dogecoin.min.js"></script>
+      <script>
+  CoinWidgetCom.go({
+    /* make sure you update the wallet_address or you will not get your donations */
+    wallet_address: "DQJcT8NooBi3DEYDmzyrBXZaSUUaDgPCLf"
+    , currency: "dogecoin"
+    , counter: "amount"
+    , alignment: "bl"
+    , qrcode: true
+    , auto_show: false
+    , lbl_button: "Donate"
+    , lbl_address: "Tip Dogecoin to this Address:"
+    , lbl_amount: "DOGE"
+  });
+       </script>
+        <p>Free, gratis and open-source.</p>
+        <p class="copyright">Havok maintained by <a href="https://deavmi.github.io/DeavmiOSS">DeavmiOSS</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
