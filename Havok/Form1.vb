@@ -337,13 +337,13 @@ Public Class Form1
             Label6.ForeColor = Color.Black
         End If
         If My.Settings.Havok_Interface_VisualStyling = "false" Then
-            Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
             Button15.Visible = False
             Button16.Visible = True
         End If
 
         If My.Settings.Havok_Interface_VisualStyling = "true" Then
-            Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
+            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
             Button15.Visible = True
             Button16.Visible = False
         End If
@@ -562,7 +562,7 @@ Public Class Form1
         My.Settings.Havok_Interface_VisualStyling = "false"
         My.Settings.Save()
         If My.Settings.Havok_Interface_VisualStyling = "false" Then
-            Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
             Button15.Visible = False
             Button16.Visible = True
         End If
@@ -572,7 +572,7 @@ Public Class Form1
         My.Settings.Havok_Interface_VisualStyling = "true"
         My.Settings.Save()
         If My.Settings.Havok_Interface_VisualStyling.ToString = "true" Then
-            Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
+            Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
             Button15.Visible = True
             Button16.Visible = False
         End If
