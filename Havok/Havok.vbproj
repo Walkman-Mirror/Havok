@@ -70,6 +70,9 @@
       <HintPath>Resources\Geckofx-Winforms-15.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -81,25 +84,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Import Include="DevComponents.DotNetBar" />
-    <Import Include="Gecko" />
-    <Import Include="GeckoFX" />
-    <Import Include="Havok" />
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
     <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
+    <Import Include="System.Threading.Tasks" />
     <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Include="Updates.Designer.vb">
+      <DependentUpon>Updates.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="Updates.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GeckoConfigTool.Designer.vb">
@@ -108,10 +109,10 @@
     <Compile Include="GeckoConfigTool.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HGettter.Designer.vb">
-      <DependentUpon>HGettter.vb</DependentUpon>
+    <Compile Include="HGetter.Designer.vb">
+      <DependentUpon>HGetter.vb</DependentUpon>
     </Compile>
-    <Compile Include="HGettter.vb">
+    <Compile Include="HGetter.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HTMLEditor.Designer.vb">
@@ -222,14 +223,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <EmbeddedResource Include="Updates.resx">
+      <DependentUpon>Updates.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeckoConfigTool.resx">
       <DependentUpon>GeckoConfigTool.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HGettter.resx">
-      <DependentUpon>HGettter.vb</DependentUpon>
+    <EmbeddedResource Include="HGetter.resx">
+      <DependentUpon>HGetter.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HTMLEditor.resx">
       <DependentUpon>HTMLEditor.vb</DependentUpon>

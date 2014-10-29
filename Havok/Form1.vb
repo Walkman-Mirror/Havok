@@ -8,7 +8,7 @@ Imports System.Net.Mail
 Public Class Form1
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        'Updates.Show()
+        Updates.Show()
     End Sub
 
     Private Sub WeaponStarter()
@@ -96,7 +96,7 @@ Public Class Form1
         If ComboBox1.Text = "HGetter" Then
             ListBox1.Items.Add("---------------------------")
             ListBox1.Items.Add("Starting HGetter...")
-            'HGetter.Show()
+            HGetter.Show()
             Button2.Enabled = False
             Button4.Enabled = True
 
@@ -223,7 +223,7 @@ Public Class Form1
         End If
 
         If ComboBox1.Text = "HGetter" Then
-            'HGetter.Close()
+            HGetter.Close()
         End If
 
         If ComboBox1.Text = "HPusher" Then
@@ -472,7 +472,7 @@ Public Class Form1
             WebBrowser1.Navigate(My.Settings.Havok_Browser_HomepageURL.ToString)
         End If
         If ComboBox1.Text = "HGetter" Then
-            'HGetter.Close()
+            HGetter.Close()
             WebBrowser1.Navigate(My.Settings.Havok_Browser_HomepageURL.ToString)
         End If
         If ComboBox1.Text = "Remote-PC" Then
@@ -513,9 +513,9 @@ Public Class Form1
     Private Sub Button14_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button14.Click
         'Lil' Inspirational Quotes 
         If TextBox1.Text = "" Then
-            MsgBox("Listen Here " & My.User.Name.ToString & ", Live Life, Don't Be A Turkey")
+            MsgBox("Listen Here " & My.User.Name & ", Live Life, Don't Be A Turkey")
         Else
-            MsgBox("Listen Here " & My.User.Name.ToString & ", Live Life, Don't Be A Turkey" & TextBox1.Text)
+            MsgBox("Listen Here " & My.User.Name & ", Live Life, Don't Be A Turkey" & TextBox1.Text)
         End If
     End Sub
 
@@ -595,7 +595,7 @@ Public Class Form1
     End Sub
 
     Private Sub CheckForUpdatesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckForUpdatesToolStripMenuItem.Click
-        'Updates.Show()
+        Updates.Show()
     End Sub
 
     Private Sub EnableToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EnableToolStripMenuItem1.Click
@@ -772,13 +772,13 @@ Public Class Form1
         'START MULTITASKING CODE HERE
 
         If ComboBox1.Text = "HGetter" Then
-            'If HGetter.Visible = True Then
-            '    Button2.Enabled = False
-            '    Button4.Enabled = True
-            'Else
-            '    Button2.Enabled = True
-            '    Button4.Enabled = False
-            'End If
+            If HGetter.Visible = True Then
+                Button2.Enabled = False
+                Button4.Enabled = True
+            Else
+                Button2.Enabled = True
+                Button4.Enabled = False
+            End If
         End If
 
         If ComboBox1.Text = "HPusher" Then
@@ -904,7 +904,7 @@ Public Class Form1
     End Sub
 
     Private Sub CheckForUpdatesToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckForUpdatesToolStripMenuItem1.Click
-        'Updates.Show()
+        Updates.Show()
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AboutToolStripMenuItem.Click
