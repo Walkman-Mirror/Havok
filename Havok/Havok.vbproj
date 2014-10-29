@@ -18,7 +18,7 @@
     <OptionStrict>Off</OptionStrict>
     <OptionInfer>On</OptionInfer>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <ApplicationIcon>havok_icon.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\havok_icon.ico</ApplicationIcon>
     <ManifestCertificateThumbprint>BE2A1671D881086DD2CDBB83B378C9B5221481FF</ManifestCertificateThumbprint>
     <ManifestKeyFile>Havok_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
@@ -73,12 +73,15 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevComponents.DotNetBar2, Version=11.1.0.5, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=11.4.0.5, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
     <Reference Include="geckofx-core-15">
-      <HintPath>bin\Debug\geckofx-core-15.dll</HintPath>
+      <HintPath>Resources\geckofx-core-15.dll</HintPath>
     </Reference>
     <Reference Include="Geckofx-Winforms-15">
-      <HintPath>bin\Debug\Geckofx-Winforms-15.dll</HintPath>
+      <HintPath>Resources\Geckofx-Winforms-15.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Data.Schema, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.Data.Schema.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
@@ -158,34 +161,10 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Checkforupdates.Designer.vb">
-      <DependentUpon>Checkforupdates.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Checkforupdates.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Exit.Designer.vb">
       <DependentUpon>Exit.vb</DependentUpon>
     </Compile>
     <Compile Include="Exit.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UDPFlooder.Designer.vb">
-      <DependentUpon>UDPFlooder.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UDPFlooder.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UsefulWindowThatIUse.Designer.vb">
-      <DependentUpon>UsefulWindowThatIUse.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UsefulWindowThatIUse.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HGetter.Designer.vb">
-      <DependentUpon>HGetter.vb</DependentUpon>
-    </Compile>
-    <Compile Include="HGetter.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HPusher.Designer.vb">
@@ -233,12 +212,6 @@
     <Compile Include="RemotePC.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RouterAdmin.Designer.vb">
-      <DependentUpon>RouterAdmin.vb</DependentUpon>
-    </Compile>
-    <Compile Include="RouterAdmin.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Tolly.Designer.vb">
       <DependentUpon>Tolly.vb</DependentUpon>
     </Compile>
@@ -284,20 +257,8 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Checkforupdates.resx">
-      <DependentUpon>Checkforupdates.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Exit.resx">
       <DependentUpon>Exit.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UDPFlooder.resx">
-      <DependentUpon>UDPFlooder.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UsefulWindowThatIUse.resx">
-      <DependentUpon>UsefulWindowThatIUse.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HGetter.resx">
-      <DependentUpon>HGetter.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HPusher.resx">
       <DependentUpon>HPusher.vb</DependentUpon>
@@ -305,7 +266,6 @@
     <EmbeddedResource Include="LicenseAgreement.resx">
       <DependentUpon>LicenseAgreement.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -320,9 +280,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RemotePC.resx">
       <DependentUpon>RemotePC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RouterAdmin.resx">
-      <DependentUpon>RouterAdmin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tolly.resx">
       <DependentUpon>Tolly.vb</DependentUpon>
@@ -387,8 +344,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="1355653070_happy.ico" />
-    <Content Include="havok_icon.ico" />
+    <Content Include="Resources\1355653070_happy.ico" />
+    <Content Include="Resources\havok_icon.ico" />
     <None Include="Resources\havok.png" />
     <None Include="Resources\1374278882_Network_connection.png" />
     <None Include="Resources\1374278940_Network_connection.png" />

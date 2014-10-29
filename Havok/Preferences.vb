@@ -180,56 +180,56 @@ Public Class Preferences
     Private Sub Button17_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button17.Click
         My.Settings.Havok_Weapons_UDPInterval = TextBox3.Text
         My.Settings.Save()
-        UDPFlooder.Flooder.Interval = My.Settings.Havok_Weapons_UDPInterval.ToString
+        'UDPFlooder.Flooder.Interval = My.Settings.Havok_Weapons_UDPInterval.ToString
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Dim lulala23 As UsefulWindowThatIUse = New UsefulWindowThatIUse
-        lulala23.Show()
-        lulala23.Text = "Gecko Configuration"
-        lulala23.GeckoWebBrowser1.Navigate("about:config")
+        'Dim lulala23 As UsefulWindowThatIUse = New UsefulWindowThatIUse
+        'lulala23.Show()
+        'lulala23.Text = "Gecko Configuration"
+        'lulala23.GeckoWebBrowser1.Navigate("about:config")
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        Dim lulala23 As UsefulWindowThatIUse = New UsefulWindowThatIUse
-        lulala23.Show()
-        lulala23.Text = "Gecko Plugins"
-        lulala23.GeckoWebBrowser1.Navigate("about:plugins")
+        'Dim lulala23 As UsefulWindowThatIUse = New UsefulWindowThatIUse
+        'lulala23.Show()
+        'lulala23.Text = "Gecko Plugins"
+        'lulala23.GeckoWebBrowser1.Navigate("about:plugins")
     End Sub
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
-        Dim lulala23 As UsefulWindowThatIUse = New UsefulWindowThatIUse
-        lulala23.Show()
-        lulala23.Text = "Gecko Addons"
-        lulala23.GeckoWebBrowser1.Navigate("about:addons")
+        'Dim lulala23 As UsefulWindowThatIUse = New UsefulWindowThatIUse
+        'lulala23.Show()
+        'lulala23.Text = "Gecko Addons"
+        'lulala23.GeckoWebBrowser1.Navigate("about:addons")
     End Sub
 
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
-        Dim lulala23 As UsefulWindowThatIUse = New UsefulWindowThatIUse
-        lulala23.Show()
-        lulala23.Text = "Gecko Build Configuration"
-        lulala23.GeckoWebBrowser1.Navigate("about:buildconfig")
+        'Dim lulala23 As UsefulWindowThatIUse = New UsefulWindowThatIUse
+        'lulala23.Show()
+        'lulala23.Text = "Gecko Build Configuration"
+        'lulala23.GeckoWebBrowser1.Navigate("about:buildconfig")
     End Sub
 
     Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
-        Dim lulala23 As UsefulWindowThatIUse = New UsefulWindowThatIUse
-        lulala23.Show()
-        lulala23.Text = "Gecko Memory"
-        lulala23.GeckoWebBrowser1.Navigate("about:memory")
+        'Dim lulala23 As UsefulWindowThatIUse = New UsefulWindowThatIUse
+        'lulala23.Show()
+        'lulala23.Text = "Gecko Memory"
+        'lulala23.GeckoWebBrowser1.Navigate("about:memory")
     End Sub
 
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
-        Dim lulala23 As UsefulWindowThatIUse = New UsefulWindowThatIUse
-        lulala23.Show()
-        lulala23.Text = "Gecko Compartments"
-        lulala23.GeckoWebBrowser1.Navigate("about:compartments")
+        'Dim lulala23 As UsefulWindowThatIUse = New UsefulWindowThatIUse
+        'lulala23.Show()
+        'lulala23.Text = "Gecko Compartments"
+        'lulala23.GeckoWebBrowser1.Navigate("about:compartments")
     End Sub
 
     Private Sub LinkLabel4_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel4.LinkClicked
-        Dim lulala23 As UsefulWindowThatIUse = New UsefulWindowThatIUse
-        lulala23.Show()
-        lulala23.Text = "Message From Mozilla"
-        lulala23.GeckoWebBrowser1.Navigate("about:mozilla")
+        'Dim lulala23 As UsefulWindowThatIUse = New UsefulWindowThatIUse
+        'lulala23.Show()
+        'lulala23.Text = "Message From Mozilla"
+        'lulala23.GeckoWebBrowser1.Navigate("about:mozilla")
     End Sub
 
     Private Sub Button11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button11.Click
