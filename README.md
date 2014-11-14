@@ -1,4 +1,4 @@
-# Havok [![Build status](https://ci.appveyor.com/api/projects/status/6w3w22u2lh26np34?svg=true)](https://ci.appveyor.com/project/Walkman100/havok)
+# Havok [![Build status](https://ci.appveyor.com/api/projects/status/6w3w22u2lh26np34)](https://ci.appveyor.com/project/Walkman100/havok)
 
 Havok is a free and open-source networking tool and web tool for Windows.
 
